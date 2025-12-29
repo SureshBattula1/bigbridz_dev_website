@@ -1,0 +1,18 @@
+<article class="card h-full flex flex-col gap-3 overflow-hidden">
+  @if (image) {
+    <div class="hero-image-frame rounded-lg overflow-hidden bg-gradient-to-br from-primary/10 to-navy/10 -mx-6 -mt-6 mb-3">
+      <img [src]="image" [alt]="title" class="w-full h-40 object-cover" onerror="this.style.display='none'" />
+    </div>
+  }
+  @if (icon && !image) {
+    <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-primary/10 to-navy/10 text-primary flex items-center justify-center shadow-sm">
+      <app-icon [name]="icon" size="24" class="text-primary"></app-icon>
+    </div>
+  }
+  <h3 class="text-lg font-semibold text-slate-900">
+    {{ title }}
+  </h3>
+  <p class="text-sm text-gray-600 flex-1 leading-relaxed">
+    {{ description }}
+  </p>
+</article>

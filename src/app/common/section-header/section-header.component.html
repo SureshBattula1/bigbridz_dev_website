@@ -1,0 +1,19 @@
+<div class="section-padding pb-6 pt-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col gap-3 animate-fade-up">
+      @if (eyebrow) {
+        <span class="pill-badge inline-block w-fit">
+          {{ eyebrow }}
+        </span>
+      }
+      <h2 class="section-heading">
+        {{ title }}
+      </h2>
+      @if (subtitle) {
+        <p class="section-subheading">
+          {{ subtitle }}
+        </p>
+      }
+    </div>
+  </div>
+</div>

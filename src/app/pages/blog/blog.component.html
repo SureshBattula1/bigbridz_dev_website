@@ -1,0 +1,33 @@
+<app-section-header
+  eyebrow="Blog"
+  title="Insights from the BigBridz team"
+  subtitle="Articles and checklists to help you plan and execute your next software project."
+/>
+
+<section class="section-padding pt-4">
+  <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    @for (post of posts; track post.title; let i = $index) {
+      <article class="card flex flex-col gap-3 animate-fade-up overflow-hidden" [style.animation-delay.ms]="i * 100">
+        @if (post.image) {
+          <div class="hero-image-frame rounded-lg overflow-hidden bg-gradient-to-br from-primary/10 to-navy/10 -mx-6 -mt-6 mb-3">
+            <img [src]="post.image" [alt]="post.title" class="w-full h-40 object-cover" onerror="this.style.display='none'" />
+          </div>
+        }
+        <div class="flex items-center gap-3 text-xs">
+          <span class="pill-badge">{{ post.category }}</span>
+          <span class="text-gray-400">{{ post.readTime }}</span>
+        </div>
+        <h3 class="text-base md:text-lg font-semibold text-slate-900 leading-tight">
+          {{ post.title }}
+        </h3>
+        <p class="text-sm text-gray-600 flex-1 leading-relaxed">
+          {{ post.summary }}
+        </p>
+        <p class="text-xs text-gray-400 pt-2 border-t border-gray-100">
+          {{ post.date }}
+        </p>
+      </article>
+    }
+  </div>
+</section>
+

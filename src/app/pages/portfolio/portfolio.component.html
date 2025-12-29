@@ -1,0 +1,46 @@
+<app-section-header
+  eyebrow="Portfolio"
+  title="Sample projects delivered by BigBridz"
+  subtitle="Here are some of the solutions we have built for our clients. We can share more detailed case studies on request."
+/>
+
+<section class="section-padding pt-4">
+  <div class="max-w-6xl mx-auto grid gap-8">
+    @for (project of projects; track project.name; let i = $index) {
+      <article class="card animate-fade-up" [style.animation-delay.ms]="i * 100">
+        <div class="grid gap-6 md:grid-cols-[200px,1fr]">
+          @if (project.image) {
+            <div class="hero-image-frame rounded-xl overflow-hidden bg-gradient-to-br from-primary/10 to-navy/10 flex items-center justify-center">
+              <img [src]="project.image" [alt]="project.name" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+            </div>
+          }
+          <div class="flex-1">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-slate-900 mb-1">
+                  {{ project.name }}
+                </h3>
+                <p class="pill-badge inline-block mb-3">
+                  {{ project.industry }}
+                </p>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  {{ project.summary }}
+                </p>
+              </div>
+            </div>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-700">
+              @for (item of project.highlights; track item) {
+                <li class="flex items-start gap-2">
+                  <span class="text-primary mt-1">✓</span>
+                  <span>{{ item }}</span>
+                </li>
+              }
+            </ul>
+          </div>
+        </div>
+      </article>
+    }
+  </div>
+</section>
+
+

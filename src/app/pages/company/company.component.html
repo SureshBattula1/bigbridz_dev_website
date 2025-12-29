@@ -1,0 +1,73 @@
+<app-section-header
+  eyebrow="Company"
+  title="About BigBridz"
+  subtitle="BigBridz is a software development company based in Hyderabad, focused on building reliable, scalable, and user-friendly applications for global clients."
+/>
+
+<section class="section-padding pt-4">
+  <div class="max-w-6xl mx-auto space-y-12">
+    <div class="grid gap-10 md:grid-cols-[1.5fr,1.5fr]">
+      <div class="space-y-4 text-sm md:text-base text-gray-700">
+        <p class="leading-relaxed">
+          Our engineering professionals capture your business idea quickly and translate it
+          into ready-to-use software. Designers and developers work together in agile sprints,
+          ensuring pixel-perfect UI and robust functionality.
+        </p>
+        <p class="leading-relaxed">
+          We keep clients informed with regular demos and detailed reports. Our goal is not
+          only to deliver software but to become your long-term technology partner.
+        </p>
+        <p class="leading-relaxed">
+          With 18+ years of combined experience, BigBridz has delivered 200+ projects for startups,
+          SMEs, and enterprises. We are recognized on Goodfirms, Clutch, and Top Developers platforms.
+        </p>
+      </div>
+
+      <div class="grid gap-4">
+        @for (item of values; track item.title; let i = $index) {
+          <div class="card animate-fade-up" [style.animation-delay.ms]="i * 100">
+            <div class="flex items-start gap-3">
+              @if (item.icon) {
+                <div class="flex-shrink-0">
+                  <app-icon [name]="item.icon" size="32" class="text-primary"></app-icon>
+                </div>
+              }
+              <div>
+                <h3 class="text-base font-semibold text-slate-900 mb-1">
+                  {{ item.title }}
+                </h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  {{ item.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="grid gap-6 md:grid-cols-4">
+      @for (stat of stats; track stat.label) {
+        <div class="card text-center animate-fade-up">
+          <p class="text-3xl md:text-4xl font-bold text-primary mb-2">{{ stat.value }}</p>
+          <p class="text-sm text-gray-600">{{ stat.label }}</p>
+        </div>
+      }
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div>
+      <h3 class="text-xl font-semibold text-slate-900 mb-4 text-center">Certifications & Recognition</h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        @for (cert of certifications; track cert) {
+          <span class="pill-badge">{{ cert }}</span>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+

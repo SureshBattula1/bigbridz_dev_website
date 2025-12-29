@@ -1,0 +1,47 @@
+<app-section-header
+  eyebrow="Solutions"
+  title="Industry-focused software solutions"
+  subtitle="BigBridz builds tailored solutions for multiple domains, combining reusable components with domain-specific workflows."
+/>
+
+<section class="section-padding pt-4">
+  <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+    @for (solution of verticalSolutions; track solution.title) {
+      <app-service-card
+        [title]="solution.title"
+        [description]="solution.description"
+        [icon]="solution.icon"
+      />
+    }
+  </div>
+</section>
+
+<section class="section-padding bg-slate-900 text-gray-100">
+  <div class="max-w-6xl mx-auto grid gap-10 md:grid-cols-2 items-center">
+    <div class="space-y-4">
+      <h2 class="text-2xl md:text-3xl font-semibold">
+        Why businesses choose BigBridz as their technology partner
+      </h2>
+      <p class="text-sm md:text-base text-gray-300">
+        We understand that each industry has unique compliance, performance,
+        and user experience needs. Our team studies your domain first, then
+        proposes a solution that fits your operations and growth plans.
+      </p>
+    </div>
+    <div class="grid gap-4 text-sm">
+      <div class="card bg-slate-800 border-slate-700 text-gray-100">
+        <h3 class="font-semibold mb-1">Consultative approach</h3>
+        <p>We do not just code; we help refine your workflows and propose the right digital roadmap.</p>
+      </div>
+      <div class="card bg-slate-800 border-slate-700 text-gray-100">
+        <h3 class="font-semibold mb-1">Scalable architecture</h3>
+        <p>Solutions are designed to handle increasing users, data, and integrations without rework.</p>
+      </div>
+      <div class="card bg-slate-800 border-slate-700 text-gray-100">
+        <h3 class="font-semibold mb-1">Long-term support</h3>
+        <p>Our team stays with you after launch for enhancements, monitoring, and proactive improvements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
