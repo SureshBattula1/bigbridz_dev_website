@@ -50,16 +50,13 @@ export class CompanyComponent {
   ];
 
   stats = [
-    { label: 'Years of Experience', value: '18+' },
-    { label: 'Projects Delivered', value: '200+' },
-    { label: 'Happy Clients', value: '150+' },
-    { label: 'Team Members', value: '50+' },
+    { label: 'Years of Experience', value: '1+' },
+    { label: 'Projects Delivered', value: '10+' },
+    // { label: 'Happy Clients', value: '150+' },
+    { label: 'Team Members', value: '10+' },
   ];
 
   certifications = [
-    'ISO Certified',
-    'Goodfirms Listed',
-    'Clutch Reviewed',
-    'Top Developers',
+    'Top Developers', '...'
   ];
 }

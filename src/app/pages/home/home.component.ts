@@ -328,4 +328,26 @@ export class HomeComponent {
       gradient: 'from-blue-400 to-blue-600'
     }
   ];
+
+  getTechIcon(techName: string): string {
+    const iconMap: Record<string, string> = {
+      'Angular': 'web',
+      'React': 'web',
+      'Node.js': 'development',
+      '.NET': 'development',
+      'Python': 'development',
+      'AWS': 'cloud',
+      'Docker': 'development',
+      'Kubernetes': 'development',
+      'PostgreSQL': 'database',
+      'MongoDB': 'database',
+      'Redis': 'database',
+      'GraphQL': 'api',
+      'Vue.js': 'web',
+      'TypeScript': 'development',
+      'Azure': 'cloud',
+      'GCP': 'cloud'
+    };
+    return iconMap[techName] || 'development';
+  }
 }

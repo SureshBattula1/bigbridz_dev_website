@@ -43,7 +43,7 @@ export class ContactComponent {
       `Message:\n${formData.message}`
     );
     
-    const mailtoLink = `mailto:bvsuresh.ab@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:info@bigbridz.com?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
     
     // Also log for debugging

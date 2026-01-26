@@ -1,387 +1,44 @@
 <section class="section-padding pb-16 hero-gradient relative overflow-hidden">
-  <!-- Animated background elements -->
+  <!-- Subtle background elements -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-20 left-10 w-48 h-48 bg-primary/5 rounded-full blur-xl animate-pulse-slow"></div>
-    <div class="absolute bottom-20 right-10 w-64 h-64 bg-navy/5 rounded-full blur-xl animate-pulse-slow" style="animation-delay: 1s"></div>
+    <div class="absolute top-20 left-10 w-48 h-48 bg-white/5 rounded-full blur-xl"></div>
+    <div class="absolute bottom-20 right-10 w-64 h-64 bg-white/5 rounded-full blur-xl"></div>
   </div>
 
-  <!-- Realistic Wireframe Cable-Stayed Bridge Animation -->
-  <div class="bridge-animation-bg">
-    <svg class="bridge-logo-animation" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <!-- Grid Pattern for Ground with Perspective -->
-        <pattern id="gridPattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
-          <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(0,84,166,0.12)" stroke-width="0.6"/>
-        </pattern>
-        
-        <!-- Blue Gradient with Depth -->
-        <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#003d7a;stop-opacity:1" />
-          <stop offset="30%" style="stop-color:#0054A6;stop-opacity:1" />
-          <stop offset="50%" style="stop-color:#0080ff;stop-opacity:1" />
-          <stop offset="70%" style="stop-color:#0054A6;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#003d7a;stop-opacity:1" />
-        </linearGradient>
-        
-        <!-- Orange Gradient with Depth -->
-        <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#d67a0a;stop-opacity:1" />
-          <stop offset="30%" style="stop-color:#F79A1F;stop-opacity:1" />
-          <stop offset="50%" style="stop-color:#FFB84D;stop-opacity:1" />
-          <stop offset="70%" style="stop-color:#F79A1F;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#d67a0a;stop-opacity:1" />
-        </linearGradient>
-        
-        <!-- Depth Shadow Gradient -->
-        <linearGradient id="shadowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color:rgba(0,0,0,0);stop-opacity:0" />
-          <stop offset="100%" style="stop-color:rgba(0,0,0,0.15);stop-opacity:0.15" />
-        </linearGradient>
-        
-        <!-- Network Data Flow Gradient -->
-        <linearGradient id="dataFlowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:#0080ff;stop-opacity:0" />
-          <stop offset="30%" style="stop-color:#00a0ff;stop-opacity:0.8" />
-          <stop offset="50%" style="stop-color:#00ccff;stop-opacity:1" />
-          <stop offset="70%" style="stop-color:#00a0ff;stop-opacity:0.8" />
-          <stop offset="100%" style="stop-color:#0080ff;stop-opacity:0" />
-        </linearGradient>
-        
-        <!-- Network Packet Gradient -->
-        <radialGradient id="packetGradient" cx="50%" cy="50%">
-          <stop offset="0%" style="stop-color:#00ccff;stop-opacity:1" />
-          <stop offset="70%" style="stop-color:#0080ff;stop-opacity:0.8" />
-          <stop offset="100%" style="stop-color:#0054A6;stop-opacity:0.4" />
-        </radialGradient>
-        
-        <!-- Network Node Gradient -->
-        <radialGradient id="nodeGradient" cx="50%" cy="50%">
-          <stop offset="0%" style="stop-color:#00a0ff;stop-opacity:1" />
-          <stop offset="50%" style="stop-color:#0080ff;stop-opacity:0.9" />
-          <stop offset="100%" style="stop-color:#0054A6;stop-opacity:0.7" />
-        </radialGradient>
-        
-        <!-- Network Connection Pattern -->
-        <pattern id="networkPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-          <circle cx="10" cy="10" r="1" fill="#0080ff" opacity="0.3" />
-        </pattern>
-      </defs>
-      
-      <!-- Grid Ground with Perspective -->
-      <g class="grid-ground-group">
-        <rect x="0" y="450" width="1200" height="150" fill="url(#gridPattern)" class="grid-ground" />
-        <rect x="0" y="450" width="1200" height="150" fill="url(#shadowGradient)" opacity="0.3" />
-      </g>
-      
-      <!-- Left Realistic V-Shaped Pylon (3D Wireframe) -->
-      <g class="pylon-left wireframe-pylon">
-        <!-- Base Rectangle (3D effect with depth lines) -->
-        <rect x="250" y="380" width="70" height="35" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" class="pylon-base" />
-        <!-- Base depth lines for 3D effect -->
-        <line x1="250" y1="380" x2="245" y2="375" stroke="url(#blueGradient)" stroke-width="2" opacity="0.6" class="pylon-depth" />
-        <line x1="320" y1="380" x2="315" y2="375" stroke="url(#blueGradient)" stroke-width="2" opacity="0.6" class="pylon-depth" />
-        <line x1="320" y1="415" x2="315" y2="410" stroke="url(#blueGradient)" stroke-width="2" opacity="0.6" class="pylon-depth" />
-        
-        <!-- Left Leg (Tapering) -->
-        <line x1="265" y1="380" x2="280" y2="300" stroke="url(#blueGradient)" stroke-width="3" class="pylon-leg" />
-        <line x1="280" y1="300" x2="290" y2="220" stroke="url(#blueGradient)" stroke-width="3" class="pylon-leg" />
-        <line x1="290" y1="220" x2="295" y2="140" stroke="url(#blueGradient)" stroke-width="3.5" class="pylon-leg" />
-        
-        <!-- Right Leg (Tapering) -->
-        <line x1="305" y1="380" x2="290" y2="300" stroke="url(#blueGradient)" stroke-width="3" class="pylon-leg" />
-        <line x1="290" y1="300" x2="280" y2="220" stroke="url(#blueGradient)" stroke-width="3" class="pylon-leg" />
-        <line x1="280" y1="220" x2="275" y2="140" stroke="url(#blueGradient)" stroke-width="3.5" class="pylon-leg" />
-        
-        <!-- Top Mast (Taller, more realistic) -->
-        <rect x="282" y="80" width="18" height="60" fill="none" stroke="url(#blueGradient)" stroke-width="3" class="pylon-top" />
-        <!-- Mast top cap -->
-        <rect x="280" y="75" width="22" height="8" fill="none" stroke="url(#blueGradient)" stroke-width="3" class="pylon-top-cap" />
-        
-        <!-- Cross Members (Multiple for realism) -->
-        <line x1="265" y1="300" x2="305" y2="300" stroke="url(#blueGradient)" stroke-width="2.5" class="pylon-cross" />
-        <line x1="270" y1="260" x2="300" y2="260" stroke="url(#blueGradient)" stroke-width="2" opacity="0.8" class="pylon-cross" />
-        <line x1="275" y1="220" x2="295" y2="220" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="pylon-cross" />
-        
-        <!-- Internal structure lines for depth -->
-        <line x1="285" y1="300" x2="287" y2="220" stroke="url(#blueGradient)" stroke-width="1.5" opacity="0.5" class="pylon-internal" />
-        <line x1="295" y1="300" x2="293" y2="220" stroke="url(#blueGradient)" stroke-width="1.5" opacity="0.5" class="pylon-internal" />
-      </g>
-      
-      <!-- Right Realistic V-Shaped Pylon (3D Wireframe) -->
-      <g class="pylon-right wireframe-pylon">
-        <!-- Base Rectangle -->
-        <rect x="880" y="380" width="70" height="35" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" class="pylon-base" />
-        <!-- Base depth lines -->
-        <line x1="880" y1="380" x2="875" y2="375" stroke="url(#blueGradient)" stroke-width="2" opacity="0.6" class="pylon-depth" />
-        <line x1="950" y1="380" x2="945" y2="375" stroke="url(#blueGradient)" stroke-width="2" opacity="0.6" class="pylon-depth" />
-        <line x1="950" y1="415" x2="945" y2="410" stroke="url(#blueGradient)" stroke-width="2" opacity="0.6" class="pylon-depth" />
-        
-        <!-- Left Leg -->
-        <line x1="895" y1="380" x2="910" y2="300" stroke="url(#blueGradient)" stroke-width="3" class="pylon-leg" />
-        <line x1="910" y1="300" x2="920" y2="220" stroke="url(#blueGradient)" stroke-width="3" class="pylon-leg" />
-        <line x1="920" y1="220" x2="925" y2="140" stroke="url(#blueGradient)" stroke-width="3.5" class="pylon-leg" />
-        
-        <!-- Right Leg -->
-        <line x1="935" y1="380" x2="920" y2="300" stroke="url(#blueGradient)" stroke-width="3" class="pylon-leg" />
-        <line x1="920" y1="300" x2="910" y2="220" stroke="url(#blueGradient)" stroke-width="3" class="pylon-leg" />
-        <line x1="910" y1="220" x2="905" y2="140" stroke="url(#blueGradient)" stroke-width="3.5" class="pylon-leg" />
-        
-        <!-- Top Mast -->
-        <rect x="912" y="80" width="18" height="60" fill="none" stroke="url(#blueGradient)" stroke-width="3" class="pylon-top" />
-        <!-- Mast top cap -->
-        <rect x="910" y="75" width="22" height="8" fill="none" stroke="url(#blueGradient)" stroke-width="3" class="pylon-top-cap" />
-        
-        <!-- Cross Members -->
-        <line x1="895" y1="300" x2="935" y2="300" stroke="url(#blueGradient)" stroke-width="2.5" class="pylon-cross" />
-        <line x1="900" y1="260" x2="930" y2="260" stroke="url(#blueGradient)" stroke-width="2" opacity="0.8" class="pylon-cross" />
-        <line x1="905" y1="220" x2="925" y2="220" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="pylon-cross" />
-        
-        <!-- Internal structure lines -->
-        <line x1="915" y1="300" x2="917" y2="220" stroke="url(#blueGradient)" stroke-width="1.5" opacity="0.5" class="pylon-internal" />
-        <line x1="925" y1="300" x2="923" y2="220" stroke="url(#blueGradient)" stroke-width="1.5" opacity="0.5" class="pylon-internal" />
-      </g>
-      
-      <!-- Cables from Left Pylon (More Realistic Dense Pattern) -->
-      <g class="cables-left">
-        <!-- Main cables fanning out -->
-        <line x1="291" y1="80" x2="320" y2="360" stroke="url(#blueGradient)" stroke-width="2.2" class="cable-stay" />
-        <line x1="291" y1="80" x2="360" y2="360" stroke="url(#orangeGradient)" stroke-width="2.2" class="cable-stay orange-cable" />
-        <line x1="291" y1="80" x2="400" y2="360" stroke="url(#blueGradient)" stroke-width="2.2" class="cable-stay" />
-        <line x1="291" y1="80" x2="440" y2="360" stroke="url(#orangeGradient)" stroke-width="2.2" class="cable-stay orange-cable" />
-        <line x1="291" y1="80" x2="480" y2="360" stroke="url(#blueGradient)" stroke-width="2.2" class="cable-stay" />
-        <line x1="291" y1="80" x2="520" y2="360" stroke="url(#orangeGradient)" stroke-width="2.2" class="cable-stay orange-cable" />
-        <line x1="291" y1="80" x2="560" y2="360" stroke="url(#blueGradient)" stroke-width="2.2" class="cable-stay" />
-        <line x1="291" y1="80" x2="600" y2="360" stroke="url(#orangeGradient)" stroke-width="2.2" class="cable-stay orange-cable" />
-        <!-- Additional cables from lower points for realism -->
-        <line x1="285" y1="220" x2="340" y2="360" stroke="url(#blueGradient)" stroke-width="1.8" opacity="0.7" class="cable-stay cable-secondary" />
-        <line x1="285" y1="220" x2="380" y2="360" stroke="url(#orangeGradient)" stroke-width="1.8" opacity="0.7" class="cable-stay orange-cable cable-secondary" />
-        <line x1="285" y1="220" x2="420" y2="360" stroke="url(#blueGradient)" stroke-width="1.8" opacity="0.7" class="cable-stay cable-secondary" />
-      </g>
-      
-      <!-- Cables from Right Pylon (More Realistic Dense Pattern) -->
-      <g class="cables-right">
-        <line x1="921" y1="80" x2="880" y2="360" stroke="url(#orangeGradient)" stroke-width="2.2" class="cable-stay orange-cable" />
-        <line x1="921" y1="80" x2="840" y2="360" stroke="url(#blueGradient)" stroke-width="2.2" class="cable-stay" />
-        <line x1="921" y1="80" x2="800" y2="360" stroke="url(#orangeGradient)" stroke-width="2.2" class="cable-stay orange-cable" />
-        <line x1="921" y1="80" x2="760" y2="360" stroke="url(#blueGradient)" stroke-width="2.2" class="cable-stay" />
-        <line x1="921" y1="80" x2="720" y2="360" stroke="url(#orangeGradient)" stroke-width="2.2" class="cable-stay orange-cable" />
-        <line x1="921" y1="80" x2="680" y2="360" stroke="url(#blueGradient)" stroke-width="2.2" class="cable-stay" />
-        <line x1="921" y1="80" x2="640" y2="360" stroke="url(#orangeGradient)" stroke-width="2.2" class="cable-stay orange-cable" />
-        <line x1="921" y1="80" x2="600" y2="360" stroke="url(#blueGradient)" stroke-width="2.2" class="cable-stay" />
-        <!-- Additional cables from lower points -->
-        <line x1="915" y1="220" x2="860" y2="360" stroke="url(#orangeGradient)" stroke-width="1.8" opacity="0.7" class="cable-stay orange-cable cable-secondary" />
-        <line x1="915" y1="220" x2="820" y2="360" stroke="url(#blueGradient)" stroke-width="1.8" opacity="0.7" class="cable-stay cable-secondary" />
-        <line x1="915" y1="220" x2="780" y2="360" stroke="url(#orangeGradient)" stroke-width="1.8" opacity="0.7" class="cable-stay orange-cable cable-secondary" />
-      </g>
-      
-      <!-- Realistic Bridge Deck with 3D Truss Pattern -->
-      <g class="deck-truss-group">
-        <!-- Main Deck Outline (3D effect) -->
-        <rect x="320" y="350" width="600" height="25" fill="none" stroke="url(#blueGradient)" stroke-width="3" class="deck-outline" />
-        <!-- Deck depth lines for 3D -->
-        <line x1="320" y1="350" x2="315" y2="345" stroke="url(#blueGradient)" stroke-width="2" opacity="0.6" class="deck-depth" />
-        <line x1="920" y1="350" x2="915" y2="345" stroke="url(#blueGradient)" stroke-width="2" opacity="0.6" class="deck-depth" />
-        <line x1="920" y1="375" x2="915" y2="370" stroke="url(#blueGradient)" stroke-width="2" opacity="0.6" class="deck-depth" />
-        
-        <!-- Realistic Truss Pattern - Both Sides with 3D Effect -->
-        <!-- Left Side Truss (N/W Pattern) -->
-        <g class="truss-left">
-          <line x1="320" y1="360" x2="340" y2="340" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="340" y1="340" x2="360" y2="360" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="360" y1="360" x2="380" y2="340" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="380" y1="340" x2="400" y2="360" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="400" y1="360" x2="420" y2="340" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="420" y1="340" x2="440" y2="360" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="440" y1="360" x2="460" y2="340" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="460" y1="340" x2="480" y2="360" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="480" y1="360" x2="500" y2="340" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="500" y1="340" x2="520" y2="360" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="520" y1="360" x2="540" y2="340" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="540" y1="340" x2="560" y2="360" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="560" y1="360" x2="580" y2="340" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="580" y1="340" x2="600" y2="360" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="600" y1="360" x2="620" y2="340" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="620" y1="340" x2="640" y2="360" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="640" y1="360" x2="660" y2="340" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="660" y1="340" x2="680" y2="360" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="680" y1="360" x2="700" y2="340" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="700" y1="340" x2="720" y2="360" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="720" y1="360" x2="740" y2="340" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="740" y1="340" x2="760" y2="360" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="760" y1="360" x2="780" y2="340" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="780" y1="340" x2="800" y2="360" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="800" y1="360" x2="820" y2="340" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="820" y1="340" x2="840" y2="360" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="840" y1="360" x2="860" y2="340" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="860" y1="340" x2="880" y2="360" stroke="url(#orangeGradient)" stroke-width="2" class="truss-line orange-truss" />
-          <line x1="880" y1="360" x2="900" y2="340" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-          <line x1="900" y1="340" x2="920" y2="360" stroke="url(#blueGradient)" stroke-width="2" class="truss-line" />
-        </g>
-        
-        <!-- Right Side Truss (Mirror Pattern) -->
-        <g class="truss-right">
-          <line x1="320" y1="360" x2="340" y2="380" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="truss-line truss-bottom" />
-          <line x1="340" y1="380" x2="360" y2="360" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="truss-line truss-bottom" />
-          <line x1="360" y1="360" x2="380" y2="380" stroke="url(#orangeGradient)" stroke-width="2" opacity="0.7" class="truss-line orange-truss truss-bottom" />
-          <line x1="380" y1="380" x2="400" y2="360" stroke="url(#orangeGradient)" stroke-width="2" opacity="0.7" class="truss-line orange-truss truss-bottom" />
-          <line x1="400" y1="360" x2="420" y2="380" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="truss-line truss-bottom" />
-          <line x1="420" y1="380" x2="440" y2="360" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="truss-line truss-bottom" />
-          <line x1="440" y1="360" x2="460" y2="380" stroke="url(#orangeGradient)" stroke-width="2" opacity="0.7" class="truss-line orange-truss truss-bottom" />
-          <line x1="460" y1="380" x2="480" y2="360" stroke="url(#orangeGradient)" stroke-width="2" opacity="0.7" class="truss-line orange-truss truss-bottom" />
-          <line x1="480" y1="360" x2="500" y2="380" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="truss-line truss-bottom" />
-          <line x1="500" y1="380" x2="520" y2="360" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="truss-line truss-bottom" />
-          <line x1="520" y1="360" x2="540" y2="380" stroke="url(#orangeGradient)" stroke-width="2" opacity="0.7" class="truss-line orange-truss truss-bottom" />
-          <line x1="540" y1="380" x2="560" y2="360" stroke="url(#orangeGradient)" stroke-width="2" opacity="0.7" class="truss-line orange-truss truss-bottom" />
-          <line x1="560" y1="360" x2="580" y2="380" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="truss-line truss-bottom" />
-          <line x1="580" y1="380" x2="600" y2="360" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="truss-line truss-bottom" />
-          <line x1="600" y1="360" x2="620" y2="380" stroke="url(#orangeGradient)" stroke-width="2" opacity="0.7" class="truss-line orange-truss truss-bottom" />
-          <line x1="620" y1="380" x2="640" y2="360" stroke="url(#orangeGradient)" stroke-width="2" opacity="0.7" class="truss-line orange-truss truss-bottom" />
-          <line x1="640" y1="360" x2="660" y2="380" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="truss-line truss-bottom" />
-          <line x1="660" y1="380" x2="680" y2="360" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="truss-line truss-bottom" />
-          <line x1="680" y1="360" x2="700" y2="380" stroke="url(#orangeGradient)" stroke-width="2" opacity="0.7" class="truss-line orange-truss truss-bottom" />
-          <line x1="700" y1="380" x2="720" y2="360" stroke="url(#orangeGradient)" stroke-width="2" opacity="0.7" class="truss-line orange-truss truss-bottom" />
-          <line x1="720" y1="360" x2="740" y2="380" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="truss-line truss-bottom" />
-          <line x1="740" y1="380" x2="760" y2="360" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="truss-line truss-bottom" />
-          <line x1="760" y1="360" x2="780" y2="380" stroke="url(#orangeGradient)" stroke-width="2" opacity="0.7" class="truss-line orange-truss truss-bottom" />
-          <line x1="780" y1="380" x2="800" y2="360" stroke="url(#orangeGradient)" stroke-width="2" opacity="0.7" class="truss-line orange-truss truss-bottom" />
-          <line x1="800" y1="360" x2="820" y2="380" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7" class="truss-line truss-bottom" />
-        </g>
-      </g>
-      
-      <!-- Cable Connection Nodes (More Realistic Positioning) -->
-      <g class="cable-nodes">
-        <circle cx="320" cy="360" r="3.5" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" class="cable-node" />
-        <circle cx="360" cy="360" r="3.5" fill="none" stroke="url(#orangeGradient)" stroke-width="2.5" class="cable-node orange-node" />
-        <circle cx="400" cy="360" r="3.5" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" class="cable-node" />
-        <circle cx="440" cy="360" r="3.5" fill="none" stroke="url(#orangeGradient)" stroke-width="2.5" class="cable-node orange-node" />
-        <circle cx="480" cy="360" r="3.5" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" class="cable-node" />
-        <circle cx="520" cy="360" r="3.5" fill="none" stroke="url(#orangeGradient)" stroke-width="2.5" class="cable-node orange-node" />
-        <circle cx="560" cy="360" r="3.5" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" class="cable-node" />
-        <circle cx="600" cy="360" r="3.5" fill="none" stroke="url(#orangeGradient)" stroke-width="2.5" class="cable-node orange-node" />
-        <circle cx="640" cy="360" r="3.5" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" class="cable-node" />
-        <circle cx="680" cy="360" r="3.5" fill="none" stroke="url(#orangeGradient)" stroke-width="2.5" class="cable-node orange-node" />
-        <circle cx="720" cy="360" r="3.5" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" class="cable-node" />
-        <circle cx="760" cy="360" r="3.5" fill="none" stroke="url(#orangeGradient)" stroke-width="2.5" class="cable-node orange-node" />
-        <circle cx="800" cy="360" r="3.5" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" class="cable-node" />
-        <circle cx="840" cy="360" r="3.5" fill="none" stroke="url(#orangeGradient)" stroke-width="2.5" class="cable-node orange-node" />
-        <circle cx="880" cy="360" r="3.5" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" class="cable-node" />
-      </g>
-      
-      <!-- Network Infrastructure Elements -->
-      <g class="network-infrastructure">
-        <!-- Network Nodes/Servers on Bridge Deck -->
-        <g class="network-nodes">
-          <!-- Server Node 1 -->
-          <g class="network-node" style="animation: network-node-pulse 3s ease-in-out infinite;">
-            <rect x="380" y="340" width="20" height="15" fill="url(#nodeGradient)" stroke="url(#blueGradient)" stroke-width="1.5" rx="2" class="server-box" />
-            <circle cx="385" cy="347" r="1.5" fill="#00ccff" class="server-indicator" />
-            <circle cx="390" cy="347" r="1.5" fill="#00ccff" class="server-indicator" />
-            <circle cx="395" cy="347" r="1.5" fill="#00ccff" class="server-indicator" />
-          </g>
-          
-          <!-- Router Node 1 -->
-          <g class="network-node" style="animation: network-node-pulse 3s ease-in-out infinite 0.3s;">
-            <circle cx="480" cy="362" r="8" fill="url(#nodeGradient)" stroke="url(#blueGradient)" stroke-width="2" class="router-node" />
-            <circle cx="480" cy="362" r="4" fill="#00ccff" opacity="0.8" class="router-core" />
-            <line x1="472" y1="362" x2="468" y2="362" stroke="#00ccff" stroke-width="1.5" class="router-antenna" />
-            <line x1="488" y1="362" x2="492" y2="362" stroke="#00ccff" stroke-width="1.5" class="router-antenna" />
-          </g>
-          
-          <!-- Server Node 2 -->
-          <g class="network-node" style="animation: network-node-pulse 3s ease-in-out infinite 0.6s;">
-            <rect x="580" y="340" width="20" height="15" fill="url(#nodeGradient)" stroke="url(#orangeGradient)" stroke-width="1.5" rx="2" class="server-box orange-server" />
-            <circle cx="585" cy="347" r="1.5" fill="#FFB84D" class="server-indicator" />
-            <circle cx="590" cy="347" r="1.5" fill="#FFB84D" class="server-indicator" />
-            <circle cx="595" cy="347" r="1.5" fill="#FFB84D" class="server-indicator" />
-          </g>
-          
-          <!-- Router Node 2 -->
-          <g class="network-node" style="animation: network-node-pulse 3s ease-in-out infinite 0.9s;">
-            <circle cx="680" cy="362" r="8" fill="url(#nodeGradient)" stroke="url(#orangeGradient)" stroke-width="2" class="router-node orange-router" />
-            <circle cx="680" cy="362" r="4" fill="#FFB84D" opacity="0.8" class="router-core" />
-            <line x1="672" y1="362" x2="668" y2="362" stroke="#FFB84D" stroke-width="1.5" class="router-antenna" />
-            <line x1="688" y1="362" x2="692" y2="362" stroke="#FFB84D" stroke-width="1.5" class="router-antenna" />
-          </g>
-          
-          <!-- Server Node 3 -->
-          <g class="network-node" style="animation: network-node-pulse 3s ease-in-out infinite 1.2s;">
-            <rect x="780" y="340" width="20" height="15" fill="url(#nodeGradient)" stroke="url(#blueGradient)" stroke-width="1.5" rx="2" class="server-box" />
-            <circle cx="785" cy="347" r="1.5" fill="#00ccff" class="server-indicator" />
-            <circle cx="790" cy="347" r="1.5" fill="#00ccff" class="server-indicator" />
-            <circle cx="795" cy="347" r="1.5" fill="#00ccff" class="server-indicator" />
-          </g>
-        </g>
-        
-        <!-- Network Data Flow Connections -->
-        <g class="network-connections">
-          <!-- Connection between Server 1 and Router 1 -->
-          <line x1="400" y1="347" x2="472" y2="362" stroke="url(#dataFlowGradient)" stroke-width="2" stroke-dasharray="5,3" class="data-connection" style="animation: data-flow 2s linear infinite;" />
-          
-          <!-- Connection between Router 1 and Server 2 -->
-          <line x1="488" y1="362" x2="580" y2="347" stroke="url(#dataFlowGradient)" stroke-width="2" stroke-dasharray="5,3" class="data-connection" style="animation: data-flow 2s linear infinite 0.5s;" />
-          
-          <!-- Connection between Server 2 and Router 2 -->
-          <line x1="600" y1="347" x2="672" y2="362" stroke="url(#dataFlowGradient)" stroke-width="2" stroke-dasharray="5,3" class="data-connection" style="animation: data-flow 2s linear infinite 1s;" />
-          
-          <!-- Connection between Router 2 and Server 3 -->
-          <line x1="688" y1="362" x2="780" y2="347" stroke="url(#dataFlowGradient)" stroke-width="2" stroke-dasharray="5,3" class="data-connection" style="animation: data-flow 2s linear infinite 1.5s;" />
-          
-          <!-- Cross-connections for network topology -->
-          <line x1="480" y1="362" x2="680" y2="362" stroke="url(#dataFlowGradient)" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6" class="data-connection network-mesh" style="animation: data-flow 3s linear infinite 0.3s;" />
-        </g>
-        
-        <!-- Data Packets Flowing Along Cables -->
-        <g class="data-packets">
-          <!-- Packets on left cables (flowing up from deck to pylon) -->
-          <circle cx="305" cy="360" r="3" fill="url(#packetGradient)" class="data-packet packet-left-1" style="animation: packet-flow-up 4s linear infinite;" />
-          <circle cx="345" cy="360" r="3" fill="url(#packetGradient)" class="data-packet packet-left-2" style="animation: packet-flow-up 4s linear infinite 0.8s;" />
-          <circle cx="385" cy="360" r="3" fill="url(#packetGradient)" class="data-packet packet-left-3" style="animation: packet-flow-up 4s linear infinite 1.6s;" />
-          <circle cx="465" cy="360" r="3" fill="url(#packetGradient)" class="data-packet packet-left-4" style="animation: packet-flow-up 4s linear infinite 2.4s;" />
-          
-          <!-- Packets on right cables (flowing up from deck to pylon) -->
-          <circle cx="865" cy="360" r="3" fill="url(#packetGradient)" class="data-packet packet-right-1" style="animation: packet-flow-up 4s linear infinite 0.4s;" />
-          <circle cx="825" cy="360" r="3" fill="url(#packetGradient)" class="data-packet packet-right-2" style="animation: packet-flow-up 4s linear infinite 1.2s;" />
-          <circle cx="785" cy="360" r="3" fill="url(#packetGradient)" class="data-packet packet-right-3" style="animation: packet-flow-up 4s linear infinite 2s;" />
-          <circle cx="705" cy="360" r="3" fill="url(#packetGradient)" class="data-packet packet-right-4" style="animation: packet-flow-up 4s linear infinite 2.8s;" />
-        </g>
-        
-        <!-- Network Topology Indicators -->
-        <g class="network-topology">
-          <!-- Connection Points -->
-          <circle cx="390" cy="347" r="2" fill="#00ccff" class="connection-point" style="animation: connection-pulse 2s ease-in-out infinite;" />
-          <circle cx="480" cy="362" r="2" fill="#00ccff" class="connection-point" style="animation: connection-pulse 2s ease-in-out infinite 0.2s;" />
-          <circle cx="590" cy="347" r="2" fill="#FFB84D" class="connection-point orange-connection" style="animation: connection-pulse 2s ease-in-out infinite 0.4s;" />
-          <circle cx="680" cy="362" r="2" fill="#FFB84D" class="connection-point orange-connection" style="animation: connection-pulse 2s ease-in-out infinite 0.6s;" />
-          <circle cx="790" cy="347" r="2" fill="#00ccff" class="connection-point" style="animation: connection-pulse 2s ease-in-out infinite 0.8s;" />
-        </g>
-      </g>
-    </svg>
-  </div>
-  
   <div class="max-w-7xl mx-auto relative z-10">
     <!-- Centered Content Layout -->
     <div class="max-w-4xl mx-auto text-center">
       
       <!-- Main Headline with Enhanced Typography -->
       <div class="space-y-4 animate-fade-up" style="animation-delay: 0.2s">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tight">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
           Crafting Digital
           <span class="block mt-2">
             <span class="relative inline-block">
-              <span class="relative z-10 bg-gradient-to-r from-primary via-primary to-navy bg-clip-text text-transparent">Journeys</span>
-              <span class="absolute bottom-1 left-0 right-0 h-4 bg-primary/10 -z-0 transform -skew-x-12 rounded-sm"></span>
+              <span class="relative z-10 text-white">Journeys</span>
+              <span class="absolute bottom-1 left-0 right-0 h-4 bg-white/20 -z-0 transform -skew-x-12 rounded-sm"></span>
       </span>
         </span>
-          <span class="block text-slate-700">That Transform Businesses</span>
+          <span class="block text-white/90">That <span class="text-orange-400 font-semibold">Transform Businesses</span></span>
       </h1>
       </div>
 
       <!-- Description with Better Typography -->
       <div class="animate-fade-up mt-8" style="animation-delay: 0.3s">
-        <p class="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
+        <p class="text-lg md:text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-light">
         Your software is more than code—it's your brand's story, vision, and voice. 
         At BigBridz, we don't just build applications; we craft experiences that engage, convert, and grow.
       </p>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="animate-fade-up mt-10 flex flex-wrap justify-center gap-4" style="animation-delay: 0.4s">
+        <a routerLink="/contact" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4  font-bold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
+          Get Started
+        </a>
+        <a routerLink="/services" class="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4  font-bold text-lg hover:bg-white/20 transform hover:scale-105 transition-all duration-300">
+          Our Services
+        </a>
       </div>
     </div>
   </div>
@@ -708,25 +365,17 @@
             @for (tech of technologyStack; track tech.name) {
               <div class="tech-stack-card group">
                 <div class="tech-card-inner">
-                  <!-- Background with Gradient (no unrelated images) -->
-                  <div class="tech-card-bg">
-                    <div class="tech-gradient-bg bg-gradient-to-br" [ngClass]="tech.gradient"></div>
-                    <img [src]="tech.image" [alt]="tech.name" class="tech-bg-image" (error)="$any($event.target).style.display='none'" />
-                    <div class="tech-bg-overlay"></div>
-                  </div>
-                  
                   <!-- Content -->
                   <div class="tech-card-content">
-                    <div class="tech-icon-wrapper">
-                      <div class="tech-icon-glow"></div>
-                      <div class="text-3xl font-bold text-white tech-icon-text">{{ tech.name.charAt(0) }}</div>
-                    </div>
                     <h4 class="tech-name">{{ tech.name }}</h4>
                     <p class="tech-category">{{ tech.category }}</p>
                   </div>
                   
-                  <!-- Hover Shine Effect -->
-                  <div class="tech-shine"></div>
+                  <!-- Animated Border -->
+                  <div class="tech-card-border"></div>
+                  
+                  <!-- Hover Glow Effect -->
+                  <div class="tech-hover-glow"></div>
                 </div>
               </div>
             }
@@ -735,25 +384,17 @@
             @for (tech of technologyStack; track tech.name + '-dup') {
               <div class="tech-stack-card group">
                 <div class="tech-card-inner">
-                  <!-- Background with Gradient (no unrelated images) -->
-                  <div class="tech-card-bg">
-                    <div class="tech-gradient-bg bg-gradient-to-br" [ngClass]="tech.gradient"></div>
-                    <img [src]="tech.image" [alt]="tech.name" class="tech-bg-image" (error)="$any($event.target).style.display='none'" />
-                    <div class="tech-bg-overlay"></div>
-                  </div>
-                  
                   <!-- Content -->
                   <div class="tech-card-content">
-                    <div class="tech-icon-wrapper">
-                      <div class="tech-icon-glow"></div>
-                      <div class="text-3xl font-bold text-white tech-icon-text">{{ tech.name.charAt(0) }}</div>
-                    </div>
                     <h4 class="tech-name">{{ tech.name }}</h4>
                     <p class="tech-category">{{ tech.category }}</p>
                   </div>
                   
-                  <!-- Hover Shine Effect -->
-                  <div class="tech-shine"></div>
+                  <!-- Animated Border -->
+                  <div class="tech-card-border"></div>
+                  
+                  <!-- Hover Glow Effect -->
+                  <div class="tech-hover-glow"></div>
                 </div>
               </div>
             }

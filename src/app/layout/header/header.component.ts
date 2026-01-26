@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { IconComponent } from '../../common/icon/icon.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, IconComponent],
+  imports: [RouterLink, RouterLinkActive, IconComponent, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   showSolutionsDropdown = false;
+  showMobileMenu = false;
+  showMobileSolutions = false;
 
   solutions = [
     { title: 'E-commerce & Retail', icon: 'ecommerce', route: 'solutions/ecommerce' },
@@ -29,5 +32,25 @@ export class HeaderComponent {
 
   onSolutionsMouseLeave(): void {
     this.showSolutionsDropdown = false;
+  }
+
+  toggleMobileMenu(): void {
+    this.showMobileMenu = !this.showMobileMenu;
+    // Prevent body scroll when menu is open
+    if (this.showMobileMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+
+  closeMobileMenu(): void {
+    this.showMobileMenu = false;
+    this.showMobileSolutions = false;
+    document.body.style.overflow = '';
+  }
+
+  toggleMobileSolutions(): void {
+    this.showMobileSolutions = !this.showMobileSolutions;
   }
 }

@@ -1,20 +1,22 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, HostListener, OnDestroy } from '@angular/core';
 import { RouterOutlet, NavigationEnd, Router } from '@angular/router';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { AutoScrollRevealService } from './common/auto-scroll-reveal.service';
 import { filter } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   providers: [AutoScrollRevealService]
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   title = 'BigBridz';
+  showWhatsApp = false;
 
   constructor(
     private router: Router,
@@ -30,10 +32,28 @@ export class AppComponent implements OnInit, AfterViewInit {
           this.initScrollReveal();
         }, 100);
       });
+    
+    // Check initial scroll position
+    this.checkScrollPosition();
   }
 
   ngAfterViewInit(): void {
     this.initScrollReveal();
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    this.checkScrollPosition();
+  }
+
+  private checkScrollPosition(): void {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    // Show WhatsApp button after scrolling 300px
+    this.showWhatsApp = scrollPosition > 300;
+  }
+
+  ngOnDestroy(): void {
+    // Cleanup if needed
   }
 
   private initScrollReveal(): void {

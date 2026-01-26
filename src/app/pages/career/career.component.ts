@@ -126,7 +126,7 @@ export class CareerComponent {
       `Resume Link: ${formData.resume || 'Not provided'}`
     );
     
-    const mailtoLink = `mailto:bvsuresh.ab@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:info@bigbridz.com?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
     
     setTimeout(() => {
