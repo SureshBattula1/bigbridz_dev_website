@@ -34,7 +34,7 @@ export class LogisticsComponent {
       icon: 'route-optimization',
       title: 'Route Optimization',
       description: 'AI-powered route optimization to reduce delivery time and fuel costs.',
-      image: 'assets/images/logistics/logistics-routes.jpg'
+      image: 'assets/images/logistics/logistics-route.jpg'
     },
     {
       icon: 'delivery',

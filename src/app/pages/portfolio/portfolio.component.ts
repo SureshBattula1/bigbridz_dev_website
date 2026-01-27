@@ -22,8 +22,8 @@ export class PortfolioComponent {
         'Multi-payment gateway integration',
         'Automated route optimization',
       ],
-      image: 'assets/portfolio-delivery.jpg',
-    },
+      image: 'assets/images/logistics/logistics-tracking.jpg',
+    }, 
     {
       name: 'Healthcare Appointment System',
       industry: 'Healthcare',
@@ -36,7 +36,7 @@ export class PortfolioComponent {
         'SMS/Email reminders',
         'EHR system integration',
       ],
-      image: 'assets/portfolio-healthcare.jpg',
+      image: 'assets/images/healthcare/healthcare-ehr.jpg',
     },
     {
       name: 'B2B Ordering Portal',
@@ -50,7 +50,7 @@ export class PortfolioComponent {
         'Credit limit management',
         'Automated invoice generation',
       ],
-      image: 'assets/portfolio-b2b.jpg',
+      image: 'assets/images/logistics/logistics-warehouse.jpg',
     },
     {
       name: 'E-Learning Platform',
@@ -64,7 +64,7 @@ export class PortfolioComponent {
         'Student progress analytics',
         'Mobile learning app',
       ],
-      image: 'assets/portfolio-education.jpg',
+      image: 'assets/images/education/education-lms.jpg',
     },
     {
       name: 'Food Delivery Marketplace',
@@ -78,7 +78,7 @@ export class PortfolioComponent {
         'Loyalty & rewards program',
         'Multi-restaurant search',
       ],
-      image: 'assets/portfolio-food.jpg',
+      image: 'assets/images/food/food-ordering.jpg',
     },
     {
       name: 'Property Management System',
@@ -92,7 +92,7 @@ export class PortfolioComponent {
         'Payment processing',
         'Maintenance request tracking',
       ],
-      image: 'assets/portfolio-realestate.jpg',
+      image: 'assets/images/realestate/realestate-listings.jpg',
     },
   ];
 }

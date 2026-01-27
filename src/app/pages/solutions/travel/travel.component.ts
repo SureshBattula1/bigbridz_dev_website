@@ -34,7 +34,7 @@ export class TravelComponent {
       icon: 'review-platform',
       title: 'Review Platform',
       description: 'Integrated review and rating systems to build trust and improve service quality.',
-      image: 'assets/images/travel/travel-reviews.jpg'
+      image: 'assets/images/travel/travel-review.jpg'
     },
     {
       icon: 'customer-engagement',
