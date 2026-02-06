@@ -71,9 +71,12 @@
 </section>
 
 <!-- Advanced Features Section - Absolute Positioned -->
-<section class="section-padding relative overflow-hidden bg-white">
-  <!-- Absolute positioned background elements -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+<section class="advanced-capabilities-section section-padding relative overflow-hidden" style="background: transparent;">
+  <!-- Fixed Background -->
+  <div class="advanced-capabilities-background" [style.background-image]="'url(' + backgroundImage + ')'"></div>
+  
+  <!-- Absolute positioned background elements (overlay) -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
     <div class="absolute top-0 left-0 w-[600px] h-[600px] bg-primary/3 rounded-full blur-[120px]"></div>
     <div class="absolute bottom-0 right-0 w-[700px] h-[700px] bg-navy/3 rounded-full blur-[140px]"></div>
     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/2 rounded-full blur-[100px]"></div>
@@ -175,83 +178,64 @@
 
       <div class="grid gap-8 md:grid-cols-3 relative z-10">
         @for (example of realWorldExamples; track example.industry; let i = $index) {
-          <div class="success-story-card group relative animate-fade-up" [style.animation-delay.ms]="i * 150">
-            <!-- Connecting Line Animation (Desktop Only) -->
-            @if (i < realWorldExamples.length - 1) {
-              <div class="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 z-0 success-connector-line"></div>
-            }
-            
+          <div class="case-study-card group relative animate-fade-up" [style.animation-delay.ms]="i * 150">
             <!-- Main Card Container -->
-            <div class="success-card-container h-full relative overflow-hidden rounded-2xl">
-              <!-- Background Image with Parallax Effect -->
-              <div class="success-card-bg-image">
-                <img [src]="example.image" [alt]="example.industry" class="success-bg-img" />
-                <div class="success-bg-overlay"></div>
-              </div>
+            <div class="case-study-container h-full bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
               
-              <!-- Animated Gradient Overlay -->
-              <div class="success-gradient-overlay" [ngClass]="example.gradient"></div>
-              
-              <!-- Floating Particles -->
-              <div class="success-particles">
-                <div class="success-particle success-particle-1"></div>
-                <div class="success-particle success-particle-2"></div>
-                <div class="success-particle success-particle-3"></div>
-              </div>
-              
-              <!-- Content Container -->
-              <div class="relative z-20 p-6 h-full flex flex-col">
-                <!-- Header with Icon -->
-                <div class="mb-6">
-                  <div class="flex items-center gap-4 mb-4">
-                    <div class="success-icon-wrapper">
-                      <div class="success-icon-glow"></div>
-                      <div class="success-icon-bg"></div>
-                      <app-icon [name]="example.icon" size="32" class="text-white relative z-10 success-icon"></app-icon>
+              <!-- Image Section with Parallax Effect -->
+              <div class="case-study-image-wrapper relative h-48 overflow-hidden">
+                <img [src]="example.image" 
+                     [alt]="example.industry" 
+                     class="case-study-image w-full h-full object-cover transition-transform duration-700 ease-out"
+                     onerror="this.style.display='none';" />
+                <div class="case-study-image-overlay absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                
+                <!-- Header Content Over Image -->
+                <div class="case-study-header-overlay absolute bottom-0 left-0 right-0 p-6 text-white z-10">
+                  <div class="flex items-center gap-4">
+                    <div class="case-study-icon-wrapper flex-shrink-0">
+                      <app-icon [name]="example.icon" size="40" class="text-white"></app-icon>
                     </div>
                     <div class="flex-1">
-                      <div class="success-number-badge">{{ i + 1 }}</div>
-                      <h4 class="font-bold text-xl text-white mt-2 success-title">{{ example.industry }}</h4>
+                      <div class="text-xs font-semibold text-white/80 mb-1">Case Study #{{ i + 1 }}</div>
+                      <h4 class="text-xl font-bold text-white">{{ example.industry }}</h4>
                     </div>
                   </div>
                 </div>
-                
-                <!-- Content Sections -->
-                <div class="flex-1 space-y-5">
-                  <!-- Challenge Section -->
-                  <div class="success-section">
-                    <div class="flex items-center gap-2 mb-2">
-                      <div class="success-section-dot success-dot-challenge"></div>
-                      <p class="text-xs font-bold text-white/90 uppercase tracking-wider">Challenge</p>
-                    </div>
-                    <p class="text-sm text-white/80 leading-relaxed success-text">{{ example.challenge }}</p>
-                  </div>
-                  
-                  <!-- Solution Section -->
-                  <div class="success-section">
-                    <div class="flex items-center gap-2 mb-2">
-                      <div class="success-section-dot success-dot-solution"></div>
-                      <p class="text-xs font-bold text-white/90 uppercase tracking-wider">Solution</p>
-                    </div>
-                    <p class="text-sm text-white/80 leading-relaxed success-text">{{ example.solution }}</p>
-                  </div>
-                  
-                  <!-- Results Section -->
-                  <div class="success-results pt-4 border-t border-white/20">
-                    <div class="flex items-center gap-2 mb-3">
-                      <div class="success-section-dot success-dot-result"></div>
-                      <p class="text-xs font-bold text-white uppercase tracking-wider">Results</p>
-                    </div>
-                    <p class="text-sm font-semibold text-white leading-relaxed success-result-text">{{ example.result }}</p>
-                  </div>
-                </div>
-                
-                <!-- Animated Border Glow -->
-                <div class="success-border-glow"></div>
-                
-                <!-- Shine Effect -->
-                <div class="success-shine"></div>
               </div>
+              
+              <!-- Card Body -->
+              <div class="case-study-body p-6 space-y-6">
+                <!-- Challenge Section -->
+                <div class="case-study-section case-study-animate-item case-study-item-1">
+                  <div class="flex items-center gap-2 mb-3">
+                    <div class="case-study-dot case-study-dot-challenge"></div>
+                    <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wide">Challenge</h5>
+                  </div>
+                  <p class="text-sm text-gray-700 leading-relaxed">{{ example.challenge }}</p>
+                </div>
+                
+                <!-- Solution Section -->
+                <div class="case-study-section case-study-animate-item case-study-item-2">
+                  <div class="flex items-center gap-2 mb-3">
+                    <div class="case-study-dot case-study-dot-solution"></div>
+                    <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wide">Solution</h5>
+                  </div>
+                  <p class="text-sm text-gray-700 leading-relaxed">{{ example.solution }}</p>
+                </div>
+                
+                <!-- Results Section -->
+                <div class="case-study-results pt-4 border-t border-gray-200 case-study-animate-item case-study-item-3">
+                  <div class="flex items-center gap-2 mb-3">
+                    <div class="case-study-dot case-study-dot-result"></div>
+                    <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wide">Results</h5>
+                  </div>
+                  <p class="text-sm font-semibold text-primary leading-relaxed">{{ example.result }}</p>
+                </div>
+              </div>
+              
+              <!-- Hover Glow Effect -->
+              <div class="case-study-glow absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500"></div>
             </div>
           </div>
         }
@@ -355,8 +339,8 @@
         </div>
         
         <!-- Gradient Fade Overlays -->
-        <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
-        <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none"></div>
+        <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r  to-transparent z-20 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l  to-transparent z-20 pointer-events-none"></div>
         
         <!-- Scrolling Cards Container -->
         <div class="tech-stack-scroll relative z-10">
@@ -365,6 +349,11 @@
             @for (tech of technologyStack; track tech.name) {
               <div class="tech-stack-card group">
                 <div class="tech-card-inner">
+                  <!-- Logo Image -->
+                  <div class="tech-logo-container">
+                    <img [src]="tech.image" [alt]="tech.name + ' logo'" class="tech-logo" onerror="this.style.display='none';" />
+                  </div>
+                  
                   <!-- Content -->
                   <div class="tech-card-content">
                     <h4 class="tech-name">{{ tech.name }}</h4>
@@ -384,6 +373,11 @@
             @for (tech of technologyStack; track tech.name + '-dup') {
               <div class="tech-stack-card group">
                 <div class="tech-card-inner">
+                  <!-- Logo Image -->
+                  <div class="tech-logo-container">
+                    <img [src]="tech.image" [alt]="tech.name + ' logo'" class="tech-logo" onerror="this.style.display='none';" />
+                  </div>
+                  
                   <!-- Content -->
                   <div class="tech-card-content">
                     <h4 class="tech-name">{{ tech.name }}</h4>
@@ -470,9 +464,12 @@
 </section>
 
 <!-- Why Choose Section -->
-<section class="section-padding bg-gradient-to-br from-white via-slate-50 to-primary/5 relative overflow-hidden">
+<section class="section-padding why-choose-section relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="why-choose-background" [style.background-image]="'url(' + whyChooseBackgroundImage + ')'"></div>
+  
   <!-- Background Animated Circles -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+  <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
     <div class="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse-slow"></div>
     <div class="absolute bottom-20 right-10 w-80 h-80 bg-navy/5 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1s;"></div>
   </div>
@@ -489,7 +486,7 @@
     </div>
     
     <!-- Circle and Thread Network Design -->
-    <div class="why-choose-network relative min-h-[600px]">
+    <div class="why-choose-network relative min-h-[380px]">
       <!-- Connecting Threads SVG -->
       <svg class="why-choose-threads absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1200 600" preserveAspectRatio="none">
         <defs>
@@ -582,6 +579,16 @@
         </div>
       }
       </div>
+    </div>
+    
+    <!-- Mission Text Section -->
+    <div class="mt-2 text-center animate-fade-up relative z-10">
+      <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+        Your Success is Our <span class="text-orange-400">Mission</span>
+      </h3>
+      <p class="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        At BigBridz, we don't just write code—we craft digital experiences that drive real business results. With a proven track record of delivering exceptional software solutions, we've become the trusted partner for businesses looking to transform their digital presence.
+      </p>
     </div>
   </div>
 </section>

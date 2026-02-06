@@ -13,6 +13,9 @@ import { IconComponent } from '../../common/icon/icon.component';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  backgroundImage = 'assets/images/home/lines-background3.jpg';
+  whyChooseBackgroundImage = 'assets/images/home/lines-background.png';
+  
   services = [
     {
       title: 'Mobile App Development',
@@ -233,99 +236,75 @@ export class HomeComponent {
   technologyStack = [
     {
       name: 'Angular',
-      image: 'assets/images/tech-logos/angular.jpg',
+      image: 'assets/images/tech-logos/angular.png',
       category: 'Frontend',
       gradient: 'from-red-600 to-red-800'
     },
     {
       name: 'React',
-      image: 'assets/images/tech-logos/react.jpg',
+      image: 'assets/images/tech-logos/react.png',
       category: 'Frontend',
       gradient: 'from-cyan-500 to-blue-600'
     },
     {
       name: 'Node.js',
-      image: 'assets/images/tech-logos/nodejs.jpg',
+      image: 'assets/images/tech-logos/node.js.png',
       category: 'Backend',
       gradient: 'from-green-600 to-green-800'
     },
     {
-      name: '.NET',
-      image: 'assets/images/tech-logos/dotnet.jpg',
-      category: 'Backend',
-      gradient: 'from-purple-600 to-purple-800'
-    },
-    {
       name: 'Python',
-      image: 'assets/images/tech-logos/python.jpg',
+      image: 'assets/images/tech-logos/python.png',
       category: 'Backend',
       gradient: 'from-yellow-500 to-blue-600'
     },
     {
       name: 'AWS',
-      image: 'assets/images/tech-logos/aws.jpg',
+      image: 'assets/images/tech-logos/aws.png',
       category: 'Cloud',
       gradient: 'from-orange-500 to-orange-700'
     },
     {
       name: 'Docker',
-      image: 'assets/images/tech-logos/docker.jpg',
+      image: 'assets/images/tech-logos/docker.png',
       category: 'DevOps',
       gradient: 'from-blue-500 to-cyan-600'
     },
     {
       name: 'Kubernetes',
-      image: 'assets/images/tech-logos/kubernetes.jpg',
+      image: 'assets/images/tech-logos/kubernetes.png',
       category: 'DevOps',
       gradient: 'from-blue-600 to-blue-800'
     },
     {
-      name: 'PostgreSQL',
-      image: 'assets/images/tech-logos/postgresql.jpg',
-      category: 'Database',
-      gradient: 'from-blue-700 to-blue-900'
-    },
-    {
-      name: 'MongoDB',
-      image: 'assets/images/tech-logos/mongodb.jpg',
-      category: 'Database',
-      gradient: 'from-green-500 to-green-700'
-    },
-    {
-      name: 'Redis',
-      image: 'assets/images/tech-logos/redis.jpg',
-      category: 'Database',
+      name: 'Laravel',
+      image: 'assets/images/tech-logos/laravel.png',
+      category: 'Backend',
       gradient: 'from-red-500 to-red-700'
     },
     {
-      name: 'GraphQL',
-      image: 'assets/images/tech-logos/graphql.jpg',
-      category: 'API',
-      gradient: 'from-pink-500 to-purple-600'
+      name: 'PHP',
+      image: 'assets/images/tech-logos/php.png',
+      category: 'Backend',
+      gradient: 'from-indigo-500 to-purple-600'
     },
     {
-      name: 'Vue.js',
-      image: 'assets/images/tech-logos/vuejs.jpg',
-      category: 'Frontend',
-      gradient: 'from-green-400 to-green-600'
+      name: 'Flutter',
+      image: 'assets/images/tech-logos/flutter.png',
+      category: 'Mobile',
+      gradient: 'from-blue-400 to-cyan-500'
     },
     {
-      name: 'TypeScript',
-      image: 'assets/images/tech-logos/typescript.jpg',
-      category: 'Language',
+      name: 'Kotlin',
+      image: 'assets/images/tech-logos/kotlin.png',
+      category: 'Mobile',
+      gradient: 'from-purple-500 to-pink-600'
+    },
+    {
+      name: 'SAP',
+      image: 'assets/images/tech-logos/sap.png',
+      category: 'Enterprise',
       gradient: 'from-blue-600 to-blue-800'
-    },
-    {
-      name: 'Azure',
-      image: 'assets/images/tech-logos/azure.jpg',
-      category: 'Cloud',
-      gradient: 'from-blue-500 to-blue-700'
-    },
-    {
-      name: 'GCP',
-      image: 'assets/images/tech-logos/gcp.jpg',
-      category: 'Cloud',
-      gradient: 'from-blue-400 to-blue-600'
     }
   ];
 

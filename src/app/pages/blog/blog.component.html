@@ -1,33 +1,105 @@
-<app-section-header
-  eyebrow="Blog"
-  title="Insights from the BigBridz team"
-  subtitle="Articles and checklists to help you plan and execute your next software project."
-/>
+<div class="blog-page-wrapper">
+  <!-- Background -->
+  <div class="blog-background" [style.background-image]="'url(' + backgroundImage + ')'"></div>
+  
+  <!-- Content -->
+  <div class="blog-content">
+    <!-- Header Section -->
+    <div class="blog-header-section">
+      <app-section-header
+        eyebrow="Blog"
+        title="Insights from the BigBridz team"
+        subtitle="Articles and checklists to help you plan and execute your next software project."
+      />
+    </div>
 
-<section class="section-padding pt-4">
-  <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-    @for (post of posts; track post.title; let i = $index) {
-      <article class="card flex flex-col gap-3 animate-fade-up overflow-hidden" [style.animation-delay.ms]="i * 100">
-        @if (post.image) {
-          <div class="hero-image-frame rounded-lg overflow-hidden bg-gradient-to-br from-primary/10 to-navy/10 -mx-6 -mt-6 mb-3">
-            <img [src]="post.image" [alt]="post.title" class="w-full h-40 object-cover" onerror="this.style.display='none'" />
-          </div>
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts-section">
+      <div class="blog-posts-grid">
+        @for (post of posts; track post.title; let i = $index) {
+          <article class="blog-post-card" [style.animation-delay.ms]="i * 100">
+            <!-- Card Content -->
+            <div class="post-card-body">
+              <!-- Category Badge -->
+              <div class="post-category-badge-inline">
+                <span>{{ post.category }}</span>
+              </div>
+              
+              <!-- Meta Info -->
+              <div class="post-meta-info">
+                <span class="post-date">{{ post.date }}</span>
+                <span class="post-read-time">
+                  <svg class="post-read-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  {{ post.readTime }}
+                </span>
+              </div>
+              
+              <!-- Title -->
+              <h3 class="post-card-title">{{ post.title }}</h3>
+              
+              <!-- Summary -->
+              <p class="post-card-summary">{{ post.summary }}</p>
+              
+              <!-- Read More Link -->
+              <div class="post-card-footer">
+                <a href="#" class="post-read-more" (click)="openModal(post); $event.preventDefault()">
+                  Read Article
+                  <svg class="post-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Hover Effect Border -->
+            <div class="post-card-border-effect"></div>
+          </article>
         }
-        <div class="flex items-center gap-3 text-xs">
-          <span class="pill-badge">{{ post.category }}</span>
-          <span class="text-gray-400">{{ post.readTime }}</span>
-        </div>
-        <h3 class="text-base md:text-lg font-semibold text-slate-900 leading-tight">
-          {{ post.title }}
-        </h3>
-        <p class="text-sm text-gray-600 flex-1 leading-relaxed">
-          {{ post.summary }}
-        </p>
-        <p class="text-xs text-gray-400 pt-2 border-t border-gray-100">
-          {{ post.date }}
-        </p>
-      </article>
-    }
+      </div>
+    </section>
   </div>
-</section>
+
+  <!-- Article Modal -->
+  @if (isModalOpen && selectedPost) {
+    <div class="blog-modal-overlay" (click)="closeModal()">
+      <div class="blog-modal-content" (click)="$event.stopPropagation()">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <div class="modal-header-top">
+            <div class="modal-category-badge">
+              <span>{{ selectedPost.category }}</span>
+            </div>
+            <button class="modal-close-btn" (click)="closeModal()" aria-label="Close modal">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <h2 class="modal-title">{{ selectedPost.title }}</h2>
+          <div class="modal-meta">
+            <span class="modal-date">{{ selectedPost.date }}</span>
+            <span class="modal-read-time">
+              <svg class="modal-read-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              {{ selectedPost.readTime }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <p class="modal-explanation">{{ selectedPost.briefExplanation }}</p>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button class="modal-close-button" (click)="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>
 
