@@ -1,63 +1,69 @@
-<section class="section-padding pb-16 pt-12 md:pt-16 hero-gradient relative overflow-hidden">
+<section
+  class="section-padding pb-16 pt-12 md:pt-16 hero-gradient relative overflow-hidden min-h-[calc(100vh-80px)] flex items-center">
   <!-- Ambient background lighting elements -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-12 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-10 right-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute top-12 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-3xl">
+    </div>
   </div>
 
-  <div class="max-w-7xl mx-auto relative z-10">
+  <div class="max-w-7xl mx-auto relative z-10 w-full">
     <div class="grid lg:grid-cols-[1.1fr,0.9fr] gap-12 lg:gap-8 items-center">
-      
+
       <!-- Left: Headline, Value Proposition, Action CTAs & Trust Markers -->
       <div class="text-left space-y-6 animate-fade-up">
-        
-        <!-- Studio Eyebrow Badge -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-white tracking-wide">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>Software Engineering Studio • Hyderabad, India</span>
-        </div>
+
+
 
         <!-- Main Headline -->
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.12] tracking-tight">
-          Reliable Software
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.12] tracking-tight">
+          From Complex
           <span class="block mt-2">
             <span class="relative inline-block">
-              <span class="relative z-10 text-white">Engineering</span>
-              <span class="absolute bottom-1.5 left-0 right-0 h-3.5 bg-white/20 -z-0 transform -skew-x-12 rounded-sm"></span>
+              <span class="relative z-10 text-primary">Challenges</span>
+              <span
+                class="absolute bottom-1.5 left-0 right-0 h-3.5 bg-primary/15 -z-0 transform -skew-x-12 rounded-sm"></span>
             </span>
           </span>
-          <span class="block text-white/90">Built for <span class="text-orange-400 font-semibold">Real Business Scale</span></span>
+          <span class="block text-slate-800">To<span class="text-orange-500 font-semibold"> Scalable
+              Software</span></span>
         </h1>
 
         <!-- Description with Better Typography -->
-        <p class="text-base sm:text-lg lg:text-xl text-white/85 max-w-xl leading-relaxed font-light">
-          We engineer production-ready web platforms, mobile applications, and custom cloud backends. Direct collaboration with senior engineers, clean architecture, and predictable sprint delivery.
+        <p class="text-base sm:text-lg lg:text-xl text-slate-600 max-w-xl leading-relaxed font-normal">
+          We design, build, and scale reliable digital solutions—from web platforms and mobile applications to
+          enterprise systems and cloud-based applications. Our engineers work closely with your team to deliver secure,
+          maintainable software that solves real business challenges.
+
         </p>
 
         <!-- CTA Buttons -->
         <div class="flex flex-wrap items-center gap-4 pt-2">
-          <a routerLink="/contact" class="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-7 py-3.5 rounded-full font-bold text-base shadow-xl hover:shadow-orange-500/25 transform hover:scale-105 active:scale-95 transition-all duration-300 inline-flex items-center gap-2">
+          <a routerLink="/contact"
+            class="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-7 py-3.5 rounded-full font-bold text-base shadow-xl hover:shadow-orange-500/25 transform hover:scale-105 active:scale-95 transition-all duration-300 inline-flex items-center gap-2">
             <span>Discuss Your Project</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
             </svg>
           </a>
-          <a routerLink="/services" class="bg-white/10 backdrop-blur-md border-2 border-white/40 text-white px-7 py-3.5 rounded-full font-bold text-base hover:bg-white/20 transform hover:scale-105 active:scale-95 transition-all duration-300 inline-flex items-center gap-2">
+          <a routerLink="/services"
+            class="bg-white/80 hover:bg-white text-primary border-2 border-primary/30 shadow-md hover:shadow-lg px-7 py-3.5 rounded-full font-bold text-base hover:scale-105 active:scale-95 transition-all duration-300 inline-flex items-center gap-2">
             <span>Our Services</span>
           </a>
         </div>
 
         <!-- Trust Badges Row -->
-        <div class="pt-4 flex flex-wrap gap-y-2 gap-x-6 text-xs sm:text-sm text-white/80 border-t border-white/15">
-          <span class="flex items-center gap-1.5">
-            <span class="text-emerald-400 font-bold">✓</span> 100% IP & Code Ownership
+        <div class="pt-4 flex flex-wrap gap-y-2 gap-x-6 text-xs sm:text-sm text-slate-700 border-t border-slate-200">
+          <span class="flex items-center gap-1.5 font-medium">
+            <span class="text-emerald-600 font-bold">✓</span> Complete Code Ownership & IP Rights
           </span>
-          <span class="flex items-center gap-1.5">
-            <span class="text-emerald-400 font-bold">✓</span> Weekly Working Demos
+          <span class="flex items-center gap-1.5 font-medium">
+            <span class="text-emerald-600 font-bold">✓</span> Transparent Development & Weekly Demos
           </span>
-          <span class="flex items-center gap-1.5">
-            <span class="text-emerald-400 font-bold">✓</span> Senior Engineer Access
+          <span class="flex items-center gap-1.5 font-medium">
+            <span class="text-emerald-600 font-bold">✓</span> Direct Access to Experienced Engineers
           </span>
         </div>
       </div>
@@ -67,71 +73,64 @@
         <!-- Ambient Stage Glow -->
         <div class="absolute w-72 h-72 bg-orange-500/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
 
-        <div class="book-stage"
-             tabindex="0"
-             role="group"
-             aria-label="3D Interactive Engineering Craftsmanship Book. Hover or tap to flip pages."
-             (pointerenter)="onStagePointerEnter()"
-             (pointerleave)="onStagePointerLeave()"
-             (click)="toggleBookFlip()"
-             (keydown.enter)="toggleBookFlip()"
-             (keydown.space)="toggleBookFlip()">
+        <div class="book-stage" tabindex="0" role="group"
+          aria-label="3D Interactive Engineering Craftsmanship Book. Hover or tap to flip pages."
+          (pointerenter)="onStagePointerEnter()" (pointerleave)="onStagePointerLeave()" (click)="toggleBookFlip()"
+          (keydown.enter)="toggleBookFlip()" (keydown.space)="toggleBookFlip()">
           <div class="book" [attr.data-s]="bookState">
             <div class="book-shadow"></div>
             @for (leaf of leaves; track leaf.id; let i = $index) {
-              <div class="leaf"
-                   [class.f]="leaf.isFlipped"
-                   [class.turning]="leaf.isTurning"
-                   [style.z-index]="leaf.zIndex"
-                   [style.transform]="leaf.peekTransform">
-                
-                <!-- Front Face -->
-                @if (leaf.frontType === 'cover') {
-                  <div class="face front cover">
-                    <span>BigBridz Software</span>
-                    <b>Craft in every detail.</b>
-                    <span>Engineering Lifecycle • Vol 01</span>
-                  </div>
-                } @else {
-                  <div class="face front">
-                    <img class="art" [src]="leaf.frontStage?.image" [alt]="leaf.frontStage?.title">
-                    <div class="cap">
-                      <span>{{ leaf.frontStage?.title }}</span>
-                      <span>{{ (leaf.frontIndex ?? 0) + 1 }} / 8</span>
-                    </div>
-                  </div>
-                }
+            <div class="leaf" [class.f]="leaf.isFlipped" [class.turning]="leaf.isTurning" [style.z-index]="leaf.zIndex"
+              [style.transform]="leaf.peekTransform">
 
-                <!-- Back Face -->
-                @if (leaf.backType === 'end') {
-                  <div class="face back end">
-                    <b>Built to last.</b>
-                    <span>BigBridz Engineering</span>
-                  </div>
-                } @else {
-                  <div class="face back">
-                    <img class="art" [src]="leaf.backStage?.image" [alt]="leaf.backStage?.title">
-                    <div class="cap">
-                      <span>{{ leaf.backStage?.title }}</span>
-                      <span>{{ (leaf.backIndex ?? 0) + 1 }} / 8</span>
-                    </div>
-                  </div>
-                }
+              <!-- Front Face -->
+              @if (leaf.frontType === 'cover') {
+              <div class="face front cover">
+                <span>BigBridz Software</span>
+                <b>Craft in every detail.</b>
+                <span>Engineering Lifecycle • Vol 01</span>
               </div>
+              } @else {
+              <div class="face front">
+                <img class="art" [src]="leaf.frontStage?.image" [alt]="leaf.frontStage?.title">
+                <div class="cap">
+                  <span>{{ leaf.frontStage?.title }}</span>
+                  <span>{{ (leaf.frontIndex ?? 0) + 1 }} / 8</span>
+                </div>
+              </div>
+              }
+
+              <!-- Back Face -->
+              @if (leaf.backType === 'end') {
+              <div class="face back end">
+                <b>Built to last.</b>
+                <span>BigBridz Engineering</span>
+              </div>
+              } @else {
+              <div class="face back">
+                <img class="art" [src]="leaf.backStage?.image" [alt]="leaf.backStage?.title">
+                <div class="cap">
+                  <span>{{ leaf.backStage?.title }}</span>
+                  <span>{{ (leaf.backIndex ?? 0) + 1 }} / 8</span>
+                </div>
+              </div>
+              }
+            </div>
             }
           </div>
           <div class="book-dots">
             @for (leaf of leaves; track leaf.id; let i = $index) {
-              <i [class.on]="currentLeafIndex > i"></i>
+            <i [class.on]="currentLeafIndex > i"></i>
             }
           </div>
         </div>
 
-        <div class="mt-4 flex items-center gap-2 text-xs text-white/70">
-          <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"></path>
+        <div class="mt-4 flex items-center gap-2 text-xs text-slate-600 font-medium">
+          <svg class="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25">
+            </path>
           </svg>
-          <span>Hover to flip pages • Tap or click on mobile</span>
         </div>
       </div>
 
@@ -141,42 +140,37 @@
 
 <div class="section-divider"></div>
 
-<app-section-header
-  eyebrow="Capabilities"
-  title="Full-lifecycle software engineering & product delivery"
-  subtitle="From early technical discovery and prototype validation to enterprise platform engineering and maintenance, we build maintainable software tailored to your workflow."
-/>
+<app-section-header eyebrow="Capabilities" title="Full-lifecycle software engineering & product delivery"
+  subtitle="From early technical discovery and prototype validation to enterprise platform engineering and maintenance, we build maintainable software tailored to your workflow." />
 
 <!-- Services Section with enhanced design -->
 <section class="section-padding pt-8">
   <div class="max-w-7xl mx-auto">
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
       @for (service of services; track service.title; let i = $index) {
-        <app-service-card
-          [title]="service.title"
-          [description]="service.description"
-          [icon]="service.icon"
-          [image]="service.image"
-          class="animate-fade-up transform hover:scale-105 transition-all duration-300"
-          [style.animation-delay.ms]="i * 100"
-        />
+      <app-service-card [title]="service.title" [description]="service.description" [icon]="service.icon"
+        [image]="service.image" class="animate-fade-up transform hover:scale-105 transition-all duration-300"
+        [style.animation-delay.ms]="i * 100" />
       }
     </div>
   </div>
 </section>
 
 <!-- Advanced Features Section - Absolute Positioned -->
-<section class="advanced-capabilities-section section-padding relative overflow-hidden" style="background: transparent;">
+<section class="advanced-capabilities-section section-padding relative overflow-hidden"
+  style="background: transparent;">
   <!-- Fixed Background -->
   <div class="advanced-capabilities-background" [style.background-image]="'url(' + backgroundImage + ')'"></div>
-  
+
   <!-- Absolute positioned background elements (overlay) -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
     <div class="absolute top-0 left-0 w-[600px] h-[600px] bg-primary/3 rounded-full blur-[120px]"></div>
     <div class="absolute bottom-0 right-0 w-[700px] h-[700px] bg-navy/3 rounded-full blur-[140px]"></div>
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/2 rounded-full blur-[100px]"></div>
+    <div
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/2 rounded-full blur-[100px]">
+    </div>
   </div>
-  
+
   <div class="max-w-7xl mx-auto relative z-10">
     <div class="text-center mb-16 animate-fade-up">
       <span class="pill-badge mb-4 inline-block">Advanced Capabilities</span>
@@ -184,71 +178,72 @@
         Architecture Built for <span class="text-primary">Production Demands</span>
       </h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-        Every system we build incorporates defensive security, horizontal scalability, and clean data contracts out of the box.
+        Every system we build incorporates defensive security, horizontal scalability, and clean data contracts out of
+        the box.
       </p>
     </div>
 
     <!-- Features Grid -->
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-16">
       @for (feature of advancedFeatures; track feature.title; let i = $index) {
-        <div class="feature-card-3d group relative animate-fade-up overflow-visible" [style.animation-delay.ms]="i * 100">
-          <!-- Animated Background Gradient Overlay -->
-          <div class="feature-card-gradient-overlay"></div>
-          
-          <!-- Floating Glow Particles -->
-          <div class="feature-card-particles">
-            <div class="particle particle-1"></div>
-            <div class="particle particle-2"></div>
-            <div class="particle particle-3"></div>
-            <div class="particle particle-4"></div>
-          </div>
-          
-          <!-- Main Card Content -->
-          <div class="card relative z-10 h-full bg-white rounded-2xl p-6 border border-gray-100">
-            <!-- Animated Corner Accents -->
-            <div class="feature-corner-accent feature-corner-top-left"></div>
-            <div class="feature-corner-accent feature-corner-top-right"></div>
-            <div class="feature-corner-accent feature-corner-bottom-left"></div>
-            <div class="feature-corner-accent feature-corner-bottom-right"></div>
-            
-            <!-- Icon Container with Large Animation -->
-            <div class="mb-6 relative">
-              <div class="feature-icon-wrapper">
-                <div class="feature-icon-glow"></div>
-                <div class="feature-icon-bg"></div>
-                <app-icon [name]="feature.icon" size="64" class="text-primary relative z-10 feature-icon"></app-icon>
-              </div>
-            </div>
-            
-            <!-- Title with Gradient Animation -->
-            <h3 class="text-xl font-bold text-slate-900 mb-3 feature-title">
-              {{ feature.title }}
-            </h3>
-            
-            <!-- Description -->
-            <p class="text-sm text-gray-600 mb-4 leading-relaxed feature-description">
-              {{ feature.description }}
-            </p>
-            
-            <!-- Real-World Example Section -->
-            <div class="pt-4 border-t border-gray-100 feature-example-section">
-              <p class="text-xs font-semibold text-primary mb-2 feature-example-label">Real-World Example:</p>
-              <p class="text-xs text-gray-600 mb-3 leading-relaxed feature-example-text">
-                {{ feature.example }}
-              </p>
-              <div class="flex flex-wrap gap-1.5 feature-tech-tags">
-                @for (tech of feature.tech.split(', '); track tech) {
-                  <span class="text-[10px] px-2 py-1 bg-primary/5 text-primary rounded-full font-medium feature-tech-tag">
-                    {{ tech }}
-                  </span>
-                }
-              </div>
-            </div>
-            
-            <!-- Animated Border Glow -->
-            <div class="feature-border-glow"></div>
-          </div>
+      <div class="feature-card-3d group relative animate-fade-up overflow-visible" [style.animation-delay.ms]="i * 100">
+        <!-- Animated Background Gradient Overlay -->
+        <div class="feature-card-gradient-overlay"></div>
+
+        <!-- Floating Glow Particles -->
+        <div class="feature-card-particles">
+          <div class="particle particle-1"></div>
+          <div class="particle particle-2"></div>
+          <div class="particle particle-3"></div>
+          <div class="particle particle-4"></div>
         </div>
+
+        <!-- Main Card Content -->
+        <div class="card relative z-10 h-full bg-white rounded-2xl p-6 border border-gray-100">
+          <!-- Animated Corner Accents -->
+          <div class="feature-corner-accent feature-corner-top-left"></div>
+          <div class="feature-corner-accent feature-corner-top-right"></div>
+          <div class="feature-corner-accent feature-corner-bottom-left"></div>
+          <div class="feature-corner-accent feature-corner-bottom-right"></div>
+
+          <!-- Icon Container with Large Animation -->
+          <div class="mb-6 relative">
+            <div class="feature-icon-wrapper">
+              <div class="feature-icon-glow"></div>
+              <div class="feature-icon-bg"></div>
+              <app-icon [name]="feature.icon" size="64" class="text-primary relative z-10 feature-icon"></app-icon>
+            </div>
+          </div>
+
+          <!-- Title with Gradient Animation -->
+          <h3 class="text-xl font-bold text-slate-900 mb-3 feature-title">
+            {{ feature.title }}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-sm text-gray-600 mb-4 leading-relaxed feature-description">
+            {{ feature.description }}
+          </p>
+
+          <!-- Real-World Example Section -->
+          <div class="pt-4 border-t border-gray-100 feature-example-section">
+            <p class="text-xs font-semibold text-primary mb-2 feature-example-label">Real-World Example:</p>
+            <p class="text-xs text-gray-600 mb-3 leading-relaxed feature-example-text">
+              {{ feature.example }}
+            </p>
+            <div class="flex flex-wrap gap-1.5 feature-tech-tags">
+              @for (tech of feature.tech.split(', '); track tech) {
+              <span class="text-[10px] px-2 py-1 bg-primary/5 text-primary rounded-full font-medium feature-tech-tag">
+                {{ tech }}
+              </span>
+              }
+            </div>
+          </div>
+
+          <!-- Animated Border Glow -->
+          <div class="feature-border-glow"></div>
+        </div>
+      </div>
       }
     </div>
 
@@ -257,9 +252,10 @@
       <!-- Animated Background Section -->
       <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-navy/5 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-navy/5 rounded-full blur-3xl animate-pulse-slow"
+          style="animation-delay: 1s;"></div>
       </div>
-      
+
       <div class="text-center mb-16 animate-fade-up relative z-10">
         <span class="pill-badge mb-4 inline-block">Case Studies</span>
         <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
@@ -272,68 +268,69 @@
 
       <div class="grid gap-8 md:grid-cols-3 relative z-10">
         @for (example of realWorldExamples; track example.industry; let i = $index) {
-          <div class="case-study-card group relative animate-fade-up" [style.animation-delay.ms]="i * 150">
-            <!-- Main Card Container -->
-            <div class="case-study-container h-full bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
-              
-              <!-- Image Section with Parallax Effect -->
-              <div class="case-study-image-wrapper relative h-48 overflow-hidden">
-                <img [src]="example.image" 
-                     [alt]="example.industry" 
-                     loading="lazy"
-                     decoding="async"
-                     class="case-study-image w-full h-full object-cover transition-transform duration-700 ease-out"
-                     onerror="this.style.display='none';" />
-                <div class="case-study-image-overlay absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                
-                <!-- Header Content Over Image -->
-                <div class="case-study-header-overlay absolute bottom-0 left-0 right-0 p-6 text-white z-10">
-                  <div class="flex items-center gap-4">
-                    <div class="case-study-icon-wrapper flex-shrink-0">
-                      <app-icon [name]="example.icon" size="40" class="text-white"></app-icon>
-                    </div>
-                    <div class="flex-1">
-                      <div class="text-xs font-semibold text-white/80 mb-1">Case Study #{{ i + 1 }}</div>
-                      <h4 class="text-xl font-bold text-white">{{ example.industry }}</h4>
-                    </div>
+        <div class="case-study-card group relative animate-fade-up" [style.animation-delay.ms]="i * 150">
+          <!-- Main Card Container -->
+          <div
+            class="case-study-container h-full bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
+
+            <!-- Image Section with Parallax Effect -->
+            <div class="case-study-image-wrapper relative h-48 overflow-hidden">
+              <img [src]="example.image" [alt]="example.industry" loading="lazy" decoding="async"
+                class="case-study-image w-full h-full object-cover transition-transform duration-700 ease-out"
+                onerror="this.style.display='none';" />
+              <div
+                class="case-study-image-overlay absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
+              </div>
+
+              <!-- Header Content Over Image -->
+              <div class="case-study-header-overlay absolute bottom-0 left-0 right-0 p-6 text-white z-10">
+                <div class="flex items-center gap-4">
+                  <div class="case-study-icon-wrapper flex-shrink-0">
+                    <app-icon [name]="example.icon" size="40" class="text-white"></app-icon>
+                  </div>
+                  <div class="flex-1">
+                    <div class="text-xs font-semibold text-white/80 mb-1">Case Study #{{ i + 1 }}</div>
+                    <h4 class="text-xl font-bold text-white">{{ example.industry }}</h4>
                   </div>
                 </div>
               </div>
-              
-              <!-- Card Body -->
-              <div class="case-study-body p-6 space-y-6">
-                <!-- Challenge Section -->
-                <div class="case-study-section case-study-animate-item case-study-item-1">
-                  <div class="flex items-center gap-2 mb-3">
-                    <div class="case-study-dot case-study-dot-challenge"></div>
-                    <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wide">Challenge</h5>
-                  </div>
-                  <p class="text-sm text-gray-700 leading-relaxed">{{ example.challenge }}</p>
+            </div>
+
+            <!-- Card Body -->
+            <div class="case-study-body p-6 space-y-6">
+              <!-- Challenge Section -->
+              <div class="case-study-section case-study-animate-item case-study-item-1">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="case-study-dot case-study-dot-challenge"></div>
+                  <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wide">Challenge</h5>
                 </div>
-                
-                <!-- Solution Section -->
-                <div class="case-study-section case-study-animate-item case-study-item-2">
-                  <div class="flex items-center gap-2 mb-3">
-                    <div class="case-study-dot case-study-dot-solution"></div>
-                    <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wide">Solution</h5>
-                  </div>
-                  <p class="text-sm text-gray-700 leading-relaxed">{{ example.solution }}</p>
-                </div>
-                
-                <!-- Results Section -->
-                <div class="case-study-results pt-4 border-t border-gray-200 case-study-animate-item case-study-item-3">
-                  <div class="flex items-center gap-2 mb-3">
-                    <div class="case-study-dot case-study-dot-result"></div>
-                    <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wide">Results</h5>
-                  </div>
-                  <p class="text-sm font-semibold text-primary leading-relaxed">{{ example.result }}</p>
-                </div>
+                <p class="text-sm text-gray-700 leading-relaxed">{{ example.challenge }}</p>
               </div>
-              
-              <!-- Hover Glow Effect -->
-              <div class="case-study-glow absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500"></div>
+
+              <!-- Solution Section -->
+              <div class="case-study-section case-study-animate-item case-study-item-2">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="case-study-dot case-study-dot-solution"></div>
+                  <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wide">Solution</h5>
+                </div>
+                <p class="text-sm text-gray-700 leading-relaxed">{{ example.solution }}</p>
+              </div>
+
+              <!-- Results Section -->
+              <div class="case-study-results pt-4 border-t border-gray-200 case-study-animate-item case-study-item-3">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="case-study-dot case-study-dot-result"></div>
+                  <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wide">Results</h5>
+                </div>
+                <p class="text-sm font-semibold text-primary leading-relaxed">{{ example.result }}</p>
+              </div>
+            </div>
+
+            <!-- Hover Glow Effect -->
+            <div class="case-study-glow absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500">
             </div>
           </div>
+        </div>
         }
       </div>
     </div>
@@ -366,47 +363,23 @@
               <rect x="425" y="95" width="30" height="15" fill="#0054A6" rx="7" class="bridge-glow" opacity="0.6" />
               <circle cx="440" cy="102" r="5" fill="#0054A6" class="bridge-glow" opacity="0.6" />
             </g>
-            
+
             <!-- Suspension Cables - Enhanced -->
-            <path d="M 360 110 Q 250 150 150 200" 
-                  stroke="#0054A6" 
-                  stroke-width="2.5" 
-                  fill="none" 
-                  stroke-linecap="round"
-                  stroke-dasharray="6,3"
-                  opacity="0.6"
-                  style="animation: bridge-cable-flow 8s linear infinite;" />
-            <path d="M 440 110 Q 550 150 650 200" 
-                  stroke="#0054A6" 
-                  stroke-width="2.5" 
-                  fill="none" 
-                  stroke-linecap="round"
-                  stroke-dasharray="6,3"
-                  opacity="0.6"
-                  style="animation: bridge-cable-flow 8s linear infinite 1s;" />
-            
+            <path d="M 360 110 Q 250 150 150 200" stroke="#0054A6" stroke-width="2.5" fill="none" stroke-linecap="round"
+              stroke-dasharray="6,3" opacity="0.6" style="animation: bridge-cable-flow 8s linear infinite;" />
+            <path d="M 440 110 Q 550 150 650 200" stroke="#0054A6" stroke-width="2.5" fill="none" stroke-linecap="round"
+              stroke-dasharray="6,3" opacity="0.6" style="animation: bridge-cable-flow 8s linear infinite 1s;" />
+
             <!-- Additional Suspension Cables for Depth -->
-            <path d="M 360 110 Q 280 140 200 200" 
-                  stroke="#0066cc" 
-                  stroke-width="2" 
-                  fill="none" 
-                  stroke-linecap="round"
-                  stroke-dasharray="4,4"
-                  opacity="0.4"
-                  style="animation: bridge-cable-flow 8s linear infinite 0.5s;" />
-            <path d="M 440 110 Q 520 140 600 200" 
-                  stroke="#0066cc" 
-                  stroke-width="2" 
-                  fill="none" 
-                  stroke-linecap="round"
-                  stroke-dasharray="4,4"
-                  opacity="0.4"
-                  style="animation: bridge-cable-flow 8s linear infinite 1.5s;" />
-            
+            <path d="M 360 110 Q 280 140 200 200" stroke="#0066cc" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-dasharray="4,4" opacity="0.4" style="animation: bridge-cable-flow 8s linear infinite 0.5s;" />
+            <path d="M 440 110 Q 520 140 600 200" stroke="#0066cc" stroke-width="2" fill="none" stroke-linecap="round"
+              stroke-dasharray="4,4" opacity="0.4" style="animation: bridge-cable-flow 8s linear infinite 1.5s;" />
+
             <!-- Bridge Deck - Enhanced for better visibility -->
             <rect x="150" y="200" width="500" height="16" fill="#0054A6" rx="2" class="bridge-glow" opacity="0.5" />
             <rect x="150" y="200" width="500" height="16" fill="url(#techBridgeDeckGradient)" rx="2" opacity="0.6" />
-            
+
             <!-- Gradient Definition for Bridge Deck -->
             <defs>
               <linearGradient id="techBridgeDeckGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -415,78 +388,74 @@
                 <stop offset="100%" style="stop-color:#0054A6;stop-opacity:0.4" />
               </linearGradient>
             </defs>
-            
+
             <!-- Arched Segments -->
-            <path d="M 250 210 Q 300 225 350 210" 
-                  stroke="#0054A6" 
-                  stroke-width="2.5" 
-                  fill="none" 
-                  stroke-linecap="round"
-                  opacity="0.5"
-                  style="animation: bridge-arch-pulse 3s ease-in-out infinite;" />
-            <path d="M 450 210 Q 500 225 550 210" 
-                  stroke="#0054A6" 
-                  stroke-width="2.5" 
-                  fill="none" 
-                  stroke-linecap="round"
-                  opacity="0.5"
-                  style="animation: bridge-arch-pulse 3s ease-in-out infinite 0.6s;" />
+            <path d="M 250 210 Q 300 225 350 210" stroke="#0054A6" stroke-width="2.5" fill="none" stroke-linecap="round"
+              opacity="0.5" style="animation: bridge-arch-pulse 3s ease-in-out infinite;" />
+            <path d="M 450 210 Q 500 225 550 210" stroke="#0054A6" stroke-width="2.5" fill="none" stroke-linecap="round"
+              opacity="0.5" style="animation: bridge-arch-pulse 3s ease-in-out infinite 0.6s;" />
           </svg>
         </div>
-        
+
         <!-- Gradient Fade Overlays -->
-        <div class="absolute left-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-20 pointer-events-none"></div>
-        <div class="absolute right-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-20 pointer-events-none"></div>
-        
+        <div
+          class="absolute left-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-20 pointer-events-none">
+        </div>
+        <div
+          class="absolute right-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-20 pointer-events-none">
+        </div>
+
         <!-- Scrolling Cards Container -->
         <div class="tech-stack-scroll relative z-10">
           <div class="tech-stack-track">
             <!-- First Set -->
             @for (tech of technologyStack; track tech.name) {
-              <div class="tech-stack-card group">
-                <div class="tech-card-inner">
-                  <!-- Logo Image -->
-                  <div class="tech-logo-container">
-                    <img [src]="tech.image" [alt]="tech.name + ' logo'" class="tech-logo" onerror="this.style.display='none';" />
-                  </div>
-                  
-                  <!-- Content -->
-                  <div class="tech-card-content">
-                    <h4 class="tech-name">{{ tech.name }}</h4>
-                    <p class="tech-category">{{ tech.category }}</p>
-                  </div>
-                  
-                  <!-- Animated Border -->
-                  <div class="tech-card-border"></div>
-                  
-                  <!-- Hover Glow Effect -->
-                  <div class="tech-hover-glow"></div>
+            <div class="tech-stack-card group">
+              <div class="tech-card-inner">
+                <!-- Logo Image -->
+                <div class="tech-logo-container">
+                  <img [src]="tech.image" [alt]="tech.name + ' logo'" class="tech-logo"
+                    onerror="this.style.display='none';" />
                 </div>
+
+                <!-- Content -->
+                <div class="tech-card-content">
+                  <h4 class="tech-name">{{ tech.name }}</h4>
+                  <p class="tech-category">{{ tech.category }}</p>
+                </div>
+
+                <!-- Animated Border -->
+                <div class="tech-card-border"></div>
+
+                <!-- Hover Glow Effect -->
+                <div class="tech-hover-glow"></div>
               </div>
+            </div>
             }
-            
+
             <!-- Duplicate Set for Seamless Loop -->
             @for (tech of technologyStack; track tech.name + '-dup') {
-              <div class="tech-stack-card group">
-                <div class="tech-card-inner">
-                  <!-- Logo Image -->
-                  <div class="tech-logo-container">
-                    <img [src]="tech.image" [alt]="tech.name + ' logo'" class="tech-logo" onerror="this.style.display='none';" />
-                  </div>
-                  
-                  <!-- Content -->
-                  <div class="tech-card-content">
-                    <h4 class="tech-name">{{ tech.name }}</h4>
-                    <p class="tech-category">{{ tech.category }}</p>
-                  </div>
-                  
-                  <!-- Animated Border -->
-                  <div class="tech-card-border"></div>
-                  
-                  <!-- Hover Glow Effect -->
-                  <div class="tech-hover-glow"></div>
+            <div class="tech-stack-card group">
+              <div class="tech-card-inner">
+                <!-- Logo Image -->
+                <div class="tech-logo-container">
+                  <img [src]="tech.image" [alt]="tech.name + ' logo'" class="tech-logo"
+                    onerror="this.style.display='none';" />
                 </div>
+
+                <!-- Content -->
+                <div class="tech-card-content">
+                  <h4 class="tech-name">{{ tech.name }}</h4>
+                  <p class="tech-category">{{ tech.category }}</p>
+                </div>
+
+                <!-- Animated Border -->
+                <div class="tech-card-border"></div>
+
+                <!-- Hover Glow Effect -->
+                <div class="tech-hover-glow"></div>
               </div>
+            </div>
             }
           </div>
         </div>
@@ -506,58 +475,54 @@
         Disciplined, <span class="text-primary">Transparent Sprints</span>
       </h3>
       <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-        No black boxes or hidden delays. We follow an iterative engineering cadence designed to validate assumptions early, control scope, and keep you in total control.
+        No black boxes or hidden delays. We follow an iterative engineering cadence designed to validate assumptions
+        early, control scope, and keep you in total control.
       </p>
     </div>
-    
+
     <!-- Process Flow: Image Left, Steps Right with Arrow Threads -->
     <div class="process-side-layout">
       <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-start">
-          
+
           <!-- Left Side: Image -->
           <div class="process-image-left animate-fade-up" style="animation-delay: 0.2s">
             <div class="process-image-container">
-              <img src="assets/images/working/working1.jpg" 
-                   alt="Our Creative Process" 
-                   loading="lazy"
-                   decoding="async"
-                   class="process-main-image"
-                   onerror="this.style.display='none';" />
+              <img src="assets/images/working/working1.jpg" alt="Our Creative Process" loading="lazy" decoding="async"
+                class="process-main-image" onerror="this.style.display='none';" />
             </div>
           </div>
-          
+
           <!-- Right Side: Process Steps with Arrow Threads -->
           <div class="process-steps-right">
             <div class="process-steps-container">
               @for (step of processSteps; track step.number; let i = $index) {
-                <div class="process-step-item" 
-                     [style.animation-delay.ms]="i * 150">
-                  
-                  <!-- Step Icon -->
-                  <div class="process-step-icon-wrapper">
-                    <div class="process-step-icon">
-                      <app-icon [name]="step.icon" size="32" class="text-white"></app-icon>
-                    </div>
-                    
-                    <!-- Vertical Line (except last) -->
-                    @if (i < processSteps.length - 1) {
-                      <div class="process-vertical-line"></div>
-                    }
+              <div class="process-step-item" [style.animation-delay.ms]="i * 150">
+
+                <!-- Step Icon -->
+                <div class="process-step-icon-wrapper">
+                  <div class="process-step-icon">
+                    <app-icon [name]="step.icon" size="32" class="text-white"></app-icon>
                   </div>
-                  
-                  <!-- Step Content -->
-                  <div class="process-step-content">
-                    <h3 class="process-step-title">{{ step.title }}</h3>
-                    <p class="process-step-description">{{ step.description }}</p>
-                  </div>
+
+                  <!-- Vertical Line (except last) -->
+                  @if (i < processSteps.length - 1) { <div class="process-vertical-line">
                 </div>
-              }
+                }
+              </div>
+
+              <!-- Step Content -->
+              <div class="process-step-content">
+                <h3 class="process-step-title">{{ step.title }}</h3>
+                <p class="process-step-description">{{ step.description }}</p>
+              </div>
             </div>
+            }
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -565,13 +530,14 @@
 <section class="section-padding why-choose-section relative overflow-hidden">
   <!-- Background Image -->
   <div class="why-choose-background" [style.background-image]="'url(' + whyChooseBackgroundImage + ')'"></div>
-  
+
   <!-- Background Animated Circles -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
     <div class="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse-slow"></div>
-    <div class="absolute bottom-20 right-10 w-80 h-80 bg-navy/5 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-20 right-10 w-80 h-80 bg-navy/5 rounded-full blur-3xl animate-pulse-slow"
+      style="animation-delay: 1s;"></div>
   </div>
-  
+
   <div class="max-w-7xl mx-auto relative z-10">
     <div class="text-center mb-16 animate-fade-up">
       <span class="pill-badge mb-4 inline-block">Our Advantages</span>
@@ -579,14 +545,16 @@
         Why Technical Leaders & Founders <span class="text-primary">Work With Us</span>
       </h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-        We eliminate agency bloat and communication layers. You get direct access to senior developers, rigorous sprint reviews, and 100% intellectual property ownership.
+        We eliminate agency bloat and communication layers. You get direct access to senior developers, rigorous sprint
+        reviews, and 100% intellectual property ownership.
       </p>
     </div>
-    
+
     <!-- Circle and Thread Network Design -->
     <div class="why-choose-network relative min-h-[380px]">
       <!-- Connecting Threads SVG -->
-      <svg class="why-choose-threads absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1200 600" preserveAspectRatio="none">
+      <svg class="why-choose-threads absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1200 600"
+        preserveAspectRatio="none">
         <defs>
           <linearGradient id="threadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color:#0054A6;stop-opacity:0.2" />
@@ -594,98 +562,76 @@
             <stop offset="100%" style="stop-color:#0054A6;stop-opacity:0.2" />
           </linearGradient>
         </defs>
-        
+
         <!-- Connecting Threads -->
-        <line x1="200" y1="300" x2="400" y2="150" 
-              stroke="url(#threadGradient)" 
-              stroke-width="2" 
-              stroke-dasharray="8,4"
-              class="why-thread why-thread-1" />
-        <line x1="400" y1="150" x2="600" y2="300" 
-              stroke="url(#threadGradient)" 
-              stroke-width="2" 
-              stroke-dasharray="8,4"
-              class="why-thread why-thread-2" />
-        <line x1="600" y1="300" x2="800" y2="150" 
-              stroke="url(#threadGradient)" 
-              stroke-width="2" 
-              stroke-dasharray="8,4"
-              class="why-thread why-thread-3" />
-        <line x1="800" y1="150" x2="1000" y2="300" 
-              stroke="url(#threadGradient)" 
-              stroke-width="2" 
-              stroke-dasharray="8,4"
-              class="why-thread why-thread-4" />
-        
+        <line x1="200" y1="300" x2="400" y2="150" stroke="url(#threadGradient)" stroke-width="2" stroke-dasharray="8,4"
+          class="why-thread why-thread-1" />
+        <line x1="400" y1="150" x2="600" y2="300" stroke="url(#threadGradient)" stroke-width="2" stroke-dasharray="8,4"
+          class="why-thread why-thread-2" />
+        <line x1="600" y1="300" x2="800" y2="150" stroke="url(#threadGradient)" stroke-width="2" stroke-dasharray="8,4"
+          class="why-thread why-thread-3" />
+        <line x1="800" y1="150" x2="1000" y2="300" stroke="url(#threadGradient)" stroke-width="2" stroke-dasharray="8,4"
+          class="why-thread why-thread-4" />
+
         <!-- Cross Connections -->
-        <line x1="200" y1="300" x2="600" y2="300" 
-              stroke="url(#threadGradient)" 
-              stroke-width="1.5" 
-              stroke-dasharray="6,6"
-              opacity="0.3"
-              class="why-thread why-thread-cross-1" />
-        <line x1="400" y1="150" x2="800" y2="150" 
-              stroke="url(#threadGradient)" 
-              stroke-width="1.5" 
-              stroke-dasharray="6,6"
-              opacity="0.3"
-              class="why-thread why-thread-cross-2" />
-        <line x1="600" y1="300" x2="1000" y2="300" 
-              stroke="url(#threadGradient)" 
-              stroke-width="1.5" 
-              stroke-dasharray="6,6"
-              opacity="0.3"
-              class="why-thread why-thread-cross-3" />
+        <line x1="200" y1="300" x2="600" y2="300" stroke="url(#threadGradient)" stroke-width="1.5"
+          stroke-dasharray="6,6" opacity="0.3" class="why-thread why-thread-cross-1" />
+        <line x1="400" y1="150" x2="800" y2="150" stroke="url(#threadGradient)" stroke-width="1.5"
+          stroke-dasharray="6,6" opacity="0.3" class="why-thread why-thread-cross-2" />
+        <line x1="600" y1="300" x2="1000" y2="300" stroke="url(#threadGradient)" stroke-width="1.5"
+          stroke-dasharray="6,6" opacity="0.3" class="why-thread why-thread-cross-3" />
       </svg>
-      
+
       <!-- Benefit Circles -->
       <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-      @for (benefit of benefits; track benefit.number; let i = $index) {
-          <div class="why-choose-circle-node" [style.animation-delay.ms]="i * 200">
-            <!-- Outer Glow Circle -->
-            <div class="why-circle-glow"></div>
-            
-            <!-- Main Circle -->
-            <div class="why-circle-main group">
-              <!-- Circle Background -->
-              <div class="why-circle-bg">
-                <div class="why-circle-gradient"></div>
-              </div>
-              
-              <!-- Circle Content -->
-              <div class="why-circle-content">
-                <!-- Icon -->
-                <div class="why-circle-icon-wrapper">
-                  <div class="why-circle-icon-glow"></div>
-                  <app-icon [name]="benefit.icon" size="48" class="text-white why-circle-icon"></app-icon>
-                </div>
-                
-                <!-- Title -->
-                <h3 class="why-circle-title">{{ benefit.title }}</h3>
-                
-                <!-- Description -->
-                <p class="why-circle-description">{{ benefit.description }}</p>
-              </div>
-              
-              <!-- Animated Border -->
-              <div class="why-circle-border"></div>
-              
-              <!-- Pulse Rings -->
-              <div class="why-circle-pulse-ring why-pulse-1"></div>
-              <div class="why-circle-pulse-ring why-pulse-2"></div>
+        @for (benefit of benefits; track benefit.number; let i = $index) {
+        <div class="why-choose-circle-node" [style.animation-delay.ms]="i * 200">
+          <!-- Outer Glow Circle -->
+          <div class="why-circle-glow"></div>
+
+          <!-- Main Circle -->
+          <div class="why-circle-main group">
+            <!-- Circle Background -->
+            <div class="why-circle-bg">
+              <div class="why-circle-gradient"></div>
             </div>
+
+            <!-- Circle Content -->
+            <div class="why-circle-content">
+              <!-- Icon -->
+              <div class="why-circle-icon-wrapper">
+                <div class="why-circle-icon-glow"></div>
+                <app-icon [name]="benefit.icon" size="48" class="text-white why-circle-icon"></app-icon>
+              </div>
+
+              <!-- Title -->
+              <h3 class="why-circle-title">{{ benefit.title }}</h3>
+
+              <!-- Description -->
+              <p class="why-circle-description">{{ benefit.description }}</p>
+            </div>
+
+            <!-- Animated Border -->
+            <div class="why-circle-border"></div>
+
+            <!-- Pulse Rings -->
+            <div class="why-circle-pulse-ring why-pulse-1"></div>
+            <div class="why-circle-pulse-ring why-pulse-2"></div>
+          </div>
         </div>
-      }
+        }
       </div>
     </div>
-    
+
     <!-- Mission Text Section -->
     <div class="mt-2 text-center animate-fade-up relative z-10">
       <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
         Engineered for Reliability, <span class="text-orange-400">Built for the Long Haul</span>
       </h3>
       <p class="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-        Software should be a durable asset that grows with your business, not technical debt that holds you back. At BigBridz, we write clean, documented code and build resilient architectures so your applications perform consistently under heavy load and scale without needing full rewrites.
+        Software should be a durable asset that grows with your business, not technical debt that holds you back. At
+        BigBridz, we write clean, documented code and build resilient architectures so your applications perform
+        consistently under heavy load and scale without needing full rewrites.
       </p>
     </div>
   </div>
@@ -694,56 +640,60 @@
 <!-- Testimonials Section -->
 <section class="section-padding bg-white">
   <div class="max-w-7xl mx-auto">
-    <app-section-header
-      eyebrow="Testimonials"
-      title="What Our Customers Are Saying"
-      subtitle="We take pride in building long-term partnerships with our clients. Here's what they have to say about working with us."
-    />
+    <app-section-header eyebrow="Testimonials" title="What Our Customers Are Saying"
+      subtitle="We take pride in building long-term partnerships with our clients. Here's what they have to say about working with us." />
     <div class="grid gap-8 md:grid-cols-2 pt-8">
       @for (testimonial of testimonials; track testimonial.author; let i = $index) {
-        <div class="card group hover:shadow-2xl transition-all duration-300 animate-fade-up transform hover:-translate-y-2" [style.animation-delay.ms]="i * 150">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="h-14 w-14 rounded-full bg-gradient-to-br from-primary to-navy flex items-center justify-center text-white font-bold text-xl flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
-              {{ testimonial.author.charAt(0) }}
-            </div>
-            <div class="flex-1">
-              <p class="font-bold text-lg text-slate-900 mb-1">{{ testimonial.author }}</p>
-              <p class="text-sm text-gray-500">{{ testimonial.role }}</p>
-            </div>
-            <div class="text-yellow-400 text-xl">★★★★★</div>
+      <div
+        class="card group hover:shadow-2xl transition-all duration-300 animate-fade-up transform hover:-translate-y-2"
+        [style.animation-delay.ms]="i * 150">
+        <div class="flex items-start gap-4 mb-4">
+          <div
+            class="h-14 w-14 rounded-full bg-gradient-to-br from-primary to-navy flex items-center justify-center text-white font-bold text-xl flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+            {{ testimonial.author.charAt(0) }}
           </div>
-          <p class="text-base text-gray-700 leading-relaxed italic relative pl-4">
-            <span class="absolute left-0 top-0 text-4xl text-primary/20 font-serif leading-none">"</span>
-            {{ testimonial.quote }}
-          </p>
+          <div class="flex-1">
+            <p class="font-bold text-lg text-slate-900 mb-1">{{ testimonial.author }}</p>
+            <p class="text-sm text-gray-500">{{ testimonial.role }}</p>
+          </div>
+          <div class="text-yellow-400 text-xl">★★★★★</div>
         </div>
+        <p class="text-base text-gray-700 leading-relaxed italic relative pl-4">
+          <span class="absolute left-0 top-0 text-4xl text-primary/20 font-serif leading-none">"</span>
+          {{ testimonial.quote }}
+        </p>
+      </div>
       }
     </div>
   </div>
 </section>
 
 <!-- Final CTA Section -->
-<section class="section-padding bg-gradient-to-br from-primary via-primary/95 to-navy text-white relative overflow-hidden">
+<section
+  class="section-padding bg-gradient-to-br from-primary via-primary/95 to-navy text-white relative overflow-hidden">
   <div class="absolute inset-0 opacity-10">
     <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
   </div>
-  
+
   <div class="max-w-4xl mx-auto text-center relative z-10">
     <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-up">
       Have a Product Idea or <span class="text-accent">Complex Engineering Challenge?</span>
     </h2>
-    <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-up" style="animation-delay: 0.1s">
-      Schedule a direct technical consultation with our engineering leads. We will review your requirements, discuss feasible architectures, and provide an honest estimate.
+    <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-up"
+      style="animation-delay: 0.1s">
+      Schedule a direct technical consultation with our engineering leads. We will review your requirements, discuss
+      feasible architectures, and provide an honest estimate.
     </p>
     <div class="flex flex-wrap justify-center gap-4 animate-fade-up" style="animation-delay: 0.2s">
-      <a routerLink="contact" class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
+      <a routerLink="contact"
+        class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
         Get Started
       </a>
-      <a routerLink="portfolio" class="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transform hover:scale-105 transition-all duration-300">
+      <a routerLink="portfolio"
+        class="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transform hover:scale-105 transition-all duration-300">
         View Portfolio
       </a>
     </div>
   </div>
 </section>
-

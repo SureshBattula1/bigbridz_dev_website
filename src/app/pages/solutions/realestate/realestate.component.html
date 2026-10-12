@@ -3,30 +3,28 @@
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
     <div class="absolute top-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-slow"></div>
   </div>
-  
+
   <div class="max-w-7xl mx-auto grid gap-12 md:grid-cols-2 items-center relative z-10">
     <div class="space-y-6 animate-fade-up">
-      <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white border border-white/20 text-xs font-semibold tracking-wide uppercase">
+      <span
+        class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-semibold tracking-wide uppercase">
         Real Estate & Property
       </span>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
         Modern <span class="text-accent">Real Estate Technology</span>
       </h1>
-      <p class="text-lg md:text-xl text-white/90 leading-relaxed">
-        From property listings to tenant management, we build real estate solutions that help agents, brokers, and property managers succeed.
+      <p class="text-lg md:text-xl text-slate-600 leading-relaxed">
+        From property listings to tenant management, we build real estate solutions that help agents, brokers, and
+        property managers succeed.
       </p>
       <div class="flex flex-wrap gap-4">
         <a routerLink="/contact" class="btn-primary">Get Started</a>
-        <a routerLink="/portfolio" class="btn-outline text-white border-white/40 hover:bg-white/10">View Portfolio</a>
+        <a routerLink="/portfolio" class="btn-outline">View Portfolio</a>
       </div>
     </div>
     <div class="relative animate-fade-up md:animate-float-soft">
       <div class="hero-image-frame">
-        <img
-          src="assets/images/realestate/realestate-listings.jpg"
-          alt="Real estate platform"
-          class="w-full h-auto"
-        />
+        <img src="assets/images/realestate/realestate-listings.jpg" alt="Real estate platform" class="w-full h-auto" />
       </div>
     </div>
   </div>
@@ -42,23 +40,24 @@
         Engineered for fast property discovery, automated lead capture, and hassle-free lease administration.
       </p>
     </div>
-    
+
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       @for (feature of features; track feature.title; let i = $index) {
-        <div class="card card-hover shine-bg animate-fade-up" [style.animation-delay.ms]="i * 100">
-          <div class="mb-4">
-            <div class="h-14 w-14 rounded-xl bg-gradient-to-br from-primary/10 to-navy/10 flex items-center justify-center mb-4">
-              <app-icon [name]="feature.icon" size="28" class="text-primary"></app-icon>
-            </div>
-            <h3 class="text-xl font-bold text-slate-900 mb-2">{{ feature.title }}</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">{{ feature.description }}</p>
+      <div class="card card-hover shine-bg animate-fade-up" [style.animation-delay.ms]="i * 100">
+        <div class="mb-4">
+          <div
+            class="h-14 w-14 rounded-xl bg-gradient-to-br from-primary/10 to-navy/10 flex items-center justify-center mb-4">
+            <app-icon [name]="feature.icon" size="28" class="text-primary"></app-icon>
           </div>
-          @if (feature.image) {
-            <div class="img-hover-zoom rounded-lg overflow-hidden mt-4">
-              <img [src]="feature.image" [alt]="feature.title" class="w-full h-48 object-cover" />
-            </div>
-          }
+          <h3 class="text-xl font-bold text-slate-900 mb-2">{{ feature.title }}</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">{{ feature.description }}</p>
         </div>
+        @if (feature.image) {
+        <div class="img-hover-zoom rounded-lg overflow-hidden mt-4">
+          <img [src]="feature.image" [alt]="feature.title" class="w-full h-48 object-cover" />
+        </div>
+        }
+      </div>
       }
     </div>
   </div>
@@ -71,32 +70,35 @@
         Why Real Estate Firms <span class="text-primary">Choose BigBridz</span>
       </h2>
     </div>
-    
+
     <div class="grid gap-6 md:grid-cols-2">
       @for (benefit of benefits; track benefit.title; let i = $index) {
-        <div class="card animate-fade-up" [style.animation-delay.ms]="i * 100">
-          <h3 class="text-lg font-bold text-slate-900 mb-2">{{ benefit.title }}</h3>
-          <p class="text-sm text-gray-600 leading-relaxed">{{ benefit.description }}</p>
-        </div>
+      <div class="card animate-fade-up" [style.animation-delay.ms]="i * 100">
+        <h3 class="text-lg font-bold text-slate-900 mb-2">{{ benefit.title }}</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">{{ benefit.description }}</p>
+      </div>
       }
     </div>
   </div>
 </section>
 
-<section class="section-padding bg-gradient-to-br from-primary via-primary/95 to-navy text-white relative overflow-hidden">
+<section
+  class="section-padding bg-gradient-to-br from-primary via-primary/95 to-navy text-white relative overflow-hidden">
   <div class="absolute inset-0 opacity-10">
     <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
   </div>
-  
+
   <div class="max-w-4xl mx-auto text-center relative z-10">
     <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-up">
       Scale Your <span class="text-accent">Real Estate Operations</span>
     </h2>
-    <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-up" style="animation-delay: 0.1s">
+    <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-up"
+      style="animation-delay: 0.1s">
       Let's discuss your real estate technology needs and build a solution that drives results.
     </p>
     <div class="flex flex-wrap justify-center gap-4 animate-fade-up" style="animation-delay: 0.2s">
-      <a routerLink="/contact" class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
+      <a routerLink="/contact"
+        class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
         Book a PropTech Scoping Session
       </a>
     </div>

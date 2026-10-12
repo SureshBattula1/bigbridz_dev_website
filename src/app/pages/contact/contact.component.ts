@@ -22,17 +22,17 @@ export class ContactComponent {
   submitted = false;
   submitting = false;
 
-  constructor(private readonly fb: FormBuilder) {}
+  constructor(private readonly fb: FormBuilder) { }
 
   submit(): void {
     if (this.form.invalid) {
       this.form.markAllAsTouched();
       return;
     }
-    
+
     this.submitting = true;
     const formData = this.form.value;
-    
+
     // Create mailto link with form data
     const subject = encodeURIComponent(`Project Inquiry: ${formData.lookingFor}`);
     const body = encodeURIComponent(
@@ -42,7 +42,7 @@ export class ContactComponent {
       `Looking For: ${formData.lookingFor}\n\n` +
       `Message:\n${formData.message}`
     );
-    
+
     // Simulated submission with clean user feedback
     setTimeout(() => {
       this.submitted = true;
@@ -54,6 +54,6 @@ export class ContactComponent {
 
   openWhatsApp(): void {
     const message = encodeURIComponent('Hello! I am interested in your software development services.');
-    window.open(`https://wa.me/916302568368?text=${message}`, '_blank');
+    window.open(`https://wa.me/919989879939?text=${message}`, '_blank');
   }
 }
