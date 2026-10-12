@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, OnDestroy, inject } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive, NavigationEnd } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
 import { IconComponent } from '../../common/icon/icon.component';
 
 @Component({
@@ -10,7 +12,10 @@ import { IconComponent } from '../../common/icon/icon.component';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnDestroy {
+  private router = inject(Router);
+  private navSub?: Subscription;
+
   showSolutionsDropdown = false;
   showMobileMenu = false;
   showMobileSolutions = false;
@@ -26,6 +31,14 @@ export class HeaderComponent {
     { title: 'Travel & Hospitality', icon: 'travel', route: 'solutions/travel' },
   ];
 
+  constructor() {
+    this.navSub = this.router.events
+      .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.closeMobileMenu();
+      });
+  }
+
   onSolutionsMouseEnter(): void {
     this.showSolutionsDropdown = true;
   }
@@ -36,7 +49,6 @@ export class HeaderComponent {
 
   toggleMobileMenu(): void {
     this.showMobileMenu = !this.showMobileMenu;
-    // Prevent body scroll when menu is open
     if (this.showMobileMenu) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -53,4 +65,10 @@ export class HeaderComponent {
   toggleMobileSolutions(): void {
     this.showMobileSolutions = !this.showMobileSolutions;
   }
+
+  ngOnDestroy(): void {
+    this.navSub?.unsubscribe();
+    document.body.style.overflow = '';
+  }
 }
+

@@ -7,7 +7,7 @@ import { Directive, ElementRef, OnInit, OnDestroy } from '@angular/core';
 export class ScrollRevealDirective implements OnInit, OnDestroy {
   private observer?: IntersectionObserver;
 
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef) { }
 
   ngOnInit(): void {
     // Create intersection observer for scroll animations with enhanced sensitivity
@@ -16,14 +16,13 @@ export class ScrollRevealDirective implements OnInit, OnDestroy {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('revealed');
-            // Optional: Unobserve after animation to improve performance
-            // this.observer?.unobserve(entry.target);
+            this.observer?.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.05, // Trigger earlier (5% visible)
-        rootMargin: '0px 0px -100px 0px' // Start animation 100px before element enters viewport
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px'
       }
     );
 

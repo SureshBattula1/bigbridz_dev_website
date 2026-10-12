@@ -300,16 +300,17 @@
 
 @media(max-width: 1023px) {
   .book-stage {
-    --w: clamp(150px, 25vw, 210px);
+    --w: clamp(130px, 22vw, 180px);
     margin-top: 1rem;
   }
 }
 
 @media(max-width: 640px) {
   .book-stage {
-    --w: clamp(130px, 32vw, 160px);
+    --w: clamp(105px, 28vw, 135px);
   }
 }
+
 
 @media(prefers-reduced-motion: reduce) {
 

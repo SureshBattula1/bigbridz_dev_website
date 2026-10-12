@@ -79,16 +79,14 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
         });
       },
       {
-        threshold: 0.05,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px'
       }
     );
 
     const selectors = [
-      'section',
+      'section:not(.hero-gradient)',
       '.card',
-      '.section-padding > *',
-      '.grid > *',
       'article'
     ];
 
@@ -110,7 +108,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       const cards = container.querySelectorAll(':scope > .card, :scope > *');
       cards.forEach((card, index) => {
         if (!card.classList.contains('no-scroll-reveal')) {
-          const delay = Math.min(index * 0.08, 0.4); // max 400ms delay, fast & snappy
+          const delay = Math.min(index * 0.05, 0.35); // smooth 50ms cascade, capped at 350ms
           (card as HTMLElement).style.transitionDelay = `${delay}s`;
         }
       });

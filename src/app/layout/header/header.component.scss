@@ -18,103 +18,30 @@
 }
 
 /* Mobile Menu Animations */
-.mobile-menu-enter {
-  animation: slideInRight 0.3s ease-out;
+.mobile-menu-drawer {
+  animation: drawerSlideIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   will-change: transform;
 }
 
-@keyframes slideInRight {
+@keyframes drawerSlideIn {
   from {
     transform: translateX(100%);
-    opacity: 0;
   }
   to {
     transform: translateX(0);
+  }
+}
+
+.mobile-menu-overlay {
+  animation: overlayFadeIn 0.22s ease-out forwards;
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
-  }
-}
-
-/* Hide desktop menu on mobile/tablet */
-@media (max-width: 1023px) {
-  /* Hide desktop navigation completely */
-  header nav.hidden {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-  
-  /* Hide desktop button */
-  header > div > div.hidden {
-    display: none !important;
-    visibility: hidden !important;
-  }
-}
-
-/* Ensure mobile menu is visible and properly styled */
-@media (max-width: 1023px) {
-  /* Mobile menu sidebar */
-  .mobile-menu-enter {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    transform: translateX(0) !important;
-    position: fixed !important;
-    top: 0 !important;
-    right: 0 !important;
-    height: 100vh !important;
-    width: 320px !important;
-    max-width: 85vw !important;
-    background-color: white !important;
-    z-index: 70 !important;
-  }
-  
-  /* Ensure menu container is visible */
-  .mobile-menu-enter > div {
-    display: flex !important;
-    flex-direction: column !important;
-    height: 100% !important;
-    width: 100% !important;
-  }
-  
-  /* Ensure mobile menu items are visible (only inside mobile menu sidebar) */
-  .mobile-menu-enter nav {
-    -webkit-overflow-scrolling: touch;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    flex: 1 !important;
-    overflow-y: auto !important;
-  }
-  
-  .mobile-menu-enter nav > div {
-    display: block !important;
-    visibility: visible !important;
-  }
-  
-  .mobile-menu-enter nav a,
-  .mobile-menu-enter nav button {
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 100% !important;
-    color: #374151 !important;
-  }
-  
-  .mobile-menu-enter nav a:hover,
-  .mobile-menu-enter nav button:hover {
-    color: #0054A6 !important;
-  }
-  
-  /* Solutions dropdown in mobile */
-  .mobile-menu-enter nav .space-y-1 > div {
-    display: block !important;
-    visibility: visible !important;
-  }
-  
-  /* Ensure menu content is scrollable */
-  .mobile-menu-enter nav.overflow-y-auto {
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch;
   }
 }
 

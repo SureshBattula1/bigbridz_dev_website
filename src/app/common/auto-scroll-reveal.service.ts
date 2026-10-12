@@ -27,19 +27,15 @@ export class AutoScrollRevealService implements OnDestroy {
         });
       },
       {
-        threshold: 0.05,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px'
       }
     );
 
     const selectors = [
-      'section',
+      'section:not(.hero-gradient)',
       '.card',
-      '.section-padding > *',
-      '.grid > *',
-      '.flex > *',
-      'article',
-      '.animate-fade-up'
+      'article'
     ];
 
     selectors.forEach(selector => {
