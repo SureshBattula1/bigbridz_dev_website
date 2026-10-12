@@ -14,58 +14,58 @@ export class EcommerceComponent {
   features = [
     {
       icon: 'storefront',
-      title: 'Custom Storefronts',
-      description: 'Beautiful, responsive online stores that reflect your brand identity and provide seamless shopping experiences across all devices.',
+      title: 'Custom High-Speed Storefronts',
+      description: 'Sub-second page load times with headless or modular architectures. Optimized catalog navigation, instant search filtering, and mobile-first checkout flows.',
       image: 'assets/images/ecommerce/ecommerce-storefront.jpg'
     },
     {
       icon: 'marketplace',
-      title: 'Marketplace Platforms',
-      description: 'Multi-vendor marketplace solutions enabling multiple sellers to list and sell products through a unified platform.',
+      title: 'Multi-Vendor Marketplaces',
+      description: 'Unified multi-seller platforms featuring merchant onboarding, split payment disbursements, commission tracking, and individual vendor dashboards.',
       image: 'assets/images/ecommerce/ecommerce-marketplace.jpg'
     },
     {
       icon: 'inventory',
-      title: 'Inventory Management',
-      description: 'Real-time inventory tracking, automated stock alerts, and comprehensive warehouse management systems.',
+      title: 'Multi-Warehouse Inventory Sync',
+      description: 'Real-time stock reservation, low-inventory triggers, automated reorder notifications, and cross-channel inventory parity.',
       image: 'assets/images/ecommerce/ecommerce-inventory.jpg'
     },
     {
       icon: 'payment',
-      title: 'Payment Integration',
-      description: 'Secure payment gateway integrations supporting multiple payment methods including cards, wallets, and UPI.',
+      title: 'Payment Gateway & Tokenization',
+      description: 'Direct integrations with Stripe, Razorpay, PayPal, and UPI. PCI-DSS compliant payment tokenization and automated webhook reconciliation.',
       image: 'assets/images/ecommerce/ecommerce-payment.jpg'
     },
     {
       icon: 'fulfillment',
-      title: 'Order Fulfillment',
-      description: 'End-to-end order processing, shipping management, and delivery tracking systems for efficient operations.',
+      title: 'Order Processing & Shipping Automation',
+      description: 'End-to-end order state machines, automated shipping label generation, courier API tracking, and return merchandise authorization (RMA).',
       image: 'assets/images/ecommerce/ecommerce-fulfillment.jpg'
     },
     {
       icon: 'dashboard',
-      title: 'Analytics Dashboard',
-      description: 'Comprehensive analytics and reporting tools to track sales, customer behavior, and business performance.',
+      title: 'Sales Telemetry & Conversion Analytics',
+      description: 'Detailed analytics on cart abandonment, average order value (AOV), customer lifetime value (LTV), and real-time revenue dashboards.',
       image: 'assets/images/ecommerce/ecommerce-dashboard.jpg'
     }
   ];
 
   benefits = [
     {
-      title: 'Scalable Architecture',
-      description: 'Built to handle growing product catalogs and increasing traffic without performance degradation.'
+      title: 'High Concurrency & Uptime',
+      description: 'Built to handle sudden flash-sale traffic spikes and seasonal demand surges with zero checkout degradation.'
     },
     {
-      title: 'Mobile-First Design',
-      description: 'Optimized for mobile shopping with responsive designs and native mobile app options.'
+      title: 'Mobile-First Optimization',
+      description: 'PWA and native mobile experiences that eliminate checkout friction and increase mobile conversion rates.'
     },
     {
-      title: 'SEO Optimized',
-      description: 'Built-in SEO features to improve search engine rankings and drive organic traffic.'
+      title: 'Technical SEO & Schema Markup',
+      description: 'Built-in OpenGraph, JSON-LD product schemas, and clean canonical URLs for high organic search indexing.'
     },
     {
-      title: 'Security & Compliance',
-      description: 'PCI-DSS compliant payment processing and robust security measures to protect customer data.'
+      title: 'Fraud Mitigation & PCI Compliance',
+      description: 'Encrypted payment tokenization, address verification (AVS), and 3D Secure authentication to minimize fraud chargebacks.'
     }
   ];
 }

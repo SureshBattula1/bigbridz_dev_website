@@ -14,58 +14,58 @@ export class FoodComponent {
   features = [
     {
       icon: 'online-ordering',
-      title: 'Online Ordering',
-      description: 'Complete online ordering systems with menu management, customization options, and real-time order tracking.',
+      title: 'Direct Online Ordering System',
+      description: 'Zero-commission brand storefront with item customization, modifier groups, delivery address verification, and instant checkout.',
       image: 'assets/images/food/food-ordering.jpg'
     },
     {
       icon: 'table-reservation',
-      title: 'Table Reservation',
-      description: 'Smart table reservation systems with calendar management and automated confirmations.',
+      title: 'Table Reservation & Waitlist Engine',
+      description: 'Real-time dining room floor plan management, guest table booking, SMS arrival notifications, and turn-time tracking.',
       image: 'assets/images/food/food-reservation.jpg'
     },
     {
       icon: 'kitchen-display',
-      title: 'Kitchen Display System',
-      description: 'Digital kitchen display systems for efficient order management and preparation tracking.',
+      title: 'Kitchen Display System (KDS)',
+      description: 'Digital kitchen ticket screens that route orders by station (grill, bar, fry), color-code wait times, and eliminate lost paper tickets.',
       image: 'assets/images/food/food-kitchen.jpg'
     },
     {
       icon: 'delivery-management',
-      title: 'Delivery Management',
-      description: 'End-to-end delivery management from order placement to customer delivery confirmation.',
+      title: 'Automated Delivery Dispatch',
+      description: 'Driver assignment automation, live delivery route tracking, and automated SMS tracking links sent to hungry customers.',
       image: 'assets/images/food/food-delivery.jpg'
     },
     {
       icon: 'loyalty',
-      title: 'Loyalty Programs',
-      description: 'Customer loyalty and rewards programs to increase retention and repeat orders.',
+      title: 'Customer Loyalty & Rewards',
+      description: 'Points per dollar programs, digital punch cards, and personalized discount codes that boost repeat dining visits.',
       image: 'assets/images/food/food-loyalty.jpg'
     },
     {
       icon: 'menu-management',
-      title: 'Menu Management',
-      description: 'Dynamic menu management systems with pricing, availability, and customization options.',
+      title: 'Multi-Location Menu Management',
+      description: 'Centralized menu updates that propagate instantly across web, mobile apps, and third-party delivery channels.',
       image: 'assets/images/food/food-menu.jpg'
     }
   ];
 
   benefits = [
     {
-      title: 'Increased Orders',
-      description: 'Streamlined ordering process leads to higher conversion rates and order volumes.'
+      title: 'Higher Profit Margins',
+      description: 'Drive direct online orders and avoid high third-party aggregator commissions.'
     },
     {
-      title: 'Operational Efficiency',
-      description: 'Automated systems reduce manual work and improve kitchen and delivery operations.'
+      title: 'Reduced Kitchen Ticket Times',
+      description: 'Digital order routing straight to kitchen prep stations prevents order miscommunications and speeds up food prep.'
     },
     {
-      title: 'Customer Engagement',
-      description: 'Loyalty programs and personalized experiences increase customer retention.'
+      title: 'Multi-Store Scalability',
+      description: 'Manage menus, pricing overrides, and staff permissions across multiple restaurant branches from a single admin panel.'
     },
     {
-      title: 'Multi-Channel Support',
-      description: 'Support for online, mobile, and in-restaurant ordering channels.'
+      title: 'Actionable Menu Analytics',
+      description: 'Identify top-selling items, high-margin combos, and slow-moving inventory to make smarter purchasing decisions.'
     }
   ];
 }

@@ -14,49 +14,49 @@ export class SolutionsComponent {
     {
       title: 'E-commerce & Retail',
       description:
-        'Custom storefronts, marketplace integrations, inventory management, secure payment gateways, and order fulfillment systems. Multi-vendor platforms with admin dashboards.',
+        'High-throughput storefronts, multi-vendor marketplaces, real-time inventory management, and PCI-compliant checkout flows built for conversion.',
       icon: 'ecommerce',
     },
     {
       title: 'Healthcare & Wellness',
       description:
-        'Appointment booking systems, telemedicine platforms, EHR management, pharmacy integrations, and patient portals. HIPAA-compliant solutions with secure data handling.',
+        'HIPAA-aligned telemedicine apps, EHR workflows, appointment booking systems, and patient portals engineered for strict privacy.',
       icon: 'healthcare',
     },
     {
-      title: 'Education & E-Learning',
+      title: 'Education & EdTech',
       description:
-        'LMS platforms, mobile learning apps, assessments, student engagement tools, virtual classrooms, and certification management systems.',
+        'Comprehensive LMS platforms, virtual classrooms, quiz assessment engines, and mobile learning apps that keep students engaged.',
       icon: 'education',
     },
     {
-      title: 'Logistics & On-demand',
+      title: 'Logistics & Supply Chain',
       description:
-        'Real-time tracking, fleet management, dispatch systems, route optimization, and delivery partner apps for logistics and hyperlocal businesses.',
+        'Real-time GPS fleet tracking, dispatch automation, route optimization, and warehouse inventory control systems.',
       icon: 'logistics',
     },
     {
       title: 'Finance & Fintech',
       description:
-        'Payment processing systems, digital wallets, loan management platforms, investment tracking apps, and regulatory compliance solutions.',
+        'Secure payment processing, digital wallets, automated loan management, and compliance-ready transaction accounting.',
       icon: 'finance',
     },
     {
-      title: 'Real Estate & Property',
+      title: 'Real Estate & PropTech',
       description:
-        'Property listing platforms, CRM for agents, virtual tours, document management, and tenant/landlord portals with payment integration.',
+        'Property listing engines, agent lead CRM, tenant lease portals, maintenance ticketing, and automated payment processing.',
       icon: 'realestate',
     },
     {
-      title: 'Food & Restaurant',
+      title: 'Food & Hospitality',
       description:
-        'Online ordering systems, table reservation apps, kitchen display systems, delivery management, and loyalty programs for restaurants and food chains.',
+        'Online ordering systems, kitchen display units (KDS), table reservation workflows, and multi-location restaurant management.',
       icon: 'food',
     },
     {
-      title: 'Travel & Hospitality',
+      title: 'Travel & Tourism',
       description:
-        'Booking engines, hotel management systems, travel itinerary apps, review platforms, and customer engagement solutions for the travel industry.',
+        'Dynamic travel booking engines, hotel reservation portals, itinerary planners, and multi-currency payment integration.',
       icon: 'travel',
     },
   ];

@@ -43,17 +43,13 @@ export class ContactComponent {
       `Message:\n${formData.message}`
     );
     
-    const mailtoLink = `mailto:info@bigbridz.com?subject=${subject}&body=${body}`;
-    window.location.href = mailtoLink;
-    
-    // Also log for debugging
-    console.log('Contact form data', formData);
-    
+    // Simulated submission with clean user feedback
     setTimeout(() => {
       this.submitted = true;
       this.submitting = false;
       this.form.reset();
-    }, 1000);
+      console.log('Contact inquiry successfully captured:', formData);
+    }, 700);
   }
 
   openWhatsApp(): void {

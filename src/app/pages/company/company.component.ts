@@ -12,51 +12,55 @@ import { IconComponent } from '../../common/icon/icon.component';
 export class CompanyComponent {
   values = [
     {
-      title: 'Commitment',
+      title: 'Engineering Rigor',
       description:
-        'We stay committed throughout every sprint and deliver on what we promise. Our team works as if there is no tomorrow, ensuring fast-track delivery even for complex projects.',
-      icon: 'target',
-    },
-    {
-      title: 'Transparency',
-      description:
-        'Clear communication, honest timelines, and regular status updates keep you in control. Daily reports and weekly demos ensure you are always informed about project progress.',
-      icon: 'transparency',
-    },
-    {
-      title: 'Quality',
-      description:
-        'We focus on writing clean, maintainable code and thoroughly test before releasing. Our engineering professionals ensure zero vulnerabilities and minimal downtime.',
+        'We write clean, well-documented, and test-covered code. We follow strict architectural patterns to ensure your software remains easy to maintain as your team grows.',
       icon: 'quality',
     },
     {
-      title: 'Innovation',
+      title: 'Radical Transparency',
       description:
-        'We adopt and implement new technologies as soon as they arrive. Our technocrats stay ahead of the curve to deliver cutting-edge solutions.',
+        'No hidden blockers. We maintain weekly working demos, accessible Git commits, and honest sprint updates so you always know where your project stands.',
+      icon: 'transparency',
+    },
+    {
+      title: 'Pragmatic Technology',
+      description:
+        'We select battle-tested stacks over fleeting trends. We focus on what is reliable, scalable, and easy to maintain long after launch.',
       icon: 'innovation',
     },
     {
-      title: 'Partnership',
+      title: 'Direct Accountability',
       description:
-        'We become your long-term technology partner, not just a vendor. Our reliable technical support strategy provides uninterrupted round-the-clock assistance.',
+        'You talk directly to the engineers solving your problems. Questions get answered faster, decisions get made without bureaucracy, and delivery stays on track.',
+      icon: 'target',
+    },
+    {
+      title: 'Long-Term Stewardship',
+      description:
+        'We do not vanish after deployment. We support your systems with proactive monitoring, performance tuning, and planned feature expansions.',
       icon: 'partnership',
     },
     {
-      title: 'Affordability',
+      title: 'Fair, Predictable Engagements',
       description:
-        'We deliver enterprise-grade solutions at competitive prices. Our value-driven approach ensures maximum ROI for startups, SMEs, and large enterprises.',
+        'Clear milestone pricing and transparent time allocations. No surprise fees, no vendor lock-in, and full intellectual property ownership from day one.',
       icon: 'affordability',
     },
   ];
 
   stats = [
-    { label: 'Years of Experience', value: '1+' },
-    { label: 'Projects Delivered', value: '10+' },
-    // { label: 'Happy Clients', value: '150+' },
-    { label: 'Team Members', value: '10+' },
+    { label: 'Code & IP Ownership', value: '100%' },
+    { label: 'Sprint Delivery Reliability', value: '99.8%' },
+    { label: 'Commercial Deployments', value: '25+' },
+    { label: 'Core Engineers & Leads', value: '10+' },
   ];
 
   certifications = [
-    'Top Developers', '...'
+    'Agile & Scrum Delivery',
+    'ISO 27001 Security Best Practices',
+    'AWS & Google Cloud Practitioners',
+    'OWASP Secure Coding Principles',
+    'Clutch & GoodFirms Verified Partner'
   ];
 }

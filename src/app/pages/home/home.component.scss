@@ -22,21 +22,21 @@
   background-attachment: fixed;
   z-index: 0;
   pointer-events: none;
-  
+
   /* Fallback background color in case image doesn't load */
   background-color: #1a1a1a;
-  
+
   /* No overlay - show original image colors */
 }
 
 /* Ensure all direct children content is above background */
-.advanced-capabilities-section > div:not(.advanced-capabilities-background) {
+.advanced-capabilities-section>div:not(.advanced-capabilities-background) {
   position: relative;
   z-index: 1;
 }
 
 /* Overlay elements should be above background but below content */
-.advanced-capabilities-section > .absolute {
+.advanced-capabilities-section>.absolute {
   z-index: 0;
 }
 
@@ -73,19 +73,19 @@
   background-attachment: fixed;
   z-index: 0;
   pointer-events: none;
-  
+
   /* Fallback background color in case image doesn't load */
   background-color: #f8f9fa;
 }
 
 /* Ensure all direct children content is above background */
-.why-choose-section > div:not(.why-choose-background) {
+.why-choose-section>div:not(.why-choose-background) {
   position: relative;
   z-index: 1;
 }
 
 /* Overlay elements should be above background but below content */
-.why-choose-section > .absolute {
+.why-choose-section>.absolute {
   z-index: 0;
 }
 
@@ -100,4 +100,221 @@
   position: relative;
   padding: 4rem 2rem;
   min-height: 380px;
+}
+
+/* ============================================================
+   3D INTERACTIVE CRAFTSMANSHIP BOOK
+   ============================================================ */
+.book-stage {
+  --w: clamp(140px, 15vw, 210px);
+  --h: calc(var(--w) * 2.20);
+  position: relative;
+  height: calc(var(--h) + 75px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1800px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+
+.book {
+  position: relative;
+  width: calc(var(--w) * 2);
+  height: var(--h);
+  transform-style: preserve-3d;
+  transform: rotateX(14deg) translateX(calc(var(--w) * -0.5));
+  transition: transform 1s cubic-bezier(0.45, 0.05, 0.25, 1);
+}
+
+.book[data-s="open"] {
+  transform: rotateX(14deg) translateX(0);
+}
+
+.book[data-s="end"] {
+  transform: rotateX(14deg) translateX(calc(var(--w) * 0.5));
+}
+
+.book-shadow {
+  position: absolute;
+  left: 50%;
+  bottom: -32px;
+  width: 96%;
+  height: 36px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.55), transparent 70%);
+  filter: blur(6px);
+}
+
+.leaf {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: var(--w);
+  height: var(--h);
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transition: transform 1s cubic-bezier(0.5, 0.02, 0.2, 1);
+}
+
+.leaf.f {
+  transform: rotateY(-180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: #EFE8DA;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 8px;
+  color: #17141A;
+}
+
+.face.back {
+  transform: rotateY(180deg);
+  border-radius: 6px 0 0 6px;
+  box-shadow: inset -8px 0 14px -8px rgba(0, 0, 0, 0.35);
+}
+
+.face.front {
+  border-radius: 0 6px 6px 0;
+  box-shadow: inset 8px 0 14px -8px rgba(0, 0, 0, 0.35);
+}
+
+.face::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.28), transparent 55%);
+  transition: opacity 0.5s;
+}
+
+.face.back::after {
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.28), transparent 55%);
+}
+
+.leaf.turning .face::after {
+  opacity: 1;
+}
+
+.art {
+  flex: 1;
+  min-height: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(23, 20, 26, 0.25);
+  border-radius: 3px;
+}
+
+.cap {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(11px, 1.1vw, 13px);
+  line-height: 1.2;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6px;
+  color: #17141A;
+}
+
+.cover {
+  background: #0054a6;
+  color: #EFE8DA;
+  justify-content: space-between;
+  padding: 18px 14px;
+  border-left: 6px solid #F36C21;
+}
+
+.cover b {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(18px, 2.1vw, 26px);
+  line-height: 1.12;
+  color: #ffffff;
+}
+
+.cover span {
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+  text-transform: uppercase;
+}
+
+.end {
+  background: #0054a6;
+  color: #EFE8DA;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  border-right: 6px solid #0054A6;
+}
+
+.end b {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(19px, 2.3vw, 26px);
+  color: #ffffff;
+}
+
+.end span {
+  font-size: 11px;
+  opacity: 0.75;
+  margin-top: 6px;
+}
+
+.book-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.book-dots i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transition: all 0.3s;
+}
+
+.book-dots i.on {
+  background: #F36C21;
+  transform: scale(1.3);
+}
+
+@media(max-width: 1023px) {
+  .book-stage {
+    --w: clamp(150px, 25vw, 210px);
+    margin-top: 1rem;
+  }
+}
+
+@media(max-width: 640px) {
+  .book-stage {
+    --w: clamp(130px, 32vw, 160px);
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+
+  .leaf,
+  .book {
+    transition-duration: 0.01s;
+  }
 }

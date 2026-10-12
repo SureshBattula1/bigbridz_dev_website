@@ -14,58 +14,58 @@ export class TravelComponent {
   features = [
     {
       icon: 'booking-engine',
-      title: 'Booking Engine',
-      description: 'Advanced booking systems for hotels, flights, tours, and travel packages with real-time availability.',
+      title: 'Real-Time Travel Booking Engine',
+      description: 'Fast, multi-attribute flight, hotel, and tour package booking with live availability checks and instant confirmation.',
       image: 'assets/images/travel/travel-booking.jpg'
     },
     {
       icon: 'hotel-management',
-      title: 'Hotel Management',
-      description: 'Complete hotel management systems for reservations, check-in/out, room management, and billing.',
+      title: 'Hotel & Room Inventory Management',
+      description: 'Property reservation dashboard, room rate yield management, check-in/check-out logs, and housekeeping status.',
       image: 'assets/images/travel/travel-hotel.jpg'
     },
     {
       icon: 'itinerary',
-      title: 'Itinerary Management',
-      description: 'Dynamic itinerary creation and management tools for travelers and travel agents.',
+      title: 'Dynamic Itinerary Builder',
+      description: 'Interactive day-by-day itinerary planners with map route previews, activity booking, and PDF itinerary exports.',
       image: 'assets/images/travel/travel-itinerary.jpg'
     },
     {
       icon: 'review-platform',
-      title: 'Review Platform',
-      description: 'Integrated review and rating systems to build trust and improve service quality.',
+      title: 'Verified Traveler Review System',
+      description: 'Authentic review and rating system with photo uploads and moderation tools to build customer trust.',
       image: 'assets/images/travel/travel-review.jpg'
     },
     {
       icon: 'customer-engagement',
-      title: 'Customer Engagement',
-      description: 'Customer engagement tools including loyalty programs, personalized recommendations, and special offers.',
+      title: 'Guest Loyalty & Promotions',
+      description: 'Tiered rewards programs, promo code engines, and automated post-trip re-engagement emails.',
       image: 'assets/images/travel/travel-engagement.jpg'
     },
     {
       icon: 'travel-planning',
-      title: 'Travel Planning',
-      description: 'Comprehensive travel planning tools with destination guides, weather, and local information.',
+      title: 'Multi-Currency Global Checkout',
+      description: 'Localized payment processing supporting international credit cards, multi-currency display, and automated tax calculations.',
       image: 'assets/images/travel/travel-planning.jpg'
     }
   ];
 
   benefits = [
     {
-      title: 'Seamless Bookings',
-      description: 'User-friendly booking systems that convert visitors into customers with ease.'
+      title: 'Frictionless Booking Conversion',
+      description: 'Clean, step-by-step checkout flows optimized for mobile travelers to minimize booking abandonment.'
     },
     {
-      title: 'Multi-Channel Support',
-      description: 'Support for web, mobile, and API integrations with third-party platforms.'
+      title: 'Channel Manager & API Integration',
+      description: 'Connect seamlessly with global distribution systems (GDS) and hotel channel managers without double-booking risks.'
     },
     {
-      title: 'Real-Time Updates',
-      description: 'Real-time availability, pricing, and booking confirmations for better customer experience.'
+      title: 'High-Traffic Resilience',
+      description: 'Fast caching layers ensure sub-second search results during seasonal travel promotions and holiday spikes.'
     },
     {
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics to track bookings, revenue, and customer behavior patterns.'
+      title: 'Comprehensive Revenue Telemetry',
+      description: 'Track booking conversion funnels, average stay values, cancellation rates, and seasonal travel patterns.'
     }
   ];
 }

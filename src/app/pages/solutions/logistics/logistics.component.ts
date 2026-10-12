@@ -14,58 +14,58 @@ export class LogisticsComponent {
   features = [
     {
       icon: 'tracking',
-      title: 'Real-Time Tracking',
-      description: 'GPS-based tracking systems for real-time shipment location and delivery status updates.',
+      title: 'Sub-Second GPS Fleet Tracking',
+      description: 'Live vehicle location streaming over WebSockets, historical route playback, speed telemetry, and geofencing alerts.',
       image: 'assets/images/logistics/logistics-tracking.jpg'
     },
     {
       icon: 'fleet',
-      title: 'Fleet Management',
-      description: 'Comprehensive fleet management solutions for vehicle tracking, maintenance, and driver management.',
+      title: 'Fleet Maintenance & Vehicle Health',
+      description: 'Preventive maintenance scheduling, odometer tracking, fuel consumption analysis, and vehicle inspection checklists.',
       image: 'assets/images/logistics/logistics-fleet.jpg'
     },
     {
       icon: 'dispatch',
-      title: 'Dispatch System',
-      description: 'Automated dispatch systems with intelligent route assignment and delivery optimization.',
+      title: 'Automated Dispatch & Assignment',
+      description: 'Intelligent matching algorithm assigning deliveries based on proximity, vehicle capacity, driver shift hours, and traffic conditions.',
       image: 'assets/images/logistics/logistics-dispatch.jpg'
     },
     {
       icon: 'route-optimization',
-      title: 'Route Optimization',
-      description: 'AI-powered route optimization to reduce delivery time and fuel costs.',
+      title: 'Dynamic Route Optimization',
+      description: 'Multi-stop route planning that factors in live road congestion and delivery priority windows to minimize fuel spend.',
       image: 'assets/images/logistics/logistics-route.jpg'
     },
     {
       icon: 'delivery',
-      title: 'Delivery Management',
-      description: 'End-to-end delivery management from order placement to final delivery confirmation.',
+      title: 'Digital Proof of Delivery (ePOD)',
+      description: 'Driver mobile application with signature capture, photo verification, barcode scanning, and instant delivery receipt generation.',
       image: 'assets/images/logistics/logistics-delivery.jpg'
     },
     {
       icon: 'warehouse',
-      title: 'Warehouse Management',
-      description: 'Complete warehouse management systems for inventory, picking, and shipping operations.',
+      title: 'Warehouse & Stock Synchronization',
+      description: 'Real-time inventory picking, bin location tracking, cross-docking workflows, and shipment staging management.',
       image: 'assets/images/logistics/logistics-warehouse.jpg'
     }
   ];
 
   benefits = [
     {
-      title: 'Real-Time Visibility',
-      description: 'Track shipments and vehicles in real-time for better operational control.'
+      title: 'Total Operational Visibility',
+      description: 'Real-time visibility over fleet movements, active delays, and driver performance from a single operations console.'
     },
     {
-      title: 'Cost Optimization',
-      description: 'Reduce fuel costs and improve efficiency with intelligent route planning.'
+      title: 'Reduced Fuel & Mileage Costs',
+      description: 'Optimized route grouping cuts unnecessary transit miles, idle engine hours, and vehicle wear-and-tear.'
     },
     {
-      title: 'Scalable Solutions',
-      description: 'Solutions that scale from small delivery operations to large logistics networks.'
+      title: 'Reliable Driver Mobile Apps',
+      description: 'Lightweight Android and iOS apps designed to function smoothly even in areas with intermittent cellular coverage.'
     },
     {
-      title: 'Mobile Apps',
-      description: 'Driver and customer mobile apps for seamless delivery experience.'
+      title: 'Scalable Fleet Capacity',
+      description: 'Architected to handle tens of thousands of simultaneous telemetry pings per second without lag.'
     }
   ];
 }

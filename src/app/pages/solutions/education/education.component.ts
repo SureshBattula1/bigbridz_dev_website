@@ -14,58 +14,58 @@ export class EducationComponent {
   features = [
     {
       icon: 'lms',
-      title: 'Learning Management System',
-      description: 'Comprehensive LMS platforms for course creation, content delivery, and student progress tracking.',
+      title: 'Course Management & LMS',
+      description: 'Structured course creation with video streaming, downloadable resources, prerequisite track management, and student milestone tracking.',
       image: 'assets/images/education/education-lms.jpg'
     },
     {
       icon: 'learning',
-      title: 'Mobile Learning Apps',
-      description: 'Native mobile applications enabling students to learn on-the-go with offline content access.',
+      title: 'Mobile-First Learning Apps',
+      description: 'Offline course video playback, push notifications for assignment deadlines, and bite-sized learning interfaces for mobile devices.',
       image: 'assets/images/education/education-mobile.jpg'
     },
     {
       icon: 'assessment',
-      title: 'Assessment Tools',
-      description: 'Advanced testing and assessment platforms with automated grading and detailed analytics.',
+      title: 'Assessment & Examination Engines',
+      description: 'Timed online tests, question bank randomization, anti-cheat tab-monitoring, and automated grading pipelines.',
       image: 'assets/images/education/education-assessment.jpg'
     },
     {
       icon: 'virtual-classroom',
-      title: 'Virtual Classrooms',
-      description: 'Interactive online classrooms with video conferencing, screen sharing, and collaborative tools.',
+      title: 'Interactive Virtual Classrooms',
+      description: 'Integrated video conferencing with real-time whiteboards, breakout rooms, screen sharing, and live Q&A chat.',
       image: 'assets/images/education/education-classroom.jpg'
     },
     {
       icon: 'student-engagement',
-      title: 'Student Engagement',
-      description: 'Gamification and engagement features to boost student participation and learning outcomes.',
+      title: 'Gamification & Retention Drivers',
+      description: 'Badges, leaderboards, streak tracking, and interactive challenges that drive course completion rates.',
       image: 'assets/images/education/education-engagement.jpg'
     },
     {
       icon: 'certification',
-      title: 'Certification Management',
-      description: 'Digital certificate generation, verification, and management systems for course completion.',
+      title: 'Tamper-Proof Certificate Verification',
+      description: 'Automated digital certificate generation with verifiable QR codes and LinkedIn social sharing integration.',
       image: 'assets/images/education/education-certification.jpg'
     }
   ];
 
   benefits = [
     {
-      title: 'Scalable Platform',
-      description: 'Support from individual courses to enterprise-level educational institutions.'
+      title: 'High-Concurrency Video Streaming',
+      description: 'Adaptive bitrate streaming that adjusts video resolution dynamically to match student bandwidth.'
     },
     {
-      title: 'Interactive Learning',
-      description: 'Engaging content delivery with multimedia support and interactive assessments.'
+      title: 'Multi-Device Accessibility',
+      description: 'Responsive web and mobile interfaces that work seamlessly across smartphones, tablets, and budget laptops.'
     },
     {
-      title: 'Analytics & Reporting',
-      description: 'Comprehensive analytics to track student progress and learning outcomes.'
+      title: 'Actionable Learning Analytics',
+      description: 'Instructor dashboards tracking student drop-off points, quiz failure rates, and module engagement.'
     },
     {
-      title: 'Multi-Device Support',
-      description: 'Accessible across all devices with responsive design and native mobile apps.'
+      title: 'Multi-Tenant School Infrastructure',
+      description: 'Supports individual course creators, corporate training academies, and multi-campus universities.'
     }
   ];
 }

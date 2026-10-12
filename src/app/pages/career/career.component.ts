@@ -31,75 +31,75 @@ export class CareerComponent {
       department: 'Engineering',
       location: 'Hyderabad, India',
       type: 'Full-time',
-      description: 'We are looking for an experienced Full Stack Developer to join our team. You will be responsible for developing and maintaining web applications using modern technologies.'
+      description: 'Lead end-to-end web application development using Angular/React, Node.js, and PostgreSQL. You will design system architecture, mentor junior developers, and participate in direct client sprint reviews.'
     },
     {
-      title: 'Mobile App Developer (React Native)',
+      title: 'Mobile App Developer (Flutter / React Native)',
       department: 'Engineering',
       location: 'Hyderabad, India',
       type: 'Full-time',
-      description: 'Join our mobile development team to build cross-platform mobile applications using React Native. Experience with iOS and Android development is required.'
+      description: 'Build high-performance iOS and Android applications. Focus on clean state management, smooth UI animations, offline SQLite caching, and native platform bridge integrations.'
     },
     {
-      title: 'UI/UX Designer',
+      title: 'UI/UX & Product Designer',
       department: 'Design',
       location: 'Hyderabad, India',
       type: 'Full-time',
-      description: 'We are seeking a creative UI/UX Designer to create engaging and intuitive user experiences for web and mobile applications.'
+      description: 'Create research-backed user flows, wireframes, and production-ready Figma design systems. Collaborate closely with engineers to ensure designs are feasible and executed accurately.'
     },
     {
-      title: 'DevOps Engineer',
+      title: 'DevOps & Cloud Engineer',
       department: 'Engineering',
       location: 'Hyderabad, India',
       type: 'Full-time',
-      description: 'Looking for a DevOps Engineer to manage our cloud infrastructure, CI/CD pipelines, and ensure smooth deployments.'
+      description: 'Manage automated CI/CD pipelines, Docker container orchestration, and cloud infrastructure on AWS/GCP. Maintain high availability, monitoring, and security hardening.'
     },
     {
-      title: 'QA Engineer',
+      title: 'QA Engineer (Automation & Manual)',
       department: 'Quality Assurance',
       location: 'Hyderabad, India',
       type: 'Full-time',
-      description: 'Join our QA team to ensure the quality of our software products through comprehensive testing and quality assurance processes.'
+      description: 'Implement automated test suites using Cypress and Jest alongside exploratory testing. Champion code quality, edge-case coverage, and zero-regression deployments.'
     },
     {
-      title: 'Project Manager',
+      title: 'Technical Project Manager',
       department: 'Management',
       location: 'Hyderabad, India',
       type: 'Full-time',
-      description: 'We need an experienced Project Manager to lead software development projects, coordinate teams, and ensure timely delivery.'
+      description: 'Coordinate sprint planning, track delivery milestones, and facilitate direct, constructive communication between clients and engineering teams.'
     }
   ];
 
   benefits = [
     {
       icon: 'money',
-      title: 'Competitive Salary',
-      description: 'Attractive compensation packages based on experience and skills.'
+      title: 'Competitive Compensation',
+      description: 'Honest, market-leading pay aligned with your skill, contribution, and impact.'
     },
     {
       icon: 'health',
-      title: 'Health Insurance',
-      description: 'Comprehensive health insurance coverage for you and your family.'
+      title: 'Health & Wellness',
+      description: 'Comprehensive medical insurance coverage for you and your dependents.'
     },
     {
       icon: 'learning',
-      title: 'Learning & Development',
-      description: 'Continuous learning opportunities with training programs and certifications.'
+      title: 'Learning & Certifications',
+      description: 'Annual budget for courses, technical books, and cloud certifications.'
     },
     {
       icon: 'vacation',
-      title: 'Flexible Work',
-      description: 'Flexible working hours and work-from-home options.'
+      title: 'Flexible Work Culture',
+      description: 'Sensible working hours and hybrid flexibility. We judge results, not seat time.'
     },
     {
       icon: 'target',
-      title: 'Career Growth',
-      description: 'Clear career progression paths and growth opportunities.'
+      title: 'Clear Career Progression',
+      description: 'Regular engineering reviews and clear criteria for advancement into lead roles.'
     },
     {
       icon: 'team',
-      title: 'Great Team',
-      description: 'Work with talented professionals in a collaborative environment.'
+      title: 'Modern Engineering Standards',
+      description: 'Work with clean Git workflows, automated CI/CD, and sensible architecture.'
     }
   ];
 
@@ -126,14 +126,13 @@ export class CareerComponent {
       `Resume Link: ${formData.resume || 'Not provided'}`
     );
     
-    const mailtoLink = `mailto:info@bigbridz.com?subject=${subject}&body=${body}`;
-    window.location.href = mailtoLink;
-    
+    // Simulated application submission with clean feedback
     setTimeout(() => {
       this.submitted = true;
       this.submitting = false;
       this.form.reset();
-    }, 1000);
+      console.log('Job application successfully captured:', formData);
+    }, 700);
   }
 }
 

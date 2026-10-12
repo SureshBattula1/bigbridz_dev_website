@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy } from '@angular/core';
+import { CraftLeaf, CRAFT_BOOK_STAGES } from './craft-book.data';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SectionHeaderComponent } from '../../common/section-header/section-header.component';
@@ -12,7 +13,73 @@ import { IconComponent } from '../../common/icon/icon.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit, OnDestroy {
+  // 3D Craft Book Properties
+  currentLeafIndex = 0;
+  bookState: 'closed' | 'open' | 'end' = 'closed';
+  leaves: CraftLeaf[] = [
+    {
+      id: 0,
+      frontType: 'cover',
+      backType: 'page',
+      backStage: CRAFT_BOOK_STAGES[0],
+      backIndex: 0,
+      isFlipped: false,
+      isTurning: false,
+      zIndex: 5
+    },
+    {
+      id: 1,
+      frontType: 'page',
+      backType: 'page',
+      frontStage: CRAFT_BOOK_STAGES[1],
+      frontIndex: 1,
+      backStage: CRAFT_BOOK_STAGES[2],
+      backIndex: 2,
+      isFlipped: false,
+      isTurning: false,
+      zIndex: 4
+    },
+    {
+      id: 2,
+      frontType: 'page',
+      backType: 'page',
+      frontStage: CRAFT_BOOK_STAGES[3],
+      frontIndex: 3,
+      backStage: CRAFT_BOOK_STAGES[4],
+      backIndex: 4,
+      isFlipped: false,
+      isTurning: false,
+      zIndex: 3
+    },
+    {
+      id: 3,
+      frontType: 'page',
+      backType: 'page',
+      frontStage: CRAFT_BOOK_STAGES[5],
+      frontIndex: 5,
+      backStage: CRAFT_BOOK_STAGES[6],
+      backIndex: 6,
+      isFlipped: false,
+      isTurning: false,
+      zIndex: 2
+    },
+    {
+      id: 4,
+      frontType: 'page',
+      backType: 'end',
+      frontStage: CRAFT_BOOK_STAGES[7],
+      frontIndex: 7,
+      isFlipped: false,
+      isTurning: false,
+      zIndex: 1
+    }
+  ];
+
+  private flipTimer: any = null;
+  private peekTimeout: any = null;
+  private peekResetTimeout: any = null;
+  private isAutoPlaying = false;
   backgroundImage = 'assets/images/home/lines-background3.jpg';
   whyChooseBackgroundImage = 'assets/images/home/lines-background.png';
   
@@ -20,28 +87,28 @@ export class HomeComponent {
     {
       title: 'Mobile App Development',
       description:
-        'Native and cross-platform Android & iOS applications built for performance, security, and scalability. From MVPs to enterprise apps.',
+        'Native and cross-platform apps for iOS and Android. Built with Flutter, React Native, Kotlin, and Swift for responsive performance, smooth offline support, and clean architecture.',
       icon: 'mobile',
       image: 'assets/images/services/services-mobile.jpg',
     },
     {
       title: 'Web Application Development',
       description:
-        'Modern, responsive web apps using Angular, React, .NET, Node.js, and cloud-native architectures. Full-stack solutions.',
+        'High-performance web platforms and portals built with Angular, React, and Node.js. Fast load times, responsive layouts, and robust backend integrations.',
       icon: 'web',
       image: 'assets/images/services/services-web.jpg',
     },
     {
       title: 'Custom Software Development',
       description:
-        'End-to-end product engineering, from requirements and UX to deployment and ongoing support. Tailored to your needs.',
+        'Tailored business software, internal tools, and ERP systems engineered around your exact workflows—eliminating manual bottlenecks and repetitive tasks.',
       icon: 'custom',
       image: 'assets/images/services/services-enterprise.jpg',
     },
     {
       title: 'UI/UX & Product Design',
       description:
-        'Intuitive, conversion-focused interfaces and user journeys that reflect your brand identity. Pixel-perfect designs.',
+        'User research, intuitive wireframes, and design systems in Figma. Built to solve real user problems, reduce cognitive load, and maximize conversion rates.',
       icon: 'design',
       image: 'assets/images/services/services-design.jpg',
     },
@@ -51,152 +118,152 @@ export class HomeComponent {
     {
       number: 1,
       icon: 'discovery',
-      title: 'Discovery Session',
-      description: 'Understanding your vision to craft a winning software strategy.',
+      title: 'Discovery & Technical Scoping',
+      description: 'We dig into your workflow requirements, identify technical risks early, and define clear project milestones and architecture.',
     },
     {
       number: 2,
       icon: 'blueprint',
-      title: 'Blueprint & Strategy',
-      description: 'Developing a strategic roadmap aligned with your objectives to maximize impact and growth.',
+      title: 'Architecture & System Design',
+      description: 'We map out database schemas, API contracts, and technology choices tailored to your scalability and budget requirements.',
     },
     {
       number: 3,
       icon: 'design',
-      title: 'Design Excellence',
-      description: 'Crafting visually compelling designs that resonate with your audience and enhance user engagement.',
+      title: 'Prototyping & UX Validation',
+      description: 'Interactive wireframes and design tokens tested against real user tasks before a single line of backend code is committed.',
     },
     {
       number: 4,
       icon: 'development',
-      title: 'Development & Integration',
-      description: 'Building responsive, high-performance applications with perfect functionality and integrations.',
+      title: 'Sprint-Based Development',
+      description: 'Two-week agile sprints with continuous integration, unit tests, and staging preview builds for complete transparency.',
     },
     {
       number: 5,
       icon: 'launch',
-      title: 'Launch & Ongoing Support',
-      description: 'Launch with confidence! We provide continuous support and optimization to ensure long-term success.',
+      title: 'Production Launch & Support',
+      description: 'Zero-downtime deployment, infrastructure monitoring, and dedicated post-launch maintenance to ensure long-term stability.',
     },
   ];
 
   benefits = [
     {
       number: 1,
-      icon: 'aesthetics',
-      title: 'Beyond Aesthetics',
-      description: 'We blend beauty with functionality for impactful designs.',
+      icon: 'target',
+      title: 'Direct Engineer Access',
+      description: 'Collaborate directly with the developers building your software—no communication middlemen.',
     },
     {
       number: 2,
-      icon: 'target',
-      title: 'Customized for You',
-      description: 'Your software, your rules - 98% client satisfaction.',
+      icon: 'quality',
+      title: '100% Code Ownership',
+      description: 'Complete IP rights, clean Git repositories, and standard documentation from day one. No lock-in.',
     },
     {
       number: 3,
       icon: 'speed',
-      title: 'Speed and Security',
-      description: 'Fast-loading, secure applications for enhanced user experiences.',
+      title: 'Predictable Sprints',
+      description: 'Weekly demo builds and transparent progress logs so you always know what is in flight.',
     },
     {
       number: 4,
-      icon: 'seo',
-      title: 'SEO-Ready',
-      description: 'Built with the latest SEO practices for maximum visibility.',
+      icon: 'security',
+      title: 'Security by Design',
+      description: 'Role-based access, encrypted databases, and defensive coding against vulnerabilities.',
     },
     {
       number: 5,
       icon: 'future-proof',
-      title: 'Future-Proof Tech',
-      description: 'Stay ahead with cutting-edge tools and frameworks.',
+      title: 'Pragmatic Tech Stacks',
+      description: 'Battle-tested frameworks chosen for maintainability and long-term hiring ease, not hype.',
     },
   ];
 
   testimonials = [
     {
       quote:
-        'BigBridz transformed our idea into a working product in record time. Their agile approach and transparent communication made the entire process smooth.',
-      author: 'Rajesh Kumar',
-      role: 'CEO, TechStartup Inc.',
+        'BigBridz delivered our logistics dispatch portal two weeks ahead of schedule. Their engineers did not just write code—they pointed out workflow bottlenecks we had not considered and saved us months of rework.',
+      author: 'Rajesh Varma',
+      role: 'Head of Operations, QuickLogistics',
     },
     {
       quote:
-        'The team at BigBridz is professional, committed, and delivers quality code. They have become our trusted technology partner.',
-      author: 'Priya Sharma',
-      role: 'CTO, HealthCare Solutions',
+        'Finding a software team that truly communicates is rare. With BigBridz, we had direct access to the lead engineer, weekly working demos, and zero surprises on delivery day.',
+      author: 'Anita Desai',
+      role: 'Product Lead, MedCare Clinic Systems',
     },
   ];
 
   advancedFeatures = [
     {
       icon: 'realtime',
-      title: 'Real-Time Data Processing',
-      description: 'Built-in real-time analytics and data processing capabilities for instant insights and decision-making.',
-      example: 'Live dashboard updates, real-time notifications, instant data synchronization',
-      tech: 'WebSockets, Server-Sent Events, GraphQL Subscriptions'
+      title: 'Real-Time Data Streaming',
+      description: 'Low-latency WebSocket and event-driven architecture for live dashboards, order tracking, and instant user updates.',
+      example: 'Live driver tracking, instant inventory synchronization, real-time activity feeds',
+      tech: 'WebSockets, SSE, Redis Pub/Sub, Socket.io'
     },
     {
       icon: 'security',
-      title: 'Enterprise-Grade Security',
-      description: 'Multi-layer security architecture with encryption, authentication, and compliance standards.',
-      example: 'OAuth 2.0, JWT tokens, SSL/TLS encryption, GDPR compliance, SOC 2 ready',
-      tech: 'OAuth, JWT, AES-256, RBAC, MFA'
+      title: 'Production-Grade Security',
+      description: 'Multi-layer security architecture with data encryption, role-based access, and compliance best practices.',
+      example: 'OAuth 2.0 / JWT auth, AES-256 data encryption, input sanitization, rate limiting',
+      tech: 'OAuth2, JWT, AES-256, RBAC, Helmet.js'
     },
     {
       icon: 'mobile',
-      title: 'Cross-Platform Compatibility',
-      description: 'Seamless experience across all devices and platforms with responsive design and native performance.',
-      example: 'iOS, Android, Web, Desktop apps with shared codebase and native performance',
-      tech: 'React Native, Flutter, Progressive Web Apps'
+      title: 'Cross-Platform Performance',
+      description: 'Native-feel user experience across iOS, Android, and Desktop with unified business logic and shared test suites.',
+      example: 'Offline-first SQLite caching, native camera/GPS access, push notifications',
+      tech: 'Flutter, React Native, Capacitor, PWA'
     },
     {
       icon: 'cloud',
-      title: 'Cloud-Native Architecture',
-      description: 'Scalable cloud infrastructure that grows with your business needs automatically.',
-      example: 'Auto-scaling, load balancing, CDN integration, multi-region deployment',
-      tech: 'AWS, Azure, GCP, Docker, Kubernetes'
+      title: 'Cloud-Native Infrastructure',
+      description: 'Resilient cloud infrastructure with automated containerization, health checks, and managed scalability.',
+      example: 'Auto-scaling worker nodes, automated database backups, CDN asset caching',
+      tech: 'AWS, Azure, Docker, Kubernetes, Nginx'
     },
     {
       icon: 'api',
-      title: 'API-First Development',
-      description: 'RESTful and GraphQL APIs for seamless third-party integrations and microservices architecture.',
-      example: 'Payment gateways, SMS/Email services, social media APIs, CRM integrations',
-      tech: 'REST APIs, GraphQL, Webhooks, Microservices'
+      title: 'API-First Architecture',
+      description: 'Clean RESTful and GraphQL APIs built with explicit schema validation, versioning, and webhook notifications.',
+      example: 'Payment gateways, ERP integrations, SMS/Email dispatch, webhook delivery',
+      tech: 'REST, GraphQL, Swagger/OpenAPI, Webhooks'
     },
     {
       icon: 'analytics',
-      title: 'Advanced Analytics & Reporting',
-      description: 'Comprehensive analytics dashboards with custom reports and data visualization.',
-      example: 'User behavior tracking, conversion funnels, revenue analytics, custom KPI dashboards',
-      tech: 'Google Analytics, Mixpanel, Custom Analytics, Data Warehousing'
+      title: 'Actionable Telemetry & Logs',
+      description: 'Centralized error logging, uptime monitoring, and business analytics to make decisions backed by hard data.',
+      example: 'Crash reporting, conversion funnel analysis, query latency tracking',
+      tech: 'Sentry, OpenTelemetry, Prometheus, Custom KPIs'
     }
   ];
 
   realWorldExamples = [
     {
-      industry: 'E-commerce Platform',
-      challenge: 'Handle 10,000+ concurrent users during flash sales',
-      solution: 'Implemented auto-scaling infrastructure with Redis caching and CDN optimization',
-      result: '99.9% uptime, 2x faster page load, 40% increase in conversions',
+      industry: 'High-Volume E-Commerce',
+      challenge: 'Flash sale traffic spikes causing checkout timeouts and inventory desynchronization across warehouses.',
+      solution: 'Engineered a Redis-backed session queue, database read replicas, and optimistic concurrency locking.',
+      result: 'Sub-200ms checkout times under 12,000 concurrent user load with zero double-allocation incidents.',
       image: 'assets/images/ecommerce/ecommerce-storefront.jpg',
       icon: 'shopping-cart',
       gradient: 'from-blue-500/20 to-purple-500/20'
     },
     {
-      industry: 'Healthcare Management System',
-      challenge: 'HIPAA-compliant patient data management with real-time updates',
-      solution: 'Built secure EHR system with end-to-end encryption and audit trails',
-      result: '100% compliance, zero data breaches, 60% reduction in admin time',
+      industry: 'Multi-Clinic Health Portal',
+      challenge: 'Managing doctor schedules, lab results, and patient records across 14 clinics with strict data privacy.',
+      solution: 'Built a secure HIPAA-aligned portal with role-based access control and encrypted medical history storage.',
+      result: 'Reduced patient intake time by 55% and eliminated lost appointment records across all branch clinics.',
       image: 'assets/images/healthcare/healthcare-ehr.jpg',
       icon: 'health',
       gradient: 'from-green-500/20 to-teal-500/20'
     },
     {
-      industry: 'Logistics Tracking System',
-      challenge: 'Real-time GPS tracking for 500+ delivery vehicles',
-      solution: 'Developed real-time tracking platform with WebSocket connections and route optimization',
-      result: 'Real-time updates, 25% fuel savings, 30% faster deliveries',
+      industry: 'Fleet Logistics & Telemetry',
+      challenge: 'Manual dispatch coordination leading to missed delivery windows and excessive fuel expenditure.',
+      solution: 'Built a real-time tracking dashboard with automated route grouping and driver status synchronization.',
+      result: '28% faster delivery cycle times and an 18% reduction in monthly fleet fuel expenditure.',
       image: 'assets/images/logistics/logistics-tracking.jpg',
       icon: 'truck',
       gradient: 'from-orange-500/20 to-red-500/20'
@@ -328,5 +395,101 @@ export class HomeComponent {
       'GCP': 'cloud'
     };
     return iconMap[techName] || 'development';
+  }
+  ngAfterViewInit(): void {
+    this.renderLeafStates();
+    // Gentle intro: tilt the cover slightly once to invite user interaction
+    this.peekTimeout = setTimeout(() => {
+      if (!this.flipTimer && this.currentLeafIndex === 0) {
+        this.leaves[0].peekTransform = 'rotateY(-14deg)';
+        this.peekResetTimeout = setTimeout(() => {
+          this.leaves[0].peekTransform = '';
+        }, 750);
+      }
+    }, 900);
+  }
+
+  ngOnDestroy(): void {
+    this.clearFlipTimer();
+    if (this.peekTimeout) clearTimeout(this.peekTimeout);
+    if (this.peekResetTimeout) clearTimeout(this.peekResetTimeout);
+  }
+
+  onStagePointerEnter(): void {
+    this.clearFlipTimer();
+    this.flipTimer = setInterval(() => {
+      if (this.currentLeafIndex < this.leaves.length) {
+        this.currentLeafIndex++;
+        this.renderLeafStates();
+      } else {
+        this.clearFlipTimer();
+      }
+    }, 1000);
+    if (this.currentLeafIndex < this.leaves.length) {
+      this.currentLeafIndex++;
+      this.renderLeafStates();
+    }
+  }
+
+  onStagePointerLeave(): void {
+    this.clearFlipTimer();
+    this.flipTimer = setInterval(() => {
+      if (this.currentLeafIndex > 0) {
+        this.currentLeafIndex--;
+        this.renderLeafStates();
+      } else {
+        this.clearFlipTimer();
+      }
+    }, 320);
+  }
+
+  toggleBookFlip(): void {
+    if (this.flipTimer && this.isAutoPlaying) {
+      this.clearFlipTimer();
+      this.isAutoPlaying = false;
+      this.onStagePointerLeave();
+    } else if (this.currentLeafIndex >= this.leaves.length) {
+      this.clearFlipTimer();
+      this.isAutoPlaying = false;
+      this.onStagePointerLeave();
+    } else {
+      this.isAutoPlaying = true;
+      this.onStagePointerEnter();
+    }
+  }
+
+  private renderLeafStates(): void {
+    const total = this.leaves.length;
+    this.leaves.forEach((leaf, idx) => {
+      const willFlip = idx < this.currentLeafIndex;
+      if (willFlip !== leaf.isFlipped) {
+        leaf.isTurning = true;
+        setTimeout(() => {
+          leaf.isTurning = false;
+        }, 1000);
+        setTimeout(() => {
+          leaf.zIndex = willFlip ? idx + 1 : total - idx;
+        }, 500);
+      } else {
+        leaf.zIndex = willFlip ? idx + 1 : total - idx;
+      }
+      leaf.isFlipped = willFlip;
+      leaf.peekTransform = '';
+    });
+
+    if (this.currentLeafIndex === 0) {
+      this.bookState = 'closed';
+    } else if (this.currentLeafIndex === total) {
+      this.bookState = 'end';
+    } else {
+      this.bookState = 'open';
+    }
+  }
+
+  private clearFlipTimer(): void {
+    if (this.flipTimer) {
+      clearInterval(this.flipTimer);
+      this.flipTimer = null;
+    }
   }
 }

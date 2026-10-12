@@ -1,38 +1,37 @@
-import { Injectable, AfterViewInit, OnDestroy } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AutoScrollRevealService implements AfterViewInit, OnDestroy {
+export class AutoScrollRevealService implements OnDestroy {
   private observer?: IntersectionObserver;
   private observedElements: Element[] = [];
 
-  ngAfterViewInit(): void {
-    // Wait for DOM to be ready
-    setTimeout(() => {
-      this.initScrollReveal();
-    }, 100);
-  }
+  public initScrollReveal(): void {
+    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+      return;
+    }
 
-  private initScrollReveal(): void {
-    // Create intersection observer with enhanced settings
+    if (this.observer) {
+      this.observer.disconnect();
+      this.observedElements = [];
+    }
+
     this.observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('revealed');
-            // Optionally unobserve after animation for performance
-            // this.observer?.unobserve(entry.target);
+            this.observer?.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.05, // Trigger when 5% visible
-        rootMargin: '0px 0px -100px 0px' // Start 100px before entering viewport
+        threshold: 0.05,
+        rootMargin: '0px 0px -50px 0px'
       }
     );
 
-    // Observe all sections, cards, and common content blocks
     const selectors = [
       'section',
       '.card',
@@ -46,7 +45,6 @@ export class AutoScrollRevealService implements AfterViewInit, OnDestroy {
     selectors.forEach(selector => {
       const elements = document.querySelectorAll(selector);
       elements.forEach((el) => {
-        // Only observe if not already revealed
         if (!el.classList.contains('revealed') && !el.classList.contains('no-scroll-reveal')) {
           this.observer?.observe(el);
           this.observedElements.push(el);
@@ -57,11 +55,8 @@ export class AutoScrollRevealService implements AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     if (this.observer) {
-      this.observedElements.forEach(el => {
-        this.observer?.unobserve(el);
-      });
       this.observer.disconnect();
+      this.observedElements = [];
     }
   }
 }
-

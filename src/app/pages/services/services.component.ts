@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { SectionHeaderComponent } from '../../common/section-header/section-header.component';
 import { ServiceCardComponent } from '../../common/service-card/service-card.component';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [SectionHeaderComponent, ServiceCardComponent],
+  imports: [RouterLink, SectionHeaderComponent, ServiceCardComponent],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'
 })
@@ -14,63 +15,60 @@ export class ServicesComponent {
     {
       title: 'Android & iOS App Development',
       description:
-        'End-to-end native and hybrid app development with Kotlin, Swift, Flutter, and React Native. We handle app store deployment, performance optimization, and post-launch maintenance.',
+        'Native and cross-platform mobile apps for iOS and Android using Flutter, React Native, Swift, and Kotlin. We engineer responsive UI, offline sync, secure authentication, and seamless app store releases.',
       icon: 'mobile',
     },
     {
       title: 'Web Application Development',
       description:
-        'Modern, SEO-friendly, and responsive web applications using Angular, React, Vue, Node.js, and cloud-native architectures. Full-stack development with scalable backend APIs.',
+        'Responsive, performant web applications built with Angular, React, and Node.js. Designed for high concurrency, fast First Contentful Paint, modular architecture, and search visibility.',
       icon: 'web',
     },
     {
-      title: 'Startup Product Development',
+      title: 'Startup MVP & Fast Prototyping',
       description:
-        'Rapid MVP development with pivot-friendly architecture. We help startups validate ideas quickly, iterate based on user feedback, and scale as you grow.',
+        'Pragmatic MVP development built for real user validation. We focus on core functionality, scalable data models, and clean APIs so your MVP can evolve into a full product without rewrites.',
       icon: 'startup',
     },
     {
-      title: 'Enterprise Software',
+      title: 'Enterprise Systems & Internal Tools',
       description:
-        'Custom CRM, ERP, and workflow automation platforms tailored to your business processes. Compliance-ready solutions with role-based access and audit trails.',
+        'Custom ERPs, operational dashboards, and automated back-office workflows. Role-based access control, detailed audit trails, and seamless integration with legacy databases.',
       icon: 'enterprise',
     },
     {
-      title: 'UI/UX Design Services',
+      title: 'UI/UX & Product Design',
       description:
-        'Intuitive, conversion-focused interfaces and user journeys that reflect your brand identity. We create wireframes, prototypes, and pixel-perfect designs.',
+        'Intuitive, high-converting interfaces crafted through user research, wireframing, and interactive Figma design systems that streamline frontend engineering.',
       icon: 'design',
     },
     {
-      title: 'Cloud & DevOps',
+      title: 'Cloud Architecture & DevOps',
       description:
-        'AWS, Azure, and GCP deployment with CI/CD pipelines, containerization, and infrastructure as code. We ensure high availability and auto-scaling capabilities.',
+        'Automated CI/CD pipelines, Docker containerization, and cloud infrastructure on AWS, Azure, and GCP. High availability, auto-scaling, and active uptime monitoring.',
       icon: 'cloud',
     },
     {
-      title: 'Legacy Modernization',
+      title: 'Legacy Modernization & Refactoring',
       description:
-        'Transform outdated systems into modern, maintainable applications. We migrate legacy code to current frameworks while preserving business logic and data.',
+        'Migrating monolithic or deprecated codebases to modern frameworks and microservices without data loss or operational downtime.',
       icon: 'legacy',
     },
     {
-      title: 'Quality Assurance & Testing',
+      title: 'Quality Assurance & Automated Testing',
       description:
-        'Comprehensive testing including unit, integration, E2E, and performance testing. We ensure bug-free releases and maintain high code quality standards.',
+        'Rigorous unit, integration, and end-to-end testing (Cypress, Jest). Automated regression pipelines ensuring bug-free production releases.',
       icon: 'qa',
     },
   ];
 
   supportingServices = [
-    'Product discovery & requirement analysis',
-    'UI/UX design and prototyping',
-    'Cloud deployment & DevOps support',
-    'Application performance optimization',
-    'Legacy app modernization',
-    '24/7 monitoring and maintenance',
-    'Security audits & penetration testing',
-    'API development & integration',
-    'Database design & optimization',
-    'Third-party service integrations',
+    'Technical feasibility & architectural scoping',
+    'Interactive UI/UX design tokens & prototypes',
+    'Automated CI/CD deployment pipelines',
+    'Database performance tuning & query optimization',
+    'Security audits & role-based access control (RBAC)',
+    'API documentation & third-party webhook integrations',
+    'Post-launch SLA monitoring & ongoing maintenance',
   ];
 }

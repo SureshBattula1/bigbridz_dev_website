@@ -14,58 +14,58 @@ export class RealestateComponent {
   features = [
     {
       icon: 'property-listing',
-      title: 'Property Listings',
-      description: 'Comprehensive property listing platforms with advanced search, filters, and detailed property information.',
+      title: 'High-Performance Property Listings',
+      description: 'Advanced multi-attribute search (neighborhood, square footage, amenities), interactive map clustering, and high-res media galleries.',
       image: 'assets/images/realestate/realestate-listings.jpg'
     },
     {
       icon: 'crm',
-      title: 'CRM for Agents',
-      description: 'Customer relationship management systems for real estate agents to manage leads and clients.',
+      title: 'Real Estate Agent CRM & Lead Ingestion',
+      description: 'Automated lead distribution, communication logs, tour scheduling, and follow-up reminders to accelerate deal closures.',
       image: 'assets/images/realestate/realestate-crm.jpg'
     },
     {
       icon: 'virtual-tour',
-      title: 'Virtual Tours',
-      description: '360-degree virtual tour integration for immersive property viewing experiences.',
+      title: '360-Degree Virtual Tours',
+      description: 'Seamless integration with 3D virtual walkthroughs and floor plans for interactive remote property viewings.',
       image: 'assets/images/realestate/realestate-tours.jpg'
     },
     {
       icon: 'document-management',
-      title: 'Document Management',
-      description: 'Secure document management systems for contracts, agreements, and property documents.',
+      title: 'Digital Lease Management & E-Sign',
+      description: 'Automated lease drafting, tenant background document uploads, and legally binding digital signature workflows.',
       image: 'assets/images/realestate/realestate-documents.jpg'
     },
     {
       icon: 'tenant-portal',
-      title: 'Tenant Portal',
-      description: 'Tenant and landlord portals for rent payments, maintenance requests, and communication.',
+      title: 'Tenant & Landlord Self-Service Portals',
+      description: 'Online rent collection with automated receipts, maintenance ticketing with photo attachments, and tenant announcements.',
       image: 'assets/images/realestate/realestate-portal.jpg'
     },
     {
       icon: 'agent-tools',
-      title: 'Agent Tools',
-      description: 'Comprehensive tools for real estate agents including lead management and analytics.',
+      title: 'Owner Analytics & Yield Reports',
+      description: 'Financial dashboards tracking occupancy rates, rent collection status, maintenance expenses, and net property yields.',
       image: 'assets/images/realestate/realestate-tools.jpg'
     }
   ];
 
   benefits = [
     {
-      title: 'Property Showcase',
-      description: 'Beautiful property listings with high-quality images and virtual tours.'
+      title: 'Faster Lease Cycles',
+      description: 'Streamlined virtual tours and digital lease signing reduce property vacancy durations significantly.'
     },
     {
-      title: 'Lead Management',
-      description: 'Advanced CRM systems to track and convert property inquiries into sales.'
+      title: 'Centralized Operations',
+      description: 'Eliminate scattered spreadsheets by combining leads, contracts, maintenance, and accounting in one platform.'
     },
     {
-      title: 'Mobile Apps',
-      description: 'Native mobile apps for agents and customers for on-the-go property management.'
+      title: 'Mobile Access for Field Agents',
+      description: 'Agents can access listing details, log client notes, and verify appointments directly from their phones.'
     },
     {
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics to track property views, leads, and conversion rates.'
+      title: 'Automated Rent Invoicing',
+      description: 'Recurring automated payment reminders and payment gateway integrations that keep cash flow predictable.'
     }
   ];
 }

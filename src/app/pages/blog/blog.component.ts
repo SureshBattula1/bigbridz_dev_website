@@ -17,64 +17,64 @@ export class BlogComponent {
   
   posts = [
     {
-      title: 'How to Choose the Right Tech Stack for Your Startup',
+      title: 'Choosing a Tech Stack in 2026: Trade-offs Over Hype',
       date: 'November 15, 2025',
       summary:
-        'Key factors to consider such as scalability, hiring availability, and time-to-market when choosing technologies. Learn how to balance innovation with stability for your MVP and future growth.',
-      category: 'Technology',
-      readTime: '5 min read',
+        'Why picking battle-tested frameworks like Angular, React, and Node.js often beats chasing the latest trend. How to evaluate hiring pools, ecosystem maturity, and maintenance costs.',
+      category: 'Architecture',
+      readTime: '6 min read',
       image: 'assets/blog-tech-stack.jpg',
-      briefExplanation: 'Choosing the right technology stack is crucial for startup success. Consider factors like team expertise, community support, scalability needs, and long-term maintenance. Popular stacks like MERN (MongoDB, Express, React, Node.js) offer flexibility, while established frameworks like .NET provide enterprise-grade stability. Evaluate your MVP requirements, budget constraints, and future growth plans before making a decision.',
+      briefExplanation: 'The biggest hidden cost in software is not initial development—it is maintenance. When selecting a technology stack, teams must weigh community maturity, long-term hiring availability, and tooling stability over social media hype. We break down the real production trade-offs between monolithic backends and microservices, relational databases vs document stores, and how to pick a stack that supports your five-year roadmap.',
     },
     {
-      title: 'Benefits of Agile Software Development for SMEs',
+      title: 'Why Two-Week Sprints Fail Without Strict Scope Scoping',
       date: 'October 28, 2025',
       summary:
-        'Why short sprints, frequent demos, and backlog grooming help small and medium businesses ship faster. Discover how agile methodologies reduce risk and improve ROI for growing companies.',
+        'Practical engineering management strategies: defining a strict Definition of Done, managing client expectations, and preventing mid-sprint scope creep.',
       category: 'Methodology',
-      readTime: '6 min read',
+      readTime: '5 min read',
       image: 'assets/blog-agile.jpg',
-      briefExplanation: 'Agile methodology transforms how SMEs approach software development. By breaking projects into 2-4 week sprints, teams can adapt quickly to changing requirements. Daily standups ensure transparency, while sprint reviews allow stakeholders to see progress regularly. This iterative approach reduces risk, improves team morale, and delivers value faster than traditional waterfall methods.',
+      briefExplanation: 'Agile sprints only succeed when the scope of work is defended vigorously. When unvetted requests are added mid-sprint, code quality drops and delivery dates slip. In this article, we share our internal sprint framework: strict backlog grooming, transparent estimation poker, staging demos every Friday, and continuous client communication that keeps priorities crystal clear.',
     },
     {
-      title: 'Checklist Before Starting a Mobile App Project',
+      title: 'Mobile Architecture Checklist: What to Decide Before Writing Code',
       date: 'September 10, 2025',
       summary:
-        'From market research to monetization strategy, this checklist prepares you for a successful app launch. Cover all bases before development begins to avoid costly mistakes.',
+        'From offline-first SQLite caching and push notification services to state management and app store compliance: what you must architect before your first commit.',
       category: 'Mobile',
       readTime: '7 min read',
       image: 'assets/blog-mobile-checklist.jpg',
-      briefExplanation: 'Before starting mobile app development, validate your idea through market research and competitor analysis. Define your target audience, create user personas, and map out user journeys. Plan your monetization strategy early—whether through in-app purchases, subscriptions, or ads. Ensure you have a clear MVP scope, budget allocation, and timeline. Don\'t forget to consider app store guidelines and prepare for beta testing.',
+      briefExplanation: 'Rushing into mobile development without answering fundamental architectural questions leads to massive refactors. This engineering checklist covers: offline state sync, API versioning strategies, deep linking handling, battery consumption optimization, biometric authentication, and automated app store release pipelines for iOS and Android.',
     },
     {
-      title: 'Cloud Migration: Best Practices and Common Pitfalls',
+      title: 'Pragmatic Cloud Migration: Moving Monoliths Without Downtime',
       date: 'August 22, 2025',
       summary:
-        'Learn how to migrate legacy applications to the cloud efficiently. We cover AWS, Azure, and GCP strategies, cost optimization, and security considerations.',
-      category: 'Cloud',
+        'A step-by-step technical guide to database replication, containerization with Docker, and canary routing to modernize legacy workloads safely.',
+      category: 'DevOps',
       readTime: '8 min read',
       image: 'assets/blog-cloud.jpg',
-      briefExplanation: 'Cloud migration requires careful planning to avoid common pitfalls. Start with a comprehensive assessment of your current infrastructure and identify which applications are cloud-ready. Choose the right cloud provider based on your needs: AWS for scalability, Azure for Microsoft integration, or GCP for data analytics. Implement proper security measures, optimize costs with reserved instances, and plan for data backup and disaster recovery.',
+      briefExplanation: 'Migrating legacy systems to cloud environments does not have to be an all-or-nothing gamble. We explore the strangler fig pattern, incremental database synchronization, health-check automation, and reverse proxy routing that enable zero-downtime cutovers and quick rollback safety nets.',
     },
     {
-      title: 'UI/UX Design Principles for Enterprise Applications',
+      title: 'Designing B2B Enterprise UI: Productivity Over Flash',
       date: 'July 18, 2025',
       summary:
-        'Enterprise apps need intuitive interfaces that boost productivity. Explore design patterns, accessibility standards, and user testing strategies for B2B software.',
-      category: 'Design',
+        'Consumer UI patterns fail in data-heavy enterprise environments. How to design high-density data tables, keyboard shortcuts, and intuitive forms that speed up daily work.',
+      category: 'UI/UX',
       readTime: '6 min read',
       image: 'assets/blog-uiux.jpg',
-      briefExplanation: 'Enterprise applications demand user-centered design that prioritizes efficiency and productivity. Focus on clear information architecture, consistent navigation patterns, and intuitive workflows. Implement accessibility standards (WCAG 2.1) to ensure all users can interact with your software. Conduct usability testing with real users, gather feedback iteratively, and maintain design consistency across all modules.',
+      briefExplanation: 'Enterprise users use software for hours every day. Flashy animations and excessive white space often slow them down. We discuss designing for efficiency: optimizing tabular data viewing, bulk action workflows, clear status iconography, inline data validation, and minimizing repetitive modal dialogs.',
     },
     {
-      title: 'Building Scalable APIs: REST vs GraphQL',
+      title: 'REST vs GraphQL in Production: What We Learned from Real Client Apps',
       date: 'June 5, 2025',
       summary:
-        'Compare REST and GraphQL architectures for modern applications. Understand when to use each approach, performance implications, and developer experience considerations.',
+        'An honest comparison of REST and GraphQL in production environments: caching trade-offs, network overhead, backend authorization complexity, and when REST remains the superior choice.',
       category: 'Backend',
-      readTime: '9 min read',
+      readTime: '8 min read',
       image: 'assets/blog-api.jpg',
-      briefExplanation: 'REST APIs are ideal for simple CRUD operations and have widespread support, making them easier to integrate. GraphQL excels when you need flexible data fetching, reducing over-fetching and under-fetching issues. REST uses standard HTTP methods and is stateless, while GraphQL provides a single endpoint with a query language. Choose REST for simplicity and caching needs, or GraphQL for complex data relationships and mobile applications.',
+      briefExplanation: 'While GraphQL offers unmatched query flexibility for mobile clients, it introduces significant backend complexity around HTTP caching, query depth DOS protection, and complex authorization layers. We share practical lessons on when GraphQL is genuinely worth the overhead and when a clean, OpenAPI-documented REST architecture delivers better developer velocity.',
     },
   ];
 

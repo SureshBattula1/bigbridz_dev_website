@@ -70,151 +70,143 @@
     <!-- Mobile Menu Toggle Button -->
     <button
       (click)="toggleMobileMenu()"
-      class="lg:hidden flex items-center justify-center w-10 h-10 text-gray-700 hover:text-primary transition-colors relative z-50"
-      aria-label="Toggle menu"
+      class="lg:hidden flex items-center justify-center w-10 h-10 text-gray-700 hover:text-primary transition-colors relative z-50 rounded-lg hover:bg-gray-100"
+      aria-label="Toggle navigation menu"
       [attr.aria-expanded]="showMobileMenu"
     >
-      <svg *ngIf="!showMobileMenu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" style="shape-rendering: geometricPrecision;">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" vector-effect="non-scaling-stroke"></path>
-      </svg>
-      <svg *ngIf="showMobileMenu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" style="shape-rendering: geometricPrecision;">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" vector-effect="non-scaling-stroke"></path>
-      </svg>
+      @if (!showMobileMenu) {
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" style="shape-rendering: geometricPrecision;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" vector-effect="non-scaling-stroke"></path>
+        </svg>
+      } @else {
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" style="shape-rendering: geometricPrecision;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" vector-effect="non-scaling-stroke"></path>
+        </svg>
+      }
     </button>
   </div>
 
   <!-- Mobile Menu Overlay -->
   @if (showMobileMenu) {
-    <div class="lg:hidden fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm" (click)="closeMobileMenu()"></div>
+    <div class="lg:hidden fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm transition-opacity" (click)="closeMobileMenu()"></div>
     
-    <!-- Mobile Menu Sidebar -->
-    <div class="lg:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-[70] mobile-menu-enter overflow-hidden" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
-      <div class="flex flex-col h-full" style="display: flex !important; visibility: visible !important;">
-        <!-- Mobile Menu Header -->
-        <div class="flex items-center justify-between p-4 border-b border-gray-200 bg-white flex-shrink-0">
-          <span class="text-lg font-semibold text-gray-900">Menu</span>
-          <button
-            (click)="closeMobileMenu()"
-            class="flex items-center justify-center w-8 h-8 text-gray-500 hover:text-gray-700 transition-colors rounded-lg hover:bg-gray-100"
-            aria-label="Close menu"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" style="shape-rendering: geometricPrecision;">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" vector-effect="non-scaling-stroke"></path>
-            </svg>
-          </button>
-        </div>
+    <!-- Mobile Menu Sidebar Drawer -->
+    <div class="lg:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-[70] flex flex-col overflow-hidden animate-slide-in-right">
+      <!-- Mobile Menu Header -->
+      <div class="flex items-center justify-between p-4 border-b border-gray-200 bg-white flex-shrink-0">
+        <span class="text-lg font-bold text-slate-900">Navigation</span>
+        <button
+          (click)="closeMobileMenu()"
+          class="flex items-center justify-center w-8 h-8 text-gray-500 hover:text-gray-700 transition-colors rounded-lg hover:bg-gray-100"
+          aria-label="Close menu"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" style="shape-rendering: geometricPrecision;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" vector-effect="non-scaling-stroke"></path>
+          </svg>
+        </button>
+      </div>
 
-        <!-- Mobile Menu Content -->
-        <nav class="flex-1 overflow-y-auto py-4 bg-white" style="display: block; visibility: visible;">
-          <div class="px-4 space-y-1" style="display: block; visibility: visible;">
-            <a
-              routerLink=""
-              routerLinkActive="text-primary bg-primary/5"
-              [routerLinkActiveOptions]="{ exact: true }"
-              (click)="closeMobileMenu()"
-              class="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
-              style="display: flex !important; visibility: visible !important; opacity: 1 !important;"
-            >
-              Home
-            </a>
-            <a
-              routerLink="services"
-              routerLinkActive="text-primary bg-primary/5"
-              (click)="closeMobileMenu()"
-              class="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
-              style="display: flex !important; visibility: visible !important; opacity: 1 !important;"
-            >
-              Services
-            </a>
-            
-            <!-- Solutions with Dropdown -->
-            <div class="space-y-1" style="display: block !important; visibility: visible !important;">
-              <button
-                (click)="toggleMobileSolutions()"
-                class="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
-                style="display: flex !important; visibility: visible !important; opacity: 1 !important;"
-              >
-                <span>Solutions</span>
-                <svg class="w-5 h-5 transition-transform" [class.rotate-180]="showMobileSolutions" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" style="shape-rendering: geometricPrecision;">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" vector-effect="non-scaling-stroke"></path>
-                </svg>
-              </button>
-              @if (showMobileSolutions) {
-                <div class="pl-4 space-y-1 border-l-2 border-gray-200 ml-4" style="display: block !important; visibility: visible !important;">
-                  @for (solution of solutions; track solution.title) {
-                    <a
-                      [routerLink]="solution.route"
-                      routerLinkActive="text-primary bg-primary/5"
-                      (click)="closeMobileMenu()"
-                      class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
-                      style="display: flex !important; visibility: visible !important; opacity: 1 !important;"
-                    >
-                      <app-icon [name]="solution.icon" size="18" class="text-primary"></app-icon>
-                      <span>{{ solution.title }}</span>
-                    </a>
-                  }
-                  <a
-                    routerLink="solutions"
-                    routerLinkActive="text-primary bg-primary/5"
-                    (click)="closeMobileMenu()"
-                    class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-primary hover:bg-primary/5 rounded-lg transition-colors"
-                    style="display: flex !important; visibility: visible !important; opacity: 1 !important;"
-                  >
-                    View All Solutions
-                  </a>
-                </div>
-              }
-            </div>
-
-            <a
-              routerLink="portfolio"
-              routerLinkActive="text-primary bg-primary/5"
-              (click)="closeMobileMenu()"
-              class="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
-              style="display: flex !important; visibility: visible !important; opacity: 1 !important;"
-            >
-              Portfolio
-            </a>
-            <a
-              routerLink="company"
-              routerLinkActive="text-primary bg-primary/5"
-              (click)="closeMobileMenu()"
-              class="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
-              style="display: flex !important; visibility: visible !important; opacity: 1 !important;"
-            >
-              Company
-            </a>
-            <a
-              routerLink="career"
-              routerLinkActive="text-primary bg-primary/5"
-              (click)="closeMobileMenu()"
-              class="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
-              style="display: flex !important; visibility: visible !important; opacity: 1 !important;"
-            >
-              Careers
-            </a>
-            <a
-              routerLink="blog"
-              routerLinkActive="text-primary bg-primary/5"
-              (click)="closeMobileMenu()"
-              class="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
-              style="display: flex !important; visibility: visible !important; opacity: 1 !important;"
-            >
-              Blog
-            </a>
-          </div>
-        </nav>
-
-        <!-- Mobile Menu Footer -->
-        <div class="p-4 border-t border-gray-200 bg-white flex-shrink-0">
+      <!-- Mobile Menu Content -->
+      <nav class="flex-1 overflow-y-auto py-4 bg-white">
+        <div class="px-4 space-y-1">
           <a
-            routerLink="contact"
+            routerLink=""
+            routerLinkActive="text-primary bg-primary/5 font-semibold"
+            [routerLinkActiveOptions]="{ exact: true }"
             (click)="closeMobileMenu()"
-            class="btn-primary w-full text-center block"
+            class="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
           >
-            Get a Quote
+            Home
+          </a>
+          <a
+            routerLink="services"
+            routerLinkActive="text-primary bg-primary/5 font-semibold"
+            (click)="closeMobileMenu()"
+            class="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+          >
+            Services
+          </a>
+          
+          <!-- Solutions with Dropdown -->
+          <div class="space-y-1">
+            <button
+              (click)="toggleMobileSolutions()"
+              class="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+            >
+              <span>Solutions</span>
+              <svg class="w-5 h-5 transition-transform" [class.rotate-180]="showMobileSolutions" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" style="shape-rendering: geometricPrecision;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" vector-effect="non-scaling-stroke"></path>
+              </svg>
+            </button>
+            @if (showMobileSolutions) {
+              <div class="pl-4 space-y-1 border-l-2 border-primary/20 ml-4">
+                @for (solution of solutions; track solution.title) {
+                  <a
+                    [routerLink]="solution.route"
+                    routerLinkActive="text-primary bg-primary/5 font-semibold"
+                    (click)="closeMobileMenu()"
+                    class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+                  >
+                    <app-icon [name]="solution.icon" size="18" class="text-primary"></app-icon>
+                    <span>{{ solution.title }}</span>
+                  </a>
+                }
+                <a
+                  routerLink="solutions"
+                  routerLinkActive="text-primary bg-primary/5 font-semibold"
+                  (click)="closeMobileMenu()"
+                  class="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-primary hover:bg-primary/5 rounded-lg transition-colors"
+                >
+                  View All Solutions →
+                </a>
+              </div>
+            }
+          </div>
+
+          <a
+            routerLink="portfolio"
+            routerLinkActive="text-primary bg-primary/5 font-semibold"
+            (click)="closeMobileMenu()"
+            class="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+          >
+            Portfolio
+          </a>
+          <a
+            routerLink="company"
+            routerLinkActive="text-primary bg-primary/5 font-semibold"
+            (click)="closeMobileMenu()"
+            class="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+          >
+            Company
+          </a>
+          <a
+            routerLink="career"
+            routerLinkActive="text-primary bg-primary/5 font-semibold"
+            (click)="closeMobileMenu()"
+            class="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+          >
+            Careers
+          </a>
+          <a
+            routerLink="blog"
+            routerLinkActive="text-primary bg-primary/5 font-semibold"
+            (click)="closeMobileMenu()"
+            class="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+          >
+            Blog
           </a>
         </div>
+      </nav>
+
+      <!-- Mobile Menu Footer -->
+      <div class="p-4 border-t border-gray-200 bg-white flex-shrink-0">
+        <a
+          routerLink="contact"
+          (click)="closeMobileMenu()"
+          class="btn-primary w-full text-center block"
+        >
+          Get a Quote
+        </a>
       </div>
     </div>
   }

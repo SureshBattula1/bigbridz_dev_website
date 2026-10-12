@@ -1,37 +1,88 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { ServicesComponent } from './pages/services/services.component';
-import { SolutionsComponent } from './pages/solutions/solutions.component';
-import { PortfolioComponent } from './pages/portfolio/portfolio.component';
-import { CompanyComponent } from './pages/company/company.component';
-import { BlogComponent } from './pages/blog/blog.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { CareerComponent } from './pages/career/career.component';
-import { EcommerceComponent } from './pages/solutions/ecommerce/ecommerce.component';
-import { HealthcareComponent } from './pages/solutions/healthcare/healthcare.component';
-import { EducationComponent } from './pages/solutions/education/education.component';
-import { LogisticsComponent } from './pages/solutions/logistics/logistics.component';
-import { FinanceComponent } from './pages/solutions/finance/finance.component';
-import { RealestateComponent } from './pages/solutions/realestate/realestate.component';
-import { FoodComponent } from './pages/solutions/food/food.component';
-import { TravelComponent } from './pages/solutions/travel/travel.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, title: 'BigBridz | Software Development Company' },
-  { path: 'services', component: ServicesComponent, title: 'BigBridz | Services' },
-  { path: 'solutions', component: SolutionsComponent, title: 'BigBridz | Solutions' },
-  { path: 'solutions/ecommerce', component: EcommerceComponent, title: 'BigBridz | E-commerce Solutions' },
-  { path: 'solutions/healthcare', component: HealthcareComponent, title: 'BigBridz | Healthcare Solutions' },
-  { path: 'solutions/education', component: EducationComponent, title: 'BigBridz | Education Solutions' },
-  { path: 'solutions/logistics', component: LogisticsComponent, title: 'BigBridz | Logistics Solutions' },
-  { path: 'solutions/finance', component: FinanceComponent, title: 'BigBridz | Finance Solutions' },
-  { path: 'solutions/realestate', component: RealestateComponent, title: 'BigBridz | Real Estate Solutions' },
-  { path: 'solutions/food', component: FoodComponent, title: 'BigBridz | Food & Restaurant Solutions' },
-  { path: 'solutions/travel', component: TravelComponent, title: 'BigBridz | Travel Solutions' },
-  { path: 'portfolio', component: PortfolioComponent, title: 'BigBridz | Portfolio' },
-  { path: 'company', component: CompanyComponent, title: 'BigBridz | Company' },
-  { path: 'blog', component: BlogComponent, title: 'BigBridz | Blog' },
-  { path: 'contact', component: ContactComponent, title: 'BigBridz | Contact' },
-  { path: 'career', component: CareerComponent, title: 'BigBridz | Careers' },
-  { path: '**', redirectTo: '' },
+  {
+    path: '',
+    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
+    title: 'BigBridz | Software Development Company | Mobile & Web Apps'
+  },
+  {
+    path: 'services',
+    loadComponent: () => import('./pages/services/services.component').then(m => m.ServicesComponent),
+    title: 'BigBridz | Services'
+  },
+  {
+    path: 'solutions',
+    loadComponent: () => import('./pages/solutions/solutions.component').then(m => m.SolutionsComponent),
+    title: 'BigBridz | Industry Solutions'
+  },
+  {
+    path: 'solutions/ecommerce',
+    loadComponent: () => import('./pages/solutions/ecommerce/ecommerce.component').then(m => m.EcommerceComponent),
+    title: 'BigBridz | E-commerce Solutions'
+  },
+  {
+    path: 'solutions/healthcare',
+    loadComponent: () => import('./pages/solutions/healthcare/healthcare.component').then(m => m.HealthcareComponent),
+    title: 'BigBridz | Healthcare Solutions'
+  },
+  {
+    path: 'solutions/education',
+    loadComponent: () => import('./pages/solutions/education/education.component').then(m => m.EducationComponent),
+    title: 'BigBridz | Education Solutions'
+  },
+  {
+    path: 'solutions/logistics',
+    loadComponent: () => import('./pages/solutions/logistics/logistics.component').then(m => m.LogisticsComponent),
+    title: 'BigBridz | Logistics Solutions'
+  },
+  {
+    path: 'solutions/finance',
+    loadComponent: () => import('./pages/solutions/finance/finance.component').then(m => m.FinanceComponent),
+    title: 'BigBridz | Finance Solutions'
+  },
+  {
+    path: 'solutions/realestate',
+    loadComponent: () => import('./pages/solutions/realestate/realestate.component').then(m => m.RealestateComponent),
+    title: 'BigBridz | Real Estate Solutions'
+  },
+  {
+    path: 'solutions/food',
+    loadComponent: () => import('./pages/solutions/food/food.component').then(m => m.FoodComponent),
+    title: 'BigBridz | Food & Restaurant Solutions'
+  },
+  {
+    path: 'solutions/travel',
+    loadComponent: () => import('./pages/solutions/travel/travel.component').then(m => m.TravelComponent),
+    title: 'BigBridz | Travel Solutions'
+  },
+  {
+    path: 'portfolio',
+    loadComponent: () => import('./pages/portfolio/portfolio.component').then(m => m.PortfolioComponent),
+    title: 'BigBridz | Portfolio'
+  },
+  {
+    path: 'company',
+    loadComponent: () => import('./pages/company/company.component').then(m => m.CompanyComponent),
+    title: 'BigBridz | Company'
+  },
+  {
+    path: 'blog',
+    loadComponent: () => import('./pages/blog/blog.component').then(m => m.BlogComponent),
+    title: 'BigBridz | Blog & Insights'
+  },
+  {
+    path: 'contact',
+    loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent),
+    title: 'BigBridz | Contact Us & Get a Quote'
+  },
+  {
+    path: 'career',
+    loadComponent: () => import('./pages/career/career.component').then(m => m.CareerComponent),
+    title: 'BigBridz | Careers & Openings'
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];

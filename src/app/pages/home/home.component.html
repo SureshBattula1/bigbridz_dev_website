@@ -1,45 +1,140 @@
-<section class="section-padding pb-16 hero-gradient relative overflow-hidden">
-  <!-- Subtle background elements -->
+<section class="section-padding pb-16 pt-12 md:pt-16 hero-gradient relative overflow-hidden">
+  <!-- Ambient background lighting elements -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-20 left-10 w-48 h-48 bg-white/5 rounded-full blur-xl"></div>
-    <div class="absolute bottom-20 right-10 w-64 h-64 bg-white/5 rounded-full blur-xl"></div>
+    <div class="absolute top-12 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-3xl"></div>
   </div>
 
   <div class="max-w-7xl mx-auto relative z-10">
-    <!-- Centered Content Layout -->
-    <div class="max-w-4xl mx-auto text-center">
+    <div class="grid lg:grid-cols-[1.1fr,0.9fr] gap-12 lg:gap-8 items-center">
       
-      <!-- Main Headline with Enhanced Typography -->
-      <div class="space-y-4 animate-fade-up" style="animation-delay: 0.2s">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-          Crafting Digital
+      <!-- Left: Headline, Value Proposition, Action CTAs & Trust Markers -->
+      <div class="text-left space-y-6 animate-fade-up">
+        
+        <!-- Studio Eyebrow Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-white tracking-wide">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Software Engineering Studio • Hyderabad, India</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.12] tracking-tight">
+          Reliable Software
           <span class="block mt-2">
             <span class="relative inline-block">
-              <span class="relative z-10 text-white">Journeys</span>
-              <span class="absolute bottom-1 left-0 right-0 h-4 bg-white/20 -z-0 transform -skew-x-12 rounded-sm"></span>
-      </span>
-        </span>
-          <span class="block text-white/90">That <span class="text-orange-400 font-semibold">Transform Businesses</span></span>
-      </h1>
+              <span class="relative z-10 text-white">Engineering</span>
+              <span class="absolute bottom-1.5 left-0 right-0 h-3.5 bg-white/20 -z-0 transform -skew-x-12 rounded-sm"></span>
+            </span>
+          </span>
+          <span class="block text-white/90">Built for <span class="text-orange-400 font-semibold">Real Business Scale</span></span>
+        </h1>
+
+        <!-- Description with Better Typography -->
+        <p class="text-base sm:text-lg lg:text-xl text-white/85 max-w-xl leading-relaxed font-light">
+          We engineer production-ready web platforms, mobile applications, and custom cloud backends. Direct collaboration with senior engineers, clean architecture, and predictable sprint delivery.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a routerLink="/contact" class="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-7 py-3.5 rounded-full font-bold text-base shadow-xl hover:shadow-orange-500/25 transform hover:scale-105 active:scale-95 transition-all duration-300 inline-flex items-center gap-2">
+            <span>Discuss Your Project</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+            </svg>
+          </a>
+          <a routerLink="/services" class="bg-white/10 backdrop-blur-md border-2 border-white/40 text-white px-7 py-3.5 rounded-full font-bold text-base hover:bg-white/20 transform hover:scale-105 active:scale-95 transition-all duration-300 inline-flex items-center gap-2">
+            <span>Our Services</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges Row -->
+        <div class="pt-4 flex flex-wrap gap-y-2 gap-x-6 text-xs sm:text-sm text-white/80 border-t border-white/15">
+          <span class="flex items-center gap-1.5">
+            <span class="text-emerald-400 font-bold">✓</span> 100% IP & Code Ownership
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="text-emerald-400 font-bold">✓</span> Weekly Working Demos
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="text-emerald-400 font-bold">✓</span> Senior Engineer Access
+          </span>
+        </div>
       </div>
 
-      <!-- Description with Better Typography -->
-      <div class="animate-fade-up mt-8" style="animation-delay: 0.3s">
-        <p class="text-lg md:text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-light">
-        Your software is more than code—it's your brand's story, vision, and voice. 
-        At BigBridz, we don't just build applications; we craft experiences that engage, convert, and grow.
-      </p>
+      <!-- Right: Interactive 3D Animated Craftsmanship Book Stage -->
+      <div class="flex flex-col items-center justify-center animate-fade-up relative" style="animation-delay: 0.2s">
+        <!-- Ambient Stage Glow -->
+        <div class="absolute w-72 h-72 bg-orange-500/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
+
+        <div class="book-stage"
+             tabindex="0"
+             role="group"
+             aria-label="3D Interactive Engineering Craftsmanship Book. Hover or tap to flip pages."
+             (pointerenter)="onStagePointerEnter()"
+             (pointerleave)="onStagePointerLeave()"
+             (click)="toggleBookFlip()"
+             (keydown.enter)="toggleBookFlip()"
+             (keydown.space)="toggleBookFlip()">
+          <div class="book" [attr.data-s]="bookState">
+            <div class="book-shadow"></div>
+            @for (leaf of leaves; track leaf.id; let i = $index) {
+              <div class="leaf"
+                   [class.f]="leaf.isFlipped"
+                   [class.turning]="leaf.isTurning"
+                   [style.z-index]="leaf.zIndex"
+                   [style.transform]="leaf.peekTransform">
+                
+                <!-- Front Face -->
+                @if (leaf.frontType === 'cover') {
+                  <div class="face front cover">
+                    <span>BigBridz Software</span>
+                    <b>Craft in every detail.</b>
+                    <span>Engineering Lifecycle • Vol 01</span>
+                  </div>
+                } @else {
+                  <div class="face front">
+                    <img class="art" [src]="leaf.frontStage?.image" [alt]="leaf.frontStage?.title">
+                    <div class="cap">
+                      <span>{{ leaf.frontStage?.title }}</span>
+                      <span>{{ (leaf.frontIndex ?? 0) + 1 }} / 8</span>
+                    </div>
+                  </div>
+                }
+
+                <!-- Back Face -->
+                @if (leaf.backType === 'end') {
+                  <div class="face back end">
+                    <b>Built to last.</b>
+                    <span>BigBridz Engineering</span>
+                  </div>
+                } @else {
+                  <div class="face back">
+                    <img class="art" [src]="leaf.backStage?.image" [alt]="leaf.backStage?.title">
+                    <div class="cap">
+                      <span>{{ leaf.backStage?.title }}</span>
+                      <span>{{ (leaf.backIndex ?? 0) + 1 }} / 8</span>
+                    </div>
+                  </div>
+                }
+              </div>
+            }
+          </div>
+          <div class="book-dots">
+            @for (leaf of leaves; track leaf.id; let i = $index) {
+              <i [class.on]="currentLeafIndex > i"></i>
+            }
+          </div>
+        </div>
+
+        <div class="mt-4 flex items-center gap-2 text-xs text-white/70">
+          <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"></path>
+          </svg>
+          <span>Hover to flip pages • Tap or click on mobile</span>
+        </div>
       </div>
 
-      <!-- CTA Buttons -->
-      <div class="animate-fade-up mt-10 flex flex-wrap justify-center gap-4" style="animation-delay: 0.4s">
-        <a routerLink="/contact" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4  font-bold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
-          Get Started
-        </a>
-        <a routerLink="/services" class="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4  font-bold text-lg hover:bg-white/20 transform hover:scale-105 transition-all duration-300">
-          Our Services
-        </a>
-      </div>
     </div>
   </div>
 </section>
@@ -47,9 +142,9 @@
 <div class="section-divider"></div>
 
 <app-section-header
-  eyebrow="Services"
-  title="End-to-end software development services"
-  subtitle="From MVPs for startups to complex enterprise platforms, BigBridz provides full-cycle design, development, and maintenance services."
+  eyebrow="Capabilities"
+  title="Full-lifecycle software engineering & product delivery"
+  subtitle="From early technical discovery and prototype validation to enterprise platform engineering and maintenance, we build maintainable software tailored to your workflow."
 />
 
 <!-- Services Section with enhanced design -->
@@ -86,11 +181,10 @@
     <div class="text-center mb-16 animate-fade-up">
       <span class="pill-badge mb-4 inline-block">Advanced Capabilities</span>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-        Enterprise-Grade <span class="text-primary">Features & Technology</span>
+        Architecture Built for <span class="text-primary">Production Demands</span>
       </h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-        We build software with cutting-edge features that power modern businesses. 
-        Real-world solutions for real-world challenges.
+        Every system we build incorporates defensive security, horizontal scalability, and clean data contracts out of the box.
       </p>
     </div>
 
@@ -169,10 +263,10 @@
       <div class="text-center mb-16 animate-fade-up relative z-10">
         <span class="pill-badge mb-4 inline-block">Case Studies</span>
         <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-          Real-World <span class="text-primary">Success Stories</span>
+          Proven <span class="text-primary">Engineering Outcomes</span>
         </h3>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          See how we've solved complex challenges for businesses across industries
+          Real challenges solved for active businesses—measured by uptime, latency reduction, and operational efficiency
         </p>
       </div>
 
@@ -186,6 +280,8 @@
               <div class="case-study-image-wrapper relative h-48 overflow-hidden">
                 <img [src]="example.image" 
                      [alt]="example.industry" 
+                     loading="lazy"
+                     decoding="async"
                      class="case-study-image w-full h-full object-cover transition-transform duration-700 ease-out"
                      onerror="this.style.display='none';" />
                 <div class="case-study-image-overlay absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
@@ -247,10 +343,10 @@
       <div class="text-center mb-12 animate-fade-up">
         <span class="pill-badge mb-4 inline-block">Technologies</span>
         <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-          Modern <span class="text-primary">Technology Stack</span>
+          Proven & Maintainable <span class="text-primary">Technology Stacks</span>
         </h3>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-          We use industry-leading technologies to build robust, scalable solutions
+          We prioritize stable, battle-tested technologies that keep maintenance low and future team onboarding seamless
         </p>
       </div>
 
@@ -339,8 +435,8 @@
         </div>
         
         <!-- Gradient Fade Overlays -->
-        <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r  to-transparent z-20 pointer-events-none"></div>
-        <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l  to-transparent z-20 pointer-events-none"></div>
+        <div class="absolute left-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-20 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-20 pointer-events-none"></div>
         
         <!-- Scrolling Cards Container -->
         <div class="tech-stack-scroll relative z-10">
@@ -404,13 +500,13 @@
   <div class="max-w-7xl mx-auto relative z-10">
     <div class="text-center mb-16 animate-fade-up">
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-        Our Creative <span class="text-primary">Process</span>
+        How We <span class="text-primary">Build & Ship</span>
       </h2>
       <h3 class="text-2xl md:text-3xl font-semibold text-slate-800 mb-4">
-        From Vision to <span class="text-primary">Digital Reality</span>
+        Disciplined, <span class="text-primary">Transparent Sprints</span>
       </h3>
       <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-        We follow a proven methodology that ensures transparency, quality, and timely delivery at every step.
+        No black boxes or hidden delays. We follow an iterative engineering cadence designed to validate assumptions early, control scope, and keep you in total control.
       </p>
     </div>
     
@@ -424,6 +520,8 @@
             <div class="process-image-container">
               <img src="assets/images/working/working1.jpg" 
                    alt="Our Creative Process" 
+                   loading="lazy"
+                   decoding="async"
                    class="process-main-image"
                    onerror="this.style.display='none';" />
             </div>
@@ -478,10 +576,10 @@
     <div class="text-center mb-16 animate-fade-up">
       <span class="pill-badge mb-4 inline-block">Our Advantages</span>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-        Why Choose <span class="text-primary">BigBridz?</span>
+        Why Technical Leaders & Founders <span class="text-primary">Work With Us</span>
       </h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-        We have lots of experience to boost your digital presence and transform your business.
+        We eliminate agency bloat and communication layers. You get direct access to senior developers, rigorous sprint reviews, and 100% intellectual property ownership.
       </p>
     </div>
     
@@ -584,10 +682,10 @@
     <!-- Mission Text Section -->
     <div class="mt-2 text-center animate-fade-up relative z-10">
       <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-        Your Success is Our <span class="text-orange-400">Mission</span>
+        Engineered for Reliability, <span class="text-orange-400">Built for the Long Haul</span>
       </h3>
       <p class="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-        At BigBridz, we don't just write code—we craft digital experiences that drive real business results. With a proven track record of delivering exceptional software solutions, we've become the trusted partner for businesses looking to transform their digital presence.
+        Software should be a durable asset that grows with your business, not technical debt that holds you back. At BigBridz, we write clean, documented code and build resilient architectures so your applications perform consistently under heavy load and scale without needing full rewrites.
       </p>
     </div>
   </div>
@@ -633,11 +731,10 @@
   
   <div class="max-w-4xl mx-auto text-center relative z-10">
     <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-up">
-      Ready to Start Your <span class="text-accent">Digital Journey?</span>
+      Have a Product Idea or <span class="text-accent">Complex Engineering Challenge?</span>
     </h2>
     <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-up" style="animation-delay: 0.1s">
-      Don't just build software—create an experience. Whether you're a startup or an enterprise, 
-      our team is ready to bring your vision to life.
+      Schedule a direct technical consultation with our engineering leads. We will review your requirements, discuss feasible architectures, and provide an honest estimate.
     </p>
     <div class="flex flex-wrap justify-center gap-4 animate-fade-up" style="animation-delay: 0.2s">
       <a routerLink="contact" class="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">

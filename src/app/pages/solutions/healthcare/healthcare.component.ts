@@ -14,58 +14,58 @@ export class HealthcareComponent {
   features = [
     {
       icon: 'calendar',
-      title: 'Appointment Scheduling',
-      description: 'Intelligent appointment booking systems with automated reminders, cancellations, and rescheduling capabilities.',
+      title: 'Intelligent Appointment Scheduling',
+      description: 'Multi-provider calendar coordination with automated SMS/WhatsApp reminders, conflict prevention, and direct calendar synchronization.',
       image: 'assets/images/healthcare/healthcare-appointment.jpg'
     },
     {
       icon: 'telemedicine',
-      title: 'Telemedicine Platform',
-      description: 'Secure video consultation platforms enabling remote patient care with HIPAA-compliant communication.',
+      title: 'Telemedicine Video Consultations',
+      description: 'Encrypted, WebRTC-powered video and audio consultations with in-session prescription writing and clinical note taking.',
       image: 'assets/images/healthcare/healthcare-telemedicine.jpg'
     },
     {
       icon: 'ehr',
-      title: 'EHR Management',
-      description: 'Electronic Health Records systems for comprehensive patient data management and seamless information sharing.',
+      title: 'Electronic Health Records (EHR)',
+      description: 'Comprehensive patient medical history, diagnostic reports, and allergy documentation with granular role-based access control.',
       image: 'assets/images/healthcare/healthcare-ehr.jpg'
     },
     {
       icon: 'pharmacy',
-      title: 'Pharmacy Integration',
-      description: 'Pharmacy management systems with prescription tracking, inventory management, and delivery coordination.',
+      title: 'Digital Pharmacy & Prescription Routing',
+      description: 'Electronic prescription generation with automated pharmacy dispatch, refill tracking, and dosage instruction logs.',
       image: 'assets/images/healthcare/healthcare-pharmacy.jpg'
     },
     {
       icon: 'patient',
-      title: 'Patient Portal',
-      description: 'Patient-facing portals for accessing medical records, test results, prescriptions, and appointment history.',
+      title: 'Patient Self-Service Portal',
+      description: 'Secure mobile and web portal for patients to view diagnostic lab results, manage past invoices, and message medical staff.',
       image: 'assets/images/healthcare/healthcare-portal.jpg'
     },
     {
       icon: 'security',
-      title: 'HIPAA Compliance',
-      description: 'Fully compliant healthcare solutions with robust security measures and data protection protocols.',
+      title: 'HIPAA-Aligned Security Architecture',
+      description: 'End-to-end data encryption at rest and in transit (AES-256), immutable audit logs, and automatic session timeouts.',
       image: 'assets/images/healthcare/healthcare-compliance.jpg'
     }
   ];
 
   benefits = [
     {
-      title: 'HIPAA Compliant',
-      description: 'All solutions built with healthcare compliance standards in mind, ensuring patient data security.'
+      title: 'Regulatory & Privacy Compliance',
+      description: 'Architected around strict HIPAA and data protection standards with zero unauthorized access vulnerabilities.'
     },
     {
-      title: 'Interoperability',
-      description: 'Seamless integration with existing healthcare systems and medical devices.'
+      title: 'Clinical System Interoperability',
+      description: 'HL7 and FHIR-compliant interfaces that connect smoothly with third-party hospital databases and diagnostic lab APIs.'
     },
     {
-      title: 'Patient-Centric',
-      description: 'Focus on improving patient experience with intuitive interfaces and accessible care options.'
+      title: 'Intuitive Patient Experience',
+      description: 'Clear, accessible interfaces designed for patients of all ages, cutting down on missed consultations.'
     },
     {
-      title: 'Scalable Solutions',
-      description: 'Designed to grow with your practice, from single clinics to large hospital networks.'
+      title: 'Fault-Tolerant Availability',
+      description: 'Redundant cloud infrastructure ensuring reliable 24/7 access to critical medical records.'
     }
   ];
 }
